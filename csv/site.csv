@@ -1,0 +1,30 @@
+page,section,key,value_ko,value_en
+[예시] home,hero,title,한국어 텍스트,English text
+home,hero,sub,Metaverse Technology Training & Extended Studies,Metaverse Technology Training & Extended Studies
+home,hero,title,The destination for leaders who seek to solve global problems.,The destination for leaders who seek to solve global problems.
+home,about,body,"METES는 경계 없는 사람들이 모여 함께 배우고 성장하는 스타트업 성장 커뮤니티입니다. 창업가, 예비 창업가, 창작자들이 프로젝트 기반 학습과 커뮤니티 활동을 통해 문제를 발견하고 해결하는 역량을 키워갑니다.","METES is a startup growth community where people without boundaries come together to learn and grow."
+home,about,quote,"TEACH LESS, LEARN MORE","TEACH LESS, LEARN MORE"
+home,about,body2,"강의 중심 교육이 아닌 실습·토론·프로젝트 중심으로 스스로 학습하는 환경을 제공합니다.","METES moves beyond lecture-centered education, offering a self-directed learning environment."
+home,vision,item1,디지털 시대를 이끌 차세대 리더 양성,Nurturing next-generation leaders for the digital era
+home,vision,item2,"문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축",Building a learning environment that embraces problems
+home,vision,item3,글로벌 네트워크를 통한 협업과 성장,Enabling collaboration and growth through a global network
+home,offer,card1_title,전문가 멘토링,Expert Mentorship
+home,offer,card1_desc,"업계 전문가와 창업 선배(마이스터)가 프로젝트와 성장을 직접 가이드","Industry experts and experienced founders directly guide projects"
+home,offer,card2_title,열린 교육 환경,Open Learning Environment
+home,offer,card2_desc,"학력, 전공 제한 없는 누구나 참여 가능한 구조","No restrictions on academic background"
+home,offer,card3_title,프로젝트 기반 학습,Project-Based Learning
+home,offer,card3_desc,강의가 아닌 프로젝트와 문제 해결 중심 학습,Learning centered on real projects and problem-solving
+home,offer,card4_title,글로벌 네트워크,Global Network
+home,offer,card4_desc,국내외 전문가 및 커뮤니티와의 연결 기회 제공,Opportunities to connect with experts and communities
+home,support,body,METES는 성주재단의 후원 프로그램으로 운영됩니다.,METES is operated as a sponsored program of the Sungjoo Foundation.
+home,contact,email,sera@metes.io,sera@metes.io
+home,contact,newsletter,https://metes.stibee.com/,https://metes.stibee.com/
+home,contact,instagram,https://www.instagram.com/metes.institute/,https://www.instagram.com/metes.institute/
+hero,curriculum,title,Curriculum,Curriculum
+hero,curriculum,desc,"METES는 매주 2일 세션이 운영됩니다. 1 Cohort = 4 Learning Block = 총 40주 과정","METES sessions are held twice a week. 1 Cohort = 4 Learning Blocks = 40 weeks total"
+hero,members,title,Members,Members
+hero,members,desc,"METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.","Meet the moderators, maesters, and makers who lead METES."
+hero,forum,title,Article,Article
+hero,forum,desc,각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.,Insights from invited maesters compiled into articles.
+hero,news,title,News,News
+hero,news,desc,METES 출신 창업가들의 이야기를 전합니다.,Stories from METES alumni entrepreneurs.

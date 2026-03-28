@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metes — 소식지</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=15">
+</head>
+<body data-page="news">
+
+<div id="support-badge"></div>
+<nav id="site-nav"></nav>
+
+<section class="page-hero" id="page-hero"></section>
+
+<!-- TOP: Article detail -->
+<div style="background:#f5f4f0;">
+  <div class="page news-layout">
+
+    <!-- Left label -->
+    <div class="news-left">
+      <h2 class="mem-heading">MAKER News</h2>
+      <p class="mem-desc">각 분야에 마에스터들을 초청하여 인사이트를 전합니다.</p>
+    </div>
+
+    <!-- Right article -->
+    <div class="news-article" id="news-article-content"></div>
+
+  </div>
+</div>
+
+<!-- BOTTOM: News list -->
+<div style="background: var(--lavender); padding: 64px 0 72px;">
+  <div class="page news-list-layout">
+
+    <div class="news-list-left">
+      <h2 class="mem-heading">News<br>Lists</h2>
+      <div class="news-cta">
+        <span>다음 이야기의 주인공?</span><br>
+        <strong>바로 당신!</strong>
+      </div>
+    </div>
+
+    <div class="news-list-right">
+      <div class="news-grid" id="news-grid"></div>
+      <div class="news-pagination-wrap">
+        <div class="news-pagination" id="news-pagination"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script src="js/data.js?v=15"></script>
+<script src="js/components.js?v=15"></script>
+<script src="js/main.js?v=15"></script>
+</body>
+</html>

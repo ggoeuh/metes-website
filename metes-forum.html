@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metes — Maester Forum</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #111;
+    --white: #fff;
+    --gray-light: #c8c8c8;
+    --gray-mid: #a0a0a0;
+    --gray-dark: #6b6b6b;
+    --lavender: #e8e4f4;
+    --tag-bg: #b8b4d0;
+    --font-en: 'Abril Fatface', serif;
+    --font-kr: 'Pretendard', sans-serif;
+    --border: 1px solid #d4d4d4;
+  }
+
+  body {
+    font-family: var(--font-kr);
+    background: #f5f4f0;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    padding: 0 32px;
+    height: 52px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 32px;
+  }
+  .logo {
+    font-family: var(--font-en);
+    color: var(--white);
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    margin-right: auto;
+  }
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: var(--font-kr);
+    opacity: 0.85;
+    transition: opacity .2s;
+  }
+  nav a:hover { opacity: 1; }
+  .nav-search { font-size: 18px; cursor: pointer; color: var(--white); opacity: 0.85; }
+  .btn-lang {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--white);
+    font-size: 11px;
+    padding: 3px 10px;
+    cursor: pointer;
+    background: transparent;
+    font-family: var(--font-en);
+    letter-spacing: 0.5px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .btn-lang::after { content: '›'; font-size: 14px; }
+
+  /* ── SUPPORT BADGE ── */
+  .support-badge {
+    position: fixed;
+    top: 0; right: 0;
+    width: 80px; height: 80px;
+    background: #e86b2a;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+    z-index: 200;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px 6px 0 0;
+  }
+  .support-badge span {
+    color: white;
+    font-size: 9px;
+    text-align: right;
+    line-height: 1.4;
+    font-family: var(--font-kr);
+    font-weight: 600;
+    transform: rotate(0deg);
+    white-space: nowrap;
+  }
+
+  /* ── WRAPPER ── */
+  .page { max-width: 960px; margin: 0 auto; }
+
+  /* ── MAESTER FORUM HERO ── */
+  .forum-hero {
+    padding: 56px 32px 48px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    background: #f5f4f0;
+  }
+  .forum-left h1 {
+    font-family: var(--font-en);
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+  .forum-left p {
+    font-size: 12.5px;
+    color: var(--gray-dark);
+    line-height: 1.7;
+    max-width: 200px;
+  }
+
+  .featured-post {
+    border-top: 2px solid var(--black);
+    padding-top: 16px;
+  }
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+  }
+  .post-num {
+    font-family: var(--font-en);
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+  .post-num span { font-size: 20px; margin-right: 2px; }
+  .post-date {
+    font-size: 12px;
+    color: var(--gray-dark);
+    font-family: var(--font-en);
+    letter-spacing: 0.5px;
+  }
+
+  .post-body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+  }
+  .post-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--gray-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray-mid);
+    font-size: 11px;
+  }
+  .post-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .post-content p {
+    font-size: 12px;
+    color: var(--gray-dark);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--white);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-family: var(--font-kr);
+  }
+
+  /* ── NEXT WEEK ── */
+  .next-week {
+    background: var(--lavender);
+    padding: 40px 32px;
+  }
+  .next-week-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 32px;
+    align-items: center;
+  }
+  .next-week h3 {
+    font-family: var(--font-en);
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+  .next-week-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .next-week-content p {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+  .next-week-content p strong { font-weight: 700; }
+  .btn-apply {
+    display: inline-block;
+    background: var(--black);
+    color: var(--white);
+    font-size: 13px;
+    padding: 12px 24px;
+    font-family: var(--font-kr);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: background .2s;
+  }
+  .btn-apply:hover { background: #333; }
+  .next-week-img {
+    width: 220px;
+    aspect-ratio: 3/2;
+    background: var(--gray-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray-mid);
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  /* ── YEAR TABS ── */
+  .archive-section {
+    padding: 0 32px;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+  .year-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+  .year-tab {
+    font-family: var(--font-en);
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--gray-mid);
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: color .2s;
+    background: none; border: none;
+    letter-spacing: -0.5px;
+  }
+  .year-tab.active {
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+  }
+  .year-tab:hover { color: var(--black); }
+  .tab-divider {
+    border: none;
+    border-top: 1px solid var(--black);
+    margin: 0 0 32px;
+  }
+
+  /* ── COHORT SECTIONS ── */
+  .cohort-section {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: var(--border);
+  }
+  .cohort-label {
+    font-family: var(--font-en);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    padding-top: 4px;
+  }
+  .cohort-content {}
+  .block-label {
+    font-family: var(--font-en);
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .card-grid.single { grid-template-columns: 155px; }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--gray-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray-mid);
+    font-size: 10px;
+  }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .card-num {
+    font-family: var(--font-en);
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .card-date {
+    font-size: 11px;
+    color: var(--gray-dark);
+    font-family: var(--font-en);
+  }
+  .card-title {
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--black);
+  }
+
+  /* ── BOTTOM CTA ── */
+  .bottom-cta {
+    padding: 56px 32px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .bottom-cta h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -1px;
+  }
+  .bottom-cta h2 em {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+
+  /* more cards below */
+  .more-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 720px) {
+    .forum-hero, .next-week-inner, .cohort-section {
+      grid-template-columns: 1fr;
+    }
+    .post-body { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- SUPPORT CORNER BADGE -->
+<div class="support-badge">
+  <span>지원 링크<br>바로가기<br>→</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <span class="logo nav-link" data-page="forum" style="cursor:pointer;">Metes</span>
+  <span class="nav-search">🔍</span>
+  <a href="#" class="nav-link" data-page="forum">커리큘럼</a>
+  <a href="#" class="nav-link active-nav" data-page="members" id="nav-members">멤버</a>
+  <a href="#" class="nav-link" data-page="forum">아티클</a>
+  <a href="#" class="nav-link" data-page="news">소식지</a>
+  <button class="btn-lang">ENG</button>
+</nav>
+
+<!-- ══════════════ FORUM PAGE ══════════════ -->
+<div id="page-forum" class="page-view">
+
+<!-- MAESTER FORUM HERO -->
+<div style="background:#f5f4f0;">
+  <div class="page">
+    <div class="forum-hero">
+      <div class="forum-left">
+        <h1>Maester<br>Forum</h1>
+        <p>각 분야에 마에스터들을 초청하여 인사이트를 전합니다.</p>
+      </div>
+
+      <div class="featured-post">
+        <div class="post-meta">
+          <div class="post-num"><span>#</span> 125</div>
+          <div class="post-date">2025/ 01/ 16</div>
+        </div>
+        <div class="post-body">
+          <div class="post-img">IMAGE</div>
+          <div class="post-content">
+            <h2>데일리 트렌드, 윤소희 대표<br>물류와 비즈니스 트렌드 narrative를 풀어내다.</h2>
+            <p>"물류는 단순한 이동이 아닌, 비즈니스의 흐름을 읽는 가장 정직한 지표입니다. 데일리 트렌드(Daily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 경영자가 놓치지 말아야 할 핵심 내러티브를 포착합니다. 윤소희 대표의 날카로운 시선으로 재해석된 물류와 비즈니스 트렌드, 그 숫자 뒤에 숨겨진 '진짜 이야기'를 통해 내일의 비즈니스를 위한 확실한 방향성을 제시합니다."</p>
+            <div class="tag-row">
+              <span class="tag">#데일리 트렌드</span>
+              <span class="tag"># 비즈니스</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEXT WEEK -->
+<div class="next-week">
+  <div class="next-week-inner page">
+    <div>
+      <h3>Next<br>Week</h3>
+    </div>
+    <div class="next-week-content">
+      <h2>하이브 라틴 아메리카 강민수 CEO의 인사이트 발굴</h2>
+      <p>YG부터 하이브 라틴 아메리카까지 그의 여정<br><strong>1월 23일, MCM Haus</strong>에서 진행됩니다.</p>
+      <a href="#" class="btn-apply">지금 바로 참여 신청하기</a>
+    </div>
+    <div class="next-week-img">IMAGE</div>
+  </div>
+</div>
+
+<!-- ARCHIVE -->
+<div class="archive-section">
+  <div class="year-tabs">
+    <button class="year-tab active">2026</button>
+    <button class="year-tab">2025</button>
+    <button class="year-tab">2024</button>
+    <button class="year-tab">2023</button>
+  </div>
+  <hr class="tab-divider">
+
+  <!-- Cohort 04 -->
+  <div class="cohort-section">
+    <div class="cohort-label">Cohort 04</div>
+    <div class="cohort-content">
+      <div class="block-label">Learning Block 01</div>
+      <div class="card-grid single">
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cohort 03 -->
+  <div class="cohort-section">
+    <div class="cohort-label">Cohort 03</div>
+    <div class="cohort-content">
+      <div class="block-label">Learning Block 04</div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom CTA + more cards row -->
+  <div style="display:grid; grid-template-columns:200px 1fr; gap:32px; padding: 28px 0;">
+    <div class="bottom-cta" style="padding:0; padding-top:4px;">
+      <h2>인사이트를<br>여러분의 <em>것으로!</em></h2>
+    </div>
+    <div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+        <div class="card">
+          <div class="card-thumb">IMAGE</div>
+          <div class="card-meta">
+            <span class="card-num">#153</span>
+            <span class="card-date">2025/ 01/ 16</span>
+          </div>
+          <div class="card-title">하이브 라틴 아메리카,<br>가종혁 대표</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /archive-section -->
+</div><!-- /page-forum -->
+
+<!-- ══════════════ MEMBERS PAGE ══════════════ -->
+<div id="page-members" class="page-view">
+
+  <!-- MODERATOR -->
+  <div style="background:#f5f4f0; padding: 56px 0 48px;">
+    <div class="page mem-section">
+      <div class="mem-left">
+        <h2 class="mem-heading">Moderator</h2>
+        <p class="mem-desc">메테스의 문화를 만듭니다.</p>
+      </div>
+      <div class="mem-right">
+        <!-- featured card -->
+        <div class="mod-featured">
+          <div class="mem-avatar large"></div>
+          <div class="mem-info">
+            <div class="mem-name">다니엘</div>
+            <div class="mem-bio">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</div>
+          </div>
+        </div>
+        <!-- two smaller cards -->
+        <div class="mod-row">
+          <div class="mem-card-h">
+            <div class="mem-avatar small"></div>
+            <div class="mem-info">
+              <div class="mem-name">다니엘</div>
+              <div class="mem-bio">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</div>
+            </div>
+          </div>
+          <div class="mem-card-h">
+            <div class="mem-avatar small"></div>
+            <div class="mem-info">
+              <div class="mem-name">다니엘</div>
+              <div class="mem-bio">자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAESTER -->
+  <div style="background:#f5f4f0; padding: 0 0 48px;">
+    <div class="page mem-section" style="padding-top:0;">
+      <div class="mem-left">
+        <h2 class="mem-heading">Maester</h2>
+        <p class="mem-desc">메테스를 00하는</p>
+      </div>
+      <div class="mem-right">
+        <div style="border-top: 1px solid #ccc; padding-top: 20px;">
+          <div class="maester-grid">
+            <div class="maester-card">
+              <div class="mem-avatar small"></div>
+              <div class="mem-info">
+                <div class="mem-name">다니엘</div>
+                <div class="mem-bio-sm">한국 최대 AI 커뮤니티 000</div>
+                <div class="maester-session">리더십 세션</div>
+              </div>
+            </div>
+            <div class="maester-card">
+              <div class="mem-avatar small"></div>
+              <div class="mem-info">
+                <div class="mem-name">다니엘</div>
+                <div class="mem-bio-sm">한국 최대 AI 커뮤니티 000</div>
+                <div class="maester-session">리더십 세션</div>
+              </div>
+            </div>
+            <div class="maester-card">
+              <div class="mem-avatar small"></div>
+              <div class="mem-info">
+                <div class="mem-name">다니엘</div>
+                <div class="mem-bio-sm">한국 최대 AI 커뮤니티 000</div>
+                <div class="maester-session">리더십 세션</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LB MAKERS -->
+  <div style="background: var(--lavender); padding: 56px 0;">
+    <div class="page mem-section" style="padding-top:0;">
+      <div class="mem-left">
+        <h2 class="mem-heading">LB Makers</h2>
+        <p class="mem-desc">각 분야에 마에스터들을 초청하여 인사이트를<br>전합니다.</p>
+      </div>
+      <div class="mem-right">
+        <div class="makers-grid">
+          <!-- 15 LB maker cards -->
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAKER POOL -->
+  <div style="background:#f5f4f0; padding: 56px 0;">
+    <div class="page mem-section" style="padding-top:0;">
+      <div class="mem-left">
+        <h2 class="mem-heading">Maker Pool</h2>
+        <p class="mem-desc">각 분야에 마에스터들을 초청하여 인사이트를 전합니다.</p>
+      </div>
+      <div class="mem-right">
+        <div class="makers-grid">
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+          <div class="maker-card"><div class="mem-avatar small"></div><div class="mem-info"><div class="mem-name">다니엘</div><div class="maker-tags"><span class="mtag"># AI 디자이너</span><span class="mtag"># AI 강의</span><span class="mtag"># AI 강의</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-members -->
+
+<!-- ══════════════ NEWS PAGE ══════════════ -->
+<div id="page-news" class="page-view">
+
+  <!-- TOP: Article detail -->
+  <div style="background:#f5f4f0; padding: 56px 0 72px;">
+    <div class="page news-layout">
+
+      <!-- Left label -->
+      <div class="news-left">
+        <h2 class="mem-heading">MAKER<br>News</h2>
+        <p class="mem-desc">각 분야에 마에스터들을 초청하여 인사이트를 전합니다.</p>
+      </div>
+
+      <!-- Right article -->
+      <div class="news-article">
+        <div class="news-article-title">데일리 트렌드, 윤소희 대표</div>
+        <div class="news-hero-img"></div>
+
+        <h3 class="news-section-title">메테스에서 OO를 배우고 창업했어요.</h3>
+
+        <div class="news-qa">
+          <h4 class="news-q">자기 소개를 해 주세요.</h4>
+          <p class="news-a">"물류는 단순한 이동이 아닌, 비즈니스의 흐름을 읽는 가장 정직한 지표입니다. 데일리 트렌드(Daily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 경영자가 놓치지 말아야 할 핵심 내러티브를 포착합니다. 윤소희 대표의 날카로운 시선으로 재해석된 물류와 비즈니스 트렌드, 그 숫자 뒤에 숨겨진 '진짜 이야기'를 통해 내일의 비즈니스를 위한 확실한 방향성을 제시합니다."</p>
+        </div>
+
+        <div class="news-qa">
+          <h4 class="news-q">어떤 일을 하시나요?</h4>
+          <p class="news-a">"물류는 단순한 이동이 아닌, 비즈니스의 흐름을 읽는 가장 정직한 지표입니다. 데일리 트렌드(Daily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 경영자가 놓치지 말아야 할 핵심 내러티브를 포착합니다. 윤소희 대표의 날카로운 시선으로 재해석된 물류와 비즈니스 트렌드, 그 숫자 뒤에 숨겨진 '진짜 이야기'를 통해 내일의 비즈니스를 위한 확실한 방향성을 제시합니다."</p>
+        </div>
+
+        <div class="news-qa">
+          <h4 class="news-q">OO님에게 메테스란?</h4>
+          <p class="news-a">"물류는 단순한 이동이 아닌, 비즈니스의 흐름을 읽는 가장 정직한 지표입니다. 데일리 트렌드(Daily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 경영자가 놓치지 말아야 할 핵심 내러티브를 포착합니다. 윤소희 대표의 날카로운 시선으로 재해석된 물류와 비즈니스 트렌드, 그 숫자 뒤에 숨겨진 '진짜 이야기'를 통해 내일의 비즈니스를 위한 확실한 방향성을 제시합니다."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM: News list -->
+  <div style="background: var(--lavender); padding: 64px 0 72px;">
+    <div class="page news-list-layout">
+
+      <div class="news-list-left">
+        <h2 class="mem-heading">News<br>Lists</h2>
+      </div>
+
+      <div class="news-list-right">
+        <div class="news-grid" id="news-grid">
+          <!-- 6 cards per page -->
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+          <div class="news-card">
+            <div class="news-card-img"></div>
+            <div class="news-card-name">데일리 트렌드, 윤소희 대표</div>
+            <div class="news-card-desc">"물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...</div>
+          </div>
+        </div>
+
+        <!-- CTA + Pagination row -->
+        <div class="news-bottom-row">
+          <div class="news-cta">
+            <span>다음 이야기의 주인공?</span><br>
+            <strong>바로 당신!</strong>
+          </div>
+          <div class="news-pagination">
+            <button class="pg-btn active-pg">1</button>
+            <button class="pg-btn">2</button>
+            <button class="pg-btn">3</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /page-news -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">Metes</div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="footer-col-title">프로그램</span>
+          <a href="#">커리큘럼</a>
+          <a href="#">멤버</a>
+          <a href="#">코호트 일정</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">콘텐츠</span>
+          <a href="#">아티클</a>
+          <a href="#">소식지</a>
+          <a href="#">Maester Forum</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">문의</span>
+          <a href="#">지원하기</a>
+          <a href="#">파트너십</a>
+          <a href="#"><span class="__cf_email__" data-cfemail="650d0009090a2508001100164b060a">[email&#160;protected]</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <span>© 2025 Metes. All rights reserved.</span>
+        <span class="footer-address">서울특별시 강남구 테헤란로 123, 4층 &nbsp;|&nbsp; 사업자등록번호 000-00-00000 &nbsp;|&nbsp; 대표 홍길동</span>
+      </div>
+      <div class="footer-legal">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer {
+  background: var(--black);
+  color: var(--white);
+  margin-top: 64px;
+}
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 32px 28px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 20px;
+}
+.footer-logo {
+  font-family: var(--font-en);
+  font-size: 32px;
+  letter-spacing: -1px;
+  opacity: 0.95;
+}
+.footer-links {
+  display: flex;
+  gap: 56px;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 2px;
+  font-family: var(--font-kr);
+}
+.footer-col a {
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  font-size: 13px;
+  font-family: var(--font-kr);
+  transition: color .15s;
+}
+.footer-col a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-bottom-left span {
+  font-size: 11px;
+  opacity: 0.35;
+  font-family: var(--font-en);
+  letter-spacing: 0.3px;
+}
+.footer-address {
+  font-family: var(--font-kr) !important;
+  font-size: 11px;
+  opacity: 0.3 !important;
+  letter-spacing: 0 !important;
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal a {
+  color: rgba(255,255,255,0.35);
+  font-size: 11px;
+  text-decoration: none;
+  font-family: var(--font-kr);
+  transition: color .15s;
+}
+.footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+/* ── NEWS PAGE ── */
+.news-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+.news-list-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 0 32px;
+}
+.news-article-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: right;
+}
+.news-hero-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--gray-light);
+  margin-bottom: 28px;
+}
+.news-section-title {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+.news-qa { margin-bottom: 22px; }
+.news-q {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.news-a {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.85;
+}
+/* News list */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 24px;
+  margin-bottom: 36px;
+}
+.news-card {}
+.news-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--gray-light);
+  margin-bottom: 10px;
+}
+.news-card-name {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.news-card-desc {
+  font-size: 11.5px;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+.news-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 12px;
+}
+.news-cta {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+.news-cta strong {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--black);
+}
+.news-pagination {
+  display: flex;
+  gap: 4px;
+}
+.pg-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #bbb;
+  background: transparent;
+  font-family: var(--font-en);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s, color .15s;
+}
+.pg-btn.active-pg {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.pg-btn:hover:not(.active-pg) { background: rgba(0,0,0,0.07); }
+
+/* ── MEMBERS PAGE ── */
+.page-view { display: none; }
+.page-view.active { display: block; }
+
+.mem-section {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+.mem-heading {
+  font-family: var(--font-en);
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.mem-desc {
+  font-size: 12.5px;
+  color: var(--gray-dark);
+  line-height: 1.7;
+}
+.mem-avatar {
+  background: var(--gray-light);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-mid);
+  font-size: 10px;
+}
+.mem-avatar.large { width: 80px; height: 80px; }
+.mem-avatar.small { width: 64px; height: 64px; }
+
+.mem-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.mem-bio {
+  font-size: 11.5px;
+  color: var(--gray-dark);
+  line-height: 1.65;
+}
+.mem-bio-sm {
+  font-size: 11.5px;
+  color: var(--gray-dark);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* Moderator */
+.mod-featured {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+.mod-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.mem-card-h {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Maester */
+.maester-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.maester-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.maester-session {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  font-size: 10px;
+  padding: 2px 8px;
+  font-family: var(--font-kr);
+}
+
+/* LB Makers / Maker Pool */
+.makers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 20px;
+}
+.maker-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.maker-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+}
+.mtag {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--white);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+.nav-link.active-nav { opacity: 1 !important; border-bottom: 2px solid white; padding-bottom: 2px; }
+
+</style>
+
+<script>
+  // Page switching
+  const pages = {
+    'forum': document.getElementById('page-forum'),
+    'members': document.getElementById('page-members'),
+    'news': document.getElementById('page-news'),
+  };
+
+  function showPage(name) {
+    Object.values(pages).forEach(p => { if(p) p.classList.remove('active'); });
+    if (pages[name]) pages[name].classList.add('active');
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-nav'));
+    document.querySelectorAll(`.nav-link[data-page="${name}"]`).forEach(l => l.classList.add('active-nav'));
+    window.scrollTo(0, 0);
+  }
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      showPage(link.dataset.page);
+    });
+  });
+
+  // Default: show members
+  showPage('members');
+
+  // Year tab switching
+  document.querySelectorAll('.year-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+  // Pagination
+  document.querySelectorAll('.pg-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pg-btn').forEach(b => b.classList.remove('active-pg'));
+      btn.classList.add('active-pg');
+    });
+  });
+</script>

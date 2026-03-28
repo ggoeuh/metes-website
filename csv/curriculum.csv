@@ -1,0 +1,14 @@
+type,key,value,value2,value3
+[예시] lb,LB1,Finding Me,문제 인식과 방향 찾기,
+lb,LB1,Finding Me,문제 인식과 방향 찾기,
+lb,LB2,Hard Skill,문제 해결 역량 강화,
+lb,LB3,Company Building,창업 실행과 구축,
+lb,LB4,Stakeholders,협업과 이해관계자 관리,
+session,Soft Skill Session,매주 화요일 오전,희진 마에스터,"리더십 시뮬레이션, 심화 토론, 커뮤니티 활동"
+session,AI Session,매주 화요일 오후,진석 마에스터,"AI 활용 실습, 프롬프트 엔지니어링, 비즈니스 적용"
+session,METES FORUM,매주 금요일,,"업계 전문가 및 마이스터와의 대화, 실제 사례 공유, 네트워킹 중심의 세션입니다."
+info,deposit_maker,메이커 예치금: 20만원,,
+info,deposit_refund,Block 출석률 85% 이상 시 전액 환급,,
+info,general_fee,회차당 2만원,,
+info,general_note,*메이커 지인 첫 참관 1회 무료,,
+info,current_cohort,Cohort 4,Learning Block 2,

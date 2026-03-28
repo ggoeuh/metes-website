@@ -15,9 +15,8 @@ renderFooter();
 initSearch();
 initNavIndicator();
 
-// ── 데이터 로드 후 페이지별 렌더링 ──
-loadAllData().then(() => {
-
+// ── 페이지별 렌더링 ──
+{
   // Article 상세 페이지
   if (currentPage === 'forum' && isArticleDetail) {
     const articleId = new URLSearchParams(window.location.search).get('id');
@@ -110,7 +109,7 @@ loadAllData().then(() => {
     if (query) renderSearchResults(query);
   }
 
-});
+}
 
 // ── 검색 기능 ──
 function initSearch() {

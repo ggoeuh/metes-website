@@ -1,237 +1,452 @@
-// ── Google Sheets CSV 연동 ──
+// ── 자동 생성 파일 (node sync.js) ──
+// 마지막 동기화: 2026. 3. 28. 오후 11:04:14
 
-const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQGLwxxiXmtN5aLVeGVZrRn068Ix7fEMAKDoOBV21GiAGw6fQgBn4yPHfzWbIvwu3nTNOE_uS7vmnAG/pub';
-const SHEETS = {
-  members:    `${SHEET_BASE}?gid=0&single=true&output=csv`,
-  news:       `${SHEET_BASE}?gid=466223975&single=true&output=csv`,
-  articles:   `${SHEET_BASE}?gid=636670025&single=true&output=csv`,
-  curriculum: `${SHEET_BASE}?gid=1927098854&single=true&output=csv`,
-  site:       `${SHEET_BASE}?gid=880266556&single=true&output=csv`,
+const membersData = {
+  "moderators": {
+    "featured": {
+      "name": "다니엘",
+      "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개"
+    },
+    "sub": [
+      {
+        "name": "다니엘",
+        "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개"
+      },
+      {
+        "name": "다니엘",
+        "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개"
+      }
+    ]
+  },
+  "maesters": [
+    {
+      "name": "다니엘",
+      "bio": "한국 최대 AI 커뮤니티 000",
+      "session": "리더십 세션"
+    },
+    {
+      "name": "다니엘",
+      "bio": "한국 최대 AI 커뮤니티 000",
+      "session": "리더십 세션"
+    },
+    {
+      "name": "다니엘",
+      "bio": "한국 최대 AI 커뮤니티 000",
+      "session": "리더십 세션"
+    }
+  ],
+  "lbMakers": [
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    }
+  ],
+  "makerPool": [
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    },
+    {
+      "name": "다니엘",
+      "tags": [
+        "# AI 디자이너",
+        "# AI 강의"
+      ]
+    }
+  ]
 };
 
-// CSV 파서
-function parseCSV(text) {
-  const lines = [];
-  let current = '';
-  let inQuotes = false;
-  for (let i = 0; i < text.length; i++) {
-    const ch = text[i];
-    if (ch === '"') {
-      if (inQuotes && text[i + 1] === '"') { current += '"'; i++; }
-      else { inQuotes = !inQuotes; }
-    } else if (ch === ',' && !inQuotes) {
-      lines.push(current); current = '';
-    } else if ((ch === '\n' || ch === '\r') && !inQuotes) {
-      if (ch === '\r' && text[i + 1] === '\n') i++;
-      lines.push(current); current = '';
-      lines.push('\n');
-    } else {
-      current += ch;
-    }
+const forumData = [
+  {
+    "year": 2026,
+    "cohorts": [
+      {
+        "name": "Cohort 04",
+        "blocks": [
+          {
+            "label": "Learning Block 01",
+            "cards": [
+              {
+                "num": 153,
+                "date": "2025/ 01/ 16",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cohort 03",
+        "blocks": [
+          {
+            "label": "Learning Block 04",
+            "cards": [
+              {
+                "num": 153,
+                "date": "2025/ 01/ 16",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 14",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 12",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 10",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 08",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 06",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 04",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2025/ 01/ 02",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 30",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 28",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              }
+            ]
+          },
+          {
+            "label": "Learning Block 03",
+            "cards": [
+              {
+                "num": 153,
+                "date": "2024/ 12/ 20",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 18",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 16",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 14",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 12",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              },
+              {
+                "num": 153,
+                "date": "2024/ 12/ 10",
+                "title": "하이브 라틴 아메리카, 가종혁 대표",
+                "tags": "",
+                "content": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "moreCards": []
   }
-  if (current) lines.push(current);
+];
 
-  const rows = [];
-  let row = [];
-  for (const item of lines) {
-    if (item === '\n') { if (row.length > 0) rows.push(row); row = []; }
-    else { row.push(item); }
-  }
-  if (row.length > 0) rows.push(row);
+const nextWeekEvent = {
+  "title": "다음 세션을 준비 중입니다",
+  "desc": "",
+  "date": "",
+  "location": "",
+  "link": "https://walla.my/a/metes_cohort4"
+};
 
-  if (rows.length < 2) return [];
-  const headers = rows[0];
-  return rows.slice(1)
-    .filter(r => r[0] && !r[0].startsWith('[예시]'))
-    .map(r => {
-      const obj = {};
-      headers.forEach((h, i) => { obj[h.trim()] = (r[i] || '').trim(); });
-      return obj;
-    });
-}
+const featuredPost = {
+  "num": 153,
+  "date": "2025/ 01/ 16",
+  "title": "하이브 라틴 아메리카, 가종혁 대표",
+  "desc": "하이브 라틴 아메리카, 가종혁 대표",
+  "tags": []
+};
 
-async function fetchSheet(url) {
-  const res = await fetch(url);
-  const text = await res.text();
-  return parseCSV(text);
-}
-
-// ── 데이터 변환 ──
-
-function transformMembers(rows) {
-  const moderatorFeatured = rows.filter(r => r.type === 'moderator_featured')[0];
-  const moderatorSub = rows.filter(r => r.type === 'moderator');
-  const maesters = rows.filter(r => r.type === 'maester');
-  const makers = rows.filter(r => r.type === 'maker');
-  const makerPool = rows.filter(r => r.type === 'maker_pool');
-
-  return {
-    moderators: {
-      featured: { name: moderatorFeatured?.name || '', bio: moderatorFeatured?.bio || '' },
-      sub: moderatorSub.map(r => ({ name: r.name, bio: r.bio })),
+const newsArticle = {
+  "title": "데일리 트렌드, 윤소희 대표",
+  "sectionTitle": "메테스에서 OO를 배우고 창업했어요.",
+  "qa": [
+    {
+      "q": "자기 소개를 해 주세요.",
+      "a": "물류는 단순한 이동이 아닌 비즈니스의 흐름을 읽는 가장 정직한 지표입니다."
     },
-    maesters: maesters.map(r => ({ name: r.name, bio: r.bio, session: r.session })),
-    lbMakers: makers.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean) })),
-    makerPool: makerPool.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean) })),
-  };
-}
+    {
+      "q": "어떤 일을 하시나요?",
+      "a": "물류는 단순한 이동이 아닌 비즈니스의 흐름을 읽는 가장 정직한 지표입니다."
+    },
+    {
+      "q": "OO님에게 메테스란?",
+      "a": "물류는 단순한 이동이 아닌 비즈니스의 흐름을 읽는 가장 정직한 지표입니다."
+    }
+  ]
+};
 
-function transformArticles(rows) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  // Next Week: 오늘 이후 가장 가까운 날짜
-  const futureRows = rows.filter(r => new Date(r.date) > today).sort((a, b) => new Date(a.date) - new Date(b.date));
-  const nextWeekRow = futureRows[0] || null;
-
-  // 과거 글들
-  const pastRows = rows.filter(r => new Date(r.date) <= today);
-
-  // Featured: 가장 최근 글
-  const sorted = [...pastRows].sort((a, b) => new Date(b.date) - new Date(a.date));
-  const featuredRow = sorted[0] || null;
-
-  // 연도별 그룹화
-  const years = [...new Set(rows.map(r => parseInt(r.year)))].sort((a, b) => b - a);
-  const forumData = years.map(year => {
-    const yearRows = pastRows.filter(r => parseInt(r.year) === year);
-    const cohortNames = [...new Set(yearRows.map(r => r.cohort).filter(Boolean))];
-    const cohorts = cohortNames.map(name => {
-      const cohortRows = yearRows.filter(r => r.cohort === name);
-      const blockNames = [...new Set(cohortRows.map(r => r.block).filter(Boolean))];
-      const blocks = blockNames.map(label => ({
-        label,
-        cards: cohortRows.filter(r => r.block === label).map(r => ({
-          num: parseInt(r.num), date: r.date, title: r.title,
-          tags: r.tags || '', content: r.content || '',
-          cohort: name, block: label,
-        })),
-      }));
-      return { name, blocks };
-    });
-    return { year, cohorts, moreCards: [] };
-  });
-
-  function formatDate(d) {
-    if (!d) return '';
-    const parts = d.split('-');
-    if (parts.length === 3) return `${parts[0]}/ ${parts[1]}/ ${parts[2]}`;
-    return d;
+const newsList = [
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+  },
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+  },
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+  },
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+  },
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+  },
+  {
+    "name": "데일리 트렌드, 윤소희 대표",
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
   }
+];
 
-  const nextWeekEvent = nextWeekRow ? {
-    title: nextWeekRow.title,
-    desc: nextWeekRow.content ? nextWeekRow.content.split('||')[0].split('::')[0] : '',
-    date: formatDate(nextWeekRow.date),
-    location: nextWeekRow.location || '',
-    link: 'https://walla.my/a/metes_cohort4',
-  } : { title: '다음 세션을 준비 중입니다', desc: '', date: '', location: '', link: 'https://walla.my/a/metes_cohort4' };
-
-  const featuredPost = featuredRow ? {
-    num: parseInt(featuredRow.num),
-    date: formatDate(featuredRow.date),
-    title: featuredRow.title,
-    desc: featuredRow.content ? featuredRow.content.split('||')[0].split('::')[1] || featuredRow.title : featuredRow.title,
-    tags: featuredRow.tags ? featuredRow.tags.split('|') : [],
-  } : { num: 0, date: '', title: '', desc: '', tags: [] };
-
-  // 카드의 날짜도 포맷
-  forumData.forEach(yd => {
-    yd.cohorts.forEach(c => {
-      c.blocks.forEach(b => {
-        b.cards.forEach(card => { card.date = formatDate(card.date); });
-      });
-    });
-  });
-
-  return { forumData, nextWeekEvent, featuredPost };
-}
-
-function transformNews(rows) {
-  const featuredRow = rows.find(r => r.type === 'featured');
-  const listRows = rows.filter(r => r.type === 'list');
-
-  const newsArticle = featuredRow ? {
-    title: featuredRow.name,
-    sectionTitle: featuredRow.section_title,
-    qa: [
-      { q: featuredRow.q1, a: featuredRow.a1 },
-      { q: featuredRow.q2, a: featuredRow.a2 },
-      { q: featuredRow.q3, a: featuredRow.a3 },
-    ].filter(item => item.q),
-  } : { title: '', sectionTitle: '', qa: [] };
-
-  const newsList = listRows.map(r => ({ name: r.name, desc: r.desc }));
-
-  return { newsArticle, newsList };
-}
-
-function transformCurriculum(rows) {
-  const lbs = rows.filter(r => r.type === 'lb');
-  const sessions = rows.filter(r => r.type === 'session');
-  const infos = rows.filter(r => r.type === 'info');
-  const currentCohort = infos.find(r => r.key === 'current_cohort');
-
-  const tuesday = sessions.filter(r => r.value.includes('화요일')).map(r => ({
-    session: r.key, time: r.value, maester: r.value2, desc: r.value3, hasPhoto: true,
-  }));
-
-  const fridayRow = sessions.find(r => r.value.includes('금요일'));
-  const friday = fridayRow ? {
-    session: fridayRow.key, time: fridayRow.value, desc: fridayRow.value3, hasPhoto: true,
-  } : { session: '', time: '', desc: '', hasPhoto: true };
-
-  return {
-    learningBlocks: lbs.map(r => ({ num: r.key, title: r.value, desc: r.value2 })),
-    tuesday,
-    friday,
-    currentCohort: currentCohort ? `${currentCohort.value}, ${currentCohort.value2}` : '',
-  };
-}
-
-// ── 전역 변수 (기존 코드 호환) ──
-
-let membersData = { moderators: { featured: {}, sub: [] }, maesters: [], lbMakers: [], makerPool: [] };
-let forumData = [];
-let nextWeekEvent = { title: '', desc: '', date: '', location: '', link: '#' };
-let featuredPost = { num: 0, date: '', title: '', desc: '', tags: [] };
-let newsArticle = { title: '', sectionTitle: '', qa: [] };
-let newsList = [];
-let curriculumData = { learningBlocks: [], tuesday: [], friday: {}, currentCohort: '' };
-
-// ── 데이터 로드 ──
-
-async function loadAllData() {
-  const page = document.body.dataset.page || 'forum';
-  const isArticle = window.location.pathname.includes('article.html');
-  const fetches = [];
-
-  // 페이지별 필요한 시트만 로드
-  if (page === 'members') {
-    fetches.push(fetchSheet(SHEETS.members).then(rows => { membersData = transformMembers(rows); }));
-  } else if (page === 'forum' || isArticle) {
-    fetches.push(fetchSheet(SHEETS.articles).then(rows => {
-      const result = transformArticles(rows);
-      forumData = result.forumData;
-      nextWeekEvent = result.nextWeekEvent;
-      featuredPost = result.featuredPost;
-    }));
-  } else if (page === 'news') {
-    fetches.push(fetchSheet(SHEETS.news).then(rows => {
-      const result = transformNews(rows);
-      newsArticle = result.newsArticle;
-      newsList = result.newsList;
-    }));
-  } else if (page === 'curriculum') {
-    fetches.push(fetchSheet(SHEETS.curriculum).then(rows => { curriculumData = transformCurriculum(rows); }));
-  } else if (page === 'search') {
-    // 검색은 멤버 + 아티클 둘 다 필요
-    fetches.push(fetchSheet(SHEETS.members).then(rows => { membersData = transformMembers(rows); }));
-    fetches.push(fetchSheet(SHEETS.articles).then(rows => {
-      const result = transformArticles(rows);
-      forumData = result.forumData;
-    }));
-  }
-
-  await Promise.all(fetches);
-}
+const curriculumData = {
+  "learningBlocks": [
+    {
+      "num": "LB1",
+      "title": "Finding Me",
+      "desc": "문제 인식과 방향 찾기"
+    },
+    {
+      "num": "LB2",
+      "title": "Hard Skill",
+      "desc": "문제 해결 역량 강화"
+    },
+    {
+      "num": "LB3",
+      "title": "Company Building",
+      "desc": "창업 실행과 구축"
+    },
+    {
+      "num": "LB4",
+      "title": "Stakeholders",
+      "desc": "협업과 이해관계자 관리"
+    }
+  ],
+  "tuesday": [
+    {
+      "session": "Soft Skill Session",
+      "time": "매주 화요일 오전",
+      "maester": "희진 마에스터",
+      "desc": "리더십 시뮬레이션, 심화 토론, 커뮤니티 활동",
+      "hasPhoto": true
+    },
+    {
+      "session": "AI Session",
+      "time": "매주 화요일 오후",
+      "maester": "진석 마에스터",
+      "desc": "AI 활용 실습, 프롬프트 엔지니어링, 비즈니스 적용",
+      "hasPhoto": true
+    }
+  ],
+  "friday": {
+    "session": "METES FORUM",
+    "time": "매주 금요일",
+    "desc": "업계 전문가 및 마이스터와의 대화, 실제 사례 공유, 네트워킹 중심의 세션입니다.",
+    "hasPhoto": true
+  },
+  "currentCohort": "Cohort 4, Learning Block 2"
+};

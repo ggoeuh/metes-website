@@ -1,7 +1,7 @@
 // ── Page Hero ──
 
 const pageHeroData = {
-  curriculum: { title: 'Curriculum', desc: 'METES는 매주 2일, 세션이 운영됩니다.<br>1 Cohort = 4 Learning Block = 총 40주 과정' },
+  curriculum: { title: 'Curriculum', desc: 'METES는 매주 2일, 세션이 운영됩니다.' },
   members: { title: 'Members', desc: 'METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.' },
   forum: { title: 'Article', desc: '각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.' },
   news: { title: 'News', desc: 'METES 출신 창업가들의 이야기를 전합니다.' },
@@ -167,39 +167,32 @@ function renderYearTabs(years, activeYear) {
 
 // ── 멤버 컴포넌트 ──
 
-function renderMemberCard(m, size) {
-  return `<div class="mem-avatar ${size}"></div>
-    <div class="mem-info">
-      <div class="mem-name">${m.name}</div>
-      <div class="mem-bio">${m.bio}</div>
-    </div>`;
-}
-
 function renderModerators(data) {
   const el = document.getElementById('moderators-content');
   if (!el) return;
-  el.innerHTML = `
-    <div class="mod-featured">${renderMemberCard(data.featured, 'large')}</div>
-    <div class="mod-row">
-      ${data.sub.map(m => `<div class="mem-card-h">${renderMemberCard(m, 'small')}</div>`).join('')}
-    </div>`;
+  const all = [data.featured, ...data.sub];
+  el.innerHTML = `<div class="mem-card-grid">
+    ${all.map(m => `
+      <div class="mem-card-v">
+        <div class="mem-avatar-v"></div>
+        <div class="mem-name">${m.name}</div>
+        <div class="mem-bio">${m.bio}</div>
+      </div>`).join('')}
+  </div>`;
 }
 
 function renderMaesters(list) {
   const el = document.getElementById('maesters-content');
   if (!el) return;
-  el.innerHTML = `<div style="border-top: 1px solid #ccc; padding-top: 20px;">
-    <div class="maester-grid">
-      ${list.map(m => `
-        <div class="maester-card">
-          <div class="mem-avatar small"></div>
-          <div class="mem-info">
-            <div class="mem-name">${m.name}</div>
-            <div class="mem-bio-sm">${m.bio}</div>
-            <div class="maester-session">${m.session}</div>
-          </div>
-        </div>`).join('')}
-    </div></div>`;
+  el.innerHTML = `<div class="mem-card-grid">
+    ${list.map(m => `
+      <div class="mem-card-v">
+        <div class="mem-avatar-v"></div>
+        <div class="mem-name">${m.name}</div>
+        <div class="mem-bio-sm">${m.bio}</div>
+        <div class="maester-session">${m.session}</div>
+      </div>`).join('')}
+  </div>`;
 }
 
 function renderMakerCard(m) {
@@ -253,7 +246,7 @@ function renderPagination(totalPages, activePage) {
   const el = document.getElementById('news-pagination');
   if (!el) return;
   el.innerHTML = Array.from({ length: totalPages }, (_, i) =>
-    `<button class="pg-btn${i + 1 === activePage ? ' active-pg' : ''}" style="${i + 1 === activePage ? '' : 'background:#fff;border:none;outline:none;box-shadow:none;'}">${i + 1}</button>`
+    `<button class="pg-btn${i + 1 === activePage ? ' active-pg' : ''}">${i + 1}</button>`
   ).join('');
 }
 
@@ -262,43 +255,46 @@ function renderPagination(totalPages, activePage) {
 function renderLearningBlocks(blocks) {
   const el = document.getElementById('learning-blocks');
   if (!el) return;
+  const currentLB = curriculumData.currentCohort || '';
+
   el.innerHTML = `
-    <div class="cur-lb-grid">${blocks.map(b => `
-      <div class="cur-lb-card">
-        <span class="cur-lb-num">${b.num}</span>
-        <h4>'${b.title}'</h4>
-        <p>${b.desc}</p>
-      </div>`).join('')}</div>
-    <p class="cur-cohort-notice">현재는 <strong>Cohort 4, Learning Block 2</strong>가 진행 중입니다. *중간 합류를 원하실 경우, <a href="mailto:sera@metes.io">문의</a> 주세요.</p>`;
+    <div class="cur-lb-grid">
+      ${blocks.map(b => `
+        <div class="cur-lb-card">
+          <span class="cur-lb-num">${b.num}</span>
+          <h4>${b.title}</h4>
+          <p>${b.desc}</p>
+        </div>`).join('')}
+    </div>
+    <p class="cur-cohort-notice">현재는 <strong>${currentLB}</strong>가 진행 중입니다. *중간 합류를 원하실 경우, <a href="mailto:sera@metes.io">문의</a> 주세요.</p>`;
 }
 
-function renderTuesdaySessions(sessions) {
-  const el = document.getElementById('tuesday-sessions');
+function renderSessionCards(tuesday, friday) {
+  const el = document.getElementById('session-cards');
   if (!el) return;
-  el.innerHTML = sessions.map((s, i) => `
-    <div class="cur-card${i > 0 ? ' cur-card-mt' : ''}">
-      ${s.hasPhoto ? '<div class="cur-photo"></div>' : ''}
-      <div class="cur-info">
-        <div class="cur-session-label">${s.session}</div>
-        <div class="cur-maester">${s.maester}</div>
-        <div class="cur-time">${s.time}</div>
-        <p class="cur-desc">${s.desc}</p>
-      </div>
-    </div>`).join('');
-}
 
-function renderFridaySession(session) {
-  const el = document.getElementById('friday-session');
-  if (!el) return;
-  el.innerHTML = `
-    <div class="cur-card">
-      <div class="cur-photo"></div>
-      <div class="cur-info">
-        <div class="cur-session-label">${session.session}</div>
-        <div class="cur-time">${session.time}</div>
-        <p class="cur-desc">${session.desc}</p>
+  function renderCard(s) {
+    const tags = s.tags ? s.tags.split('|').map(t => `<span class="tag">${t}</span>`).join('') : '';
+    return `
+    <div class="cur-session-card">
+      <div class="cur-session-img"></div>
+      <div class="cur-session-body">
+        <div class="cur-session-top">
+          <div class="cur-session-name">${s.maester || 'METES Forum'}${s.time.includes('오전') ? ' <span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? ' <span class="cur-session-ampm">오후</span>' : ''}</div>
+          <div class="cur-session-tag">${s.session}</div>
+        </div>
+        <p class="cur-session-desc">${s.desc}</p>
+        ${tags ? `<div class="cur-session-tags">${tags}</div>` : ''}
       </div>
     </div>`;
+  }
+
+  el.innerHTML = `<div class="cur-session-grid">
+    <div class="cur-day-label">Tue</div>
+    ${tuesday.map(renderCard).join('')}
+    <div class="cur-day-label">Fri</div>
+    ${renderCard(friday)}
+  </div>`;
 }
 
 // ── 아티클 상세 ──

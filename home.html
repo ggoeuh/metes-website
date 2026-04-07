@@ -6,7 +6,7 @@
 <title>Metes — Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=EB+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=42">
 </head>
 <body data-page="home">
 
@@ -40,13 +40,22 @@
     <div class="home-section-left">
       <h2 class="mem-heading">Vision</h2>
     </div>
-    <div class="home-section-right" style="border-top: 2px solid var(--black); padding-top: 20px;">
+    <div class="home-section-right" style="border-top: 2px solid var(--black); padding-top: 16px; margin-top: -16px;">
       <p class="home-about-body">METES는 단순한 지식 전달이 아닌, 스스로 문제를 정의하고 실행할 수 있는 인재를 만드는 것을 지향합니다.</p>
-      <ul class="home-vision-list">
-        <li>디지털 시대를 이끌 차세대 리더 양성</li>
-        <li>문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축</li>
-        <li>글로벌 네트워크를 통한 협업과 성장</li>
-      </ul>
+      <div class="home-vision-grid">
+        <div class="home-vision-item">
+          <div class="home-vision-icon"></div>
+          <p>디지털 시대를 이끌<br>차세대 리더 양성</p>
+        </div>
+        <div class="home-vision-item">
+          <div class="home-vision-icon"></div>
+          <p>문제를 사랑하고, 해결 과정<br>자체를 배우는 교육 환경 구축</p>
+        </div>
+        <div class="home-vision-item">
+          <div class="home-vision-icon"></div>
+          <p>글로벌 네트워크를 통한<br>협업과 성장</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -84,36 +93,36 @@
   </div>
 </section>
 
-<!-- SUPPORT -->
+<!-- SUPPORT & CONTACT -->
 <section style="background:#f5f4f0; padding:56px 0;">
   <div class="page home-section">
     <div class="home-section-left">
-      <h2 class="mem-heading">Support</h2>
-    </div>
-    <div class="home-section-right">
-      <p class="home-about-body">METES는 성주재단의 후원 프로그램으로 운영됩니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section style="background:var(--lavender); padding:56px 0;">
-  <div class="page home-section">
-    <div class="home-section-left">
-      <h2 class="mem-heading">Contact</h2>
+      <h2 class="mem-heading">Support<br>& Contact</h2>
     </div>
     <div class="home-section-right home-contact-info">
-      <p><strong>General Inquiries:</strong> sera@metes.io</p>
-      <p><strong>Newsletter:</strong> <a href="https://metes.stibee.com/" target="_blank" style="color:var(--black); text-decoration:underline;">metes.stibee.com</a></p>
-      <p><strong>Follow us:</strong> <a href="https://www.instagram.com/metes.institute/" target="_blank" style="color:var(--black); text-decoration:underline;">Instagram</a></p>
+      <p class="home-about-body" style="margin-bottom:24px;">METES는 성주재단의 후원 프로그램으로 운영됩니다.</p>
+      <div class="home-contact-grid">
+        <a href="mailto:sera@metes.io" class="home-contact-card">
+          <span class="home-contact-label">INQUIRIES</span>
+          <span class="home-contact-value">sera@metes.io</span>
+        </a>
+        <a href="https://metes.stibee.com/" target="_blank" class="home-contact-card">
+          <span class="home-contact-label">NEWSLETTER</span>
+          <span class="home-contact-value">metes.stibee.com</span>
+        </a>
+        <a href="https://www.instagram.com/metes.institute/" target="_blank" class="home-contact-card">
+          <span class="home-contact-label">FOLLOW</span>
+          <span class="home-contact-value">Instagram ↗</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer id="site-footer" style="margin-top:0;"></footer>
 
-<script src="js/data.js?v=16"></script>
-<script src="js/components.js?v=16"></script>
-<script src="js/main.js?v=16"></script>
+<script src="js/data.js?v=42"></script>
+<script src="js/components.js?v=42"></script>
+<script src="js/main.js?v=42"></script>
 </body>
 </html>

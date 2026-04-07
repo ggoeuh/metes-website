@@ -76,31 +76,44 @@ initNavIndicator();
   // News 페이지
   if (currentPage === 'news') {
     renderNewsArticle(newsArticle);
-    renderNewsGrid(newsList);
-    renderPagination(3, 1);
 
-    document.querySelectorAll('.pg-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.pg-btn').forEach(b => b.classList.remove('active-pg'));
-        btn.classList.add('active-pg');
+    const perPage = 8;
+    const totalPages = Math.max(1, Math.ceil(newsList.length / perPage));
+    let currentNewsPage = 1;
+
+    function showNewsPage(page) {
+      currentNewsPage = page;
+      const start = (page - 1) * perPage;
+      const pageItems = newsList.slice(start, start + perPage);
+      renderNewsGrid(pageItems);
+      renderPagination(totalPages, page);
+
+      // 페이지네이션 이벤트 재바인딩
+      document.querySelectorAll('.pg-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const num = parseInt(btn.textContent);
+          showNewsPage(num);
+        });
       });
-    });
 
-    const cards = document.querySelectorAll('#news-grid .news-card');
-    const cta = document.querySelector('.news-cta');
-    const gridContainer = document.querySelector('.news-list-left');
-    if (cards.length >= 3 && cta && gridContainer) {
-      const gridTop = gridContainer.getBoundingClientRect().top;
-      const secondRowTop = cards[2].getBoundingClientRect().top;
-      cta.style.top = (secondRowTop - gridTop) + 'px';
+      // CTA 위치 조정: 첫 번째 카드 하단에 맞춤
+      const newsCards = document.querySelectorAll('#news-grid .news-card');
+      const firstCard = newsCards[0];
+      const cta = document.querySelector('.news-cta');
+      const grid = document.querySelector('#news-grid');
+      if (firstCard && cta && grid) {
+        const cardBottom = grid.offsetTop + firstCard.offsetTop + firstCard.offsetHeight;
+        cta.style.top = (cardBottom - cta.offsetHeight) + 'px';
+      }
     }
+
+    showNewsPage(1);
   }
 
   // Curriculum 페이지
   if (currentPage === 'curriculum') {
     renderLearningBlocks(curriculumData.learningBlocks);
-    renderTuesdaySessions(curriculumData.tuesday);
-    renderFridaySession(curriculumData.friday);
+    renderSessionCards(curriculumData.tuesday, curriculumData.friday);
   }
 
   // Search 페이지
@@ -109,6 +122,14 @@ initNavIndicator();
     if (query) renderSearchResults(query);
   }
 
+  // 렌더링 완료 후 스크롤 애니메이션 초기화
+  setTimeout(initScrollReveal, 50);
+
+}
+
+// 홈 등 데이터 블록 밖 페이지도 커버
+if (currentPage === 'home') {
+  setTimeout(initScrollReveal, 50);
 }
 
 // ── 검색 기능 ──
@@ -185,5 +206,41 @@ function initNavIndicator() {
         setTimeout(() => window.location.href = href, 300);
       }
     });
+  });
+}
+
+// ── 스크롤 애니메이션 ──
+function initScrollReveal() {
+  // 섹션들에 scroll-reveal 클래스 추가
+  const selectors = [
+    '.mem-section', '.cur-section', '.news-layout', '.news-list-layout',
+    '.forum-hero', '.next-week-inner', '.cohort-section', '.archive-section',
+    '.home-about', '.home-section', '.home-offer-card', '.mem-card-v',
+    '.cur-session-card', '.cur-lb-card', '.cur-fee-row',
+    '.article-detail', '.article-related',
+  ];
+  document.querySelectorAll(selectors.join(',')).forEach((el, i) => {
+    el.classList.add('scroll-reveal');
+    el.style.transitionDelay = `${Math.min(i % 6, 3) * 0.1}s`;
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const elements = document.querySelectorAll('.scroll-reveal');
+
+  elements.forEach((el, i) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.style.transitionDelay = `${i * 0.15}s`;
+      setTimeout(() => el.classList.add('visible'), 100);
+    } else {
+      observer.observe(el);
+    }
   });
 }

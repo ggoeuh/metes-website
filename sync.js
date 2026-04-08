@@ -86,12 +86,12 @@ function transformMembers(rows) {
   const mp = rows.filter(r => r.type === 'maker_pool');
   return {
     moderators: {
-      featured: { name: mf?.name || '', bio: mf?.bio || '' },
-      sub: ms.map(r => ({ name: r.name, bio: r.bio })),
+      featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '' },
+      sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '' })),
     },
-    maesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session })),
-    lbMakers: mk.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean) })),
-    makerPool: mp.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean) })),
+    maesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '' })),
+    lbMakers: mk.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean), img: r.img || '' })),
+    makerPool: mp.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean), img: r.img || '' })),
   };
 }
 
@@ -116,7 +116,7 @@ function transformArticles(rows) {
         label,
         cards: cohortRows.filter(r => r.block === label).map(r => ({
           num: parseInt(r.num), date: formatDate(r.date), title: r.title,
-          tags: r.tags || '', content: r.content || '',
+          tags: r.tags || '', content: r.content || '', img: r.img || '',
         })),
       }));
       return { name, blocks };
@@ -156,7 +156,7 @@ function transformNews(rows) {
         { q: fr.q3, a: fr.a3 },
       ].filter(item => item.q),
     } : { title: '', sectionTitle: '', qa: [] },
-    newsList: lr.map(r => ({ name: r.name, desc: r.desc })),
+    newsList: lr.map(r => ({ name: r.name, desc: r.desc, img: r.img || '' })),
   };
 }
 
@@ -167,15 +167,15 @@ function transformCurriculum(rows) {
   const cc = infos.find(r => r.key === 'current_cohort');
 
   const tuesday = sessions.filter(r => r.value.includes('화요일')).map(r => ({
-    session: r.key, time: r.value, maester: r.value2, desc: r.value3, hasPhoto: true,
+    session: r.key, time: r.value, maester: r.value2, desc: r.value3, tags: r.tags || '', img: r.img || '', hasPhoto: true,
   }));
   const fridayRow = sessions.find(r => r.value.includes('금요일'));
 
   return {
     learningBlocks: lbs.map(r => ({ num: r.key, title: r.value, desc: r.value2 })),
     tuesday,
-    friday: fridayRow ? { session: fridayRow.key, time: fridayRow.value, desc: fridayRow.value3, hasPhoto: true }
-      : { session: '', time: '', desc: '', hasPhoto: true },
+    friday: fridayRow ? { session: fridayRow.key, time: fridayRow.value, desc: fridayRow.value3, tags: fridayRow.tags || '', img: fridayRow.img || '', hasPhoto: true }
+      : { session: '', time: '', desc: '', tags: '', img: '', hasPhoto: true },
     currentCohort: cc ? `${cc.value}, ${cc.value2}` : '',
   };
 }

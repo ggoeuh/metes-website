@@ -1,16 +1,18 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 8. 오전 12:19:31
+// 마지막 동기화: 2026. 4. 8. 오전 12:55:21
 
 const membersData = {
   "moderators": {
     "featured": {
       "name": "다니엘",
-      "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개"
+      "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
+      "img": ""
     },
     "sub": [
       {
         "name": "다니엘",
-        "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개"
+        "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
+        "img": ""
       }
     ]
   },
@@ -18,7 +20,8 @@ const membersData = {
     {
       "name": "다니엘",
       "bio": "한국 최대 AI 커뮤니티 000",
-      "session": "리더십 세션"
+      "session": "리더십 세션",
+      "img": ""
     }
   ],
   "lbMakers": [
@@ -27,7 +30,8 @@ const membersData = {
       "tags": [
         "# AI 디자이너",
         "# AI 강의"
-      ]
+      ],
+      "img": ""
     }
   ],
   "makerPool": [
@@ -36,7 +40,8 @@ const membersData = {
       "tags": [
         "# AI 디자이너",
         "# AI 강의"
-      ]
+      ],
+      "img": ""
     }
   ]
 };
@@ -56,7 +61,8 @@ const forumData = [
                 "date": "2025/ 01/ 16",
                 "title": "하이브 라틴 아메리카, 가종혁 대표",
                 "tags": "",
-                "content": ""
+                "content": "",
+                "img": ""
               }
             ]
           }
@@ -105,7 +111,8 @@ const newsArticle = {
 const newsList = [
   {
     "name": "데일리 트렌드, 윤소희 대표",
-    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ..."
+    "desc": "물류는 가장 정직aily Trend)는 복잡한 공급망 데이터와 시장의 소음 속에서 ...",
+    "img": ""
   }
 ];
 
@@ -137,21 +144,27 @@ const curriculumData = {
       "session": "Soft Skill Session",
       "time": "매주 화요일 오전",
       "maester": "희진 마에스터",
-      "desc": "리더십 시뮬레이션, 심화 토론, 커뮤니티 활동",
+      "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
+      "tags": "리더십|심화 토론|커뮤니티",
+      "img": "",
       "hasPhoto": true
     },
     {
       "session": "AI Session",
       "time": "매주 화요일 오후",
       "maester": "진석 마에스터",
-      "desc": "AI 활용 실습, 프롬프트 엔지니어링, 비즈니스 적용",
+      "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
+      "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
+      "img": "",
       "hasPhoto": true
     }
   ],
   "friday": {
     "session": "METES FORUM",
     "time": "매주 금요일",
-    "desc": "업계 전문가 및 마이스터와의 대화, 실제 사례 공유, 네트워킹 중심의 세션입니다.",
+    "desc": "업계 전문가 및 마이스터와의 대화, 실제 사례 공유, 네트워킹 중심 세션. 매 기수마다 다양한 분야의 연사가 참여합니다.",
+    "tags": "전문가 초청|사례 공유|네트워킹",
+    "img": "",
     "hasPhoto": true
   },
   "currentCohort": "Cohort 4, Learning Block 2"

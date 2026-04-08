@@ -3,7 +3,7 @@
 const pageHeroData = {
   curriculum: { title: 'Curriculum', desc: 'METES는 매주 2일, 세션이 운영됩니다.' },
   members: { title: 'Members', desc: 'METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.' },
-  forum: { title: 'Article', desc: '각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.' },
+  forum: { title: 'Article', desc: '각 분야의 마에스터를 초청하여 나눈 인사이트를<br class="mobile-br"> 아티클로 정리합니다.' },
   news: { title: 'News', desc: 'METES 출신 창업가들의 이야기를 전합니다.' },
 };
 
@@ -51,7 +51,33 @@ function renderNav(activePage) {
     </div>
     <input type="text" class="nav-search-input" placeholder="키워드를 입력해보세요.">
     <span class="nav-search" id="nav-search-toggle">🔍</span>
-    <button class="btn-lang">ENG</button>`;
+    <button class="btn-lang">ENG</button>
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">≡</button>`;
+
+  // 모바일 메뉴 배경 (오렌지)
+  const backdrop = document.createElement('div');
+  backdrop.className = 'mobile-menu-backdrop';
+  backdrop.id = 'mobile-menu-backdrop';
+  backdrop.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="mobile-menu-backdrop-cta">지원<br>하기 →</a>`;
+  document.body.appendChild(backdrop);
+
+  // 모바일 메뉴 오버레이
+  const overlay = document.createElement('div');
+  overlay.className = 'mobile-menu';
+  overlay.id = 'mobile-menu';
+  overlay.innerHTML = `
+    <div class="mobile-menu-top">
+      <button class="btn-lang-mobile active">ENG</button>
+      <button class="btn-lang-mobile">KOR</button>
+    </div>
+    <div class="mobile-menu-links">
+      ${navLinks.map(l => `<a href="${l.href}"${l.page === activePage ? ' class="active"' : ''}>${l.label}</a>`).join('')}
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="https://metes.stibee.com/" target="_blank">뉴스레터</a>
+      <a href="https://www.instagram.com/metes.institute/" target="_blank">Instagram</a>
+    </div>`;
+  document.body.appendChild(overlay);
 }
 
 function renderSearchResults(query) {
@@ -389,9 +415,10 @@ function renderArchive(yearData) {
         </div>`;
     }).join('');
 
+    const firstBlockLabel = cohort.blocks[0] ? cohort.blocks[0].label : '';
     html += `
       <div class="cohort-section"${isLast ? ' style="border-bottom:none;"' : ''}>
-        <div class="cohort-label">${cohort.name}</div>
+        <div class="cohort-label">${cohort.name} <span class="cohort-block-label">${firstBlockLabel}</span></div>
         <div class="cohort-content">${blocksHtml}</div>
       </div>`;
   });

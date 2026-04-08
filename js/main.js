@@ -11,6 +11,9 @@ if (!isArticleDetail) {
 }
 renderFooter();
 
+// 햄버거 메뉴
+initHamburger();
+
 // 검색 & 네비게이터 (데이터 불필요)
 initSearch();
 initNavIndicator();
@@ -206,6 +209,58 @@ function initNavIndicator() {
         setTimeout(() => window.location.href = href, 300);
       }
     });
+  });
+}
+
+// ── 모바일 br → space 변환 ──
+function initMobileBr() {
+  function toggle() {
+    const isMobile = window.innerWidth <= 720;
+    document.querySelectorAll('.mem-heading br, .forum-left h1 br').forEach(br => {
+      if (isMobile) {
+        if (!br.dataset.replaced) {
+          br.style.display = 'none';
+          br.insertAdjacentText('afterend', ' ');
+          br.dataset.replaced = 'true';
+        }
+      }
+    });
+  }
+  toggle();
+}
+initMobileBr();
+
+// ── 햄버거 메뉴 ──
+function initHamburger() {
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-menu-backdrop');
+  if (!btn || !menu) return;
+
+  function toggleMenu(open) {
+    menu.classList.toggle('open', open);
+    if (backdrop) backdrop.classList.toggle('open', open);
+    btn.textContent = open ? '✕' : '≡';
+    document.body.style.overflow = open ? 'hidden' : '';
+    const badge = document.getElementById('support-badge');
+    if (badge) badge.style.display = open ? 'none' : '';
+  }
+
+  btn.addEventListener('click', () => {
+    toggleMenu(!menu.classList.contains('open'));
+  });
+
+  // 배경 클릭 시 닫기
+  if (backdrop) backdrop.addEventListener('click', () => toggleMenu(false));
+
+  // 메뉴 링크 클릭 시 닫기
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // 화면 리사이즈 시 닫기
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) toggleMenu(false);
   });
 }
 

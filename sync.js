@@ -13,6 +13,7 @@ const SHEETS = {
   news:       `${SHEET_BASE}?gid=466223975&single=true&output=csv`,
   articles:   `${SHEET_BASE}?gid=636670025&single=true&output=csv`,
   curriculum: `${SHEET_BASE}?gid=1927098854&single=true&output=csv`,
+  site:       `${SHEET_BASE}?gid=880266556&single=true&output=csv`,
 };
 
 function fetch(url) {
@@ -180,20 +181,73 @@ function transformCurriculum(rows) {
   };
 }
 
+function transformSite(rows) {
+  const homeRows = rows.filter(r => r.page === 'home');
+  const heroRows = rows.filter(r => r.page === 'hero');
+
+  // Home data
+  const get = (section, key) => {
+    const r = homeRows.find(r => r.section === section && r.key === key);
+    return r ? r.value_ko : '';
+  };
+  const getImg = (section, key) => {
+    const r = homeRows.find(r => r.section === section && r.key === key);
+    return r && r.img ? r.img : '';
+  };
+
+  const homeData = {
+    hero: { sub: get('hero', 'sub'), title: get('hero', 'title') },
+    about: { body: get('about', 'body'), quote: get('about', 'quote'), body2: get('about', 'body2') },
+    vision: [
+      { text: get('vision', 'item1'), img: getImg('vision', 'item1') },
+      { text: get('vision', 'item2'), img: getImg('vision', 'item2') },
+      { text: get('vision', 'item3'), img: getImg('vision', 'item3') },
+    ],
+    offer: [
+      { title: get('offer', 'card1_title'), desc: get('offer', 'card1_desc'), img: getImg('offer', 'card1_title') },
+      { title: get('offer', 'card2_title'), desc: get('offer', 'card2_desc'), img: getImg('offer', 'card2_title') },
+      { title: get('offer', 'card3_title'), desc: get('offer', 'card3_desc'), img: getImg('offer', 'card3_title') },
+      { title: get('offer', 'card4_title'), desc: get('offer', 'card4_desc'), img: getImg('offer', 'card4_title') },
+    ],
+    support: { body: get('support', 'body') },
+    contact: {
+      email: get('contact', 'email'),
+      newsletter: get('contact', 'newsletter'),
+      instagram: get('contact', 'instagram'),
+    },
+  };
+
+  // Page hero data
+  const pageHeroData = {};
+  const heroPages = [...new Set(heroRows.map(r => r.section))];
+  heroPages.forEach(page => {
+    const titleRow = heroRows.find(r => r.section === page && r.key === 'title');
+    const descRow = heroRows.find(r => r.section === page && r.key === 'desc');
+    pageHeroData[page] = {
+      title: titleRow ? titleRow.value_ko : '',
+      desc: descRow ? descRow.value_ko : '',
+    };
+  });
+
+  return { homeData, pageHeroData };
+}
+
 async function main() {
   console.log('📡 Google Sheets에서 데이터를 가져오는 중...');
 
-  const [membersCSV, articlesCSV, newsCSV, curriculumCSV] = await Promise.all([
+  const [membersCSV, articlesCSV, newsCSV, curriculumCSV, siteCSV] = await Promise.all([
     fetch(SHEETS.members),
     fetch(SHEETS.articles),
     fetch(SHEETS.news),
     fetch(SHEETS.curriculum),
+    fetch(SHEETS.site),
   ]);
 
   const membersData = transformMembers(parseCSV(membersCSV));
   const { forumData, nextWeekEvent, featuredPost } = transformArticles(parseCSV(articlesCSV));
   const { newsArticle, newsList } = transformNews(parseCSV(newsCSV));
   const curriculumData = transformCurriculum(parseCSV(curriculumCSV));
+  const { homeData, pageHeroData } = transformSite(parseCSV(siteCSV));
 
   const output = `// ── 자동 생성 파일 (node sync.js) ──
 // 마지막 동기화: ${new Date().toLocaleString('ko-KR')}
@@ -211,6 +265,10 @@ const newsArticle = ${JSON.stringify(newsArticle, null, 2)};
 const newsList = ${JSON.stringify(newsList, null, 2)};
 
 const curriculumData = ${JSON.stringify(curriculumData, null, 2)};
+
+const homeData = ${JSON.stringify(homeData, null, 2)};
+
+const pageHeroData = ${JSON.stringify(pageHeroData, null, 2)};
 `;
 
   fs.writeFileSync(path.join(__dirname, 'js', 'data.js'), output, 'utf8');

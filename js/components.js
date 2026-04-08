@@ -1,11 +1,6 @@
 // ── Page Hero ──
 
-const pageHeroData = {
-  curriculum: { title: 'Curriculum', desc: 'METES는 매주 2일, 세션이 운영됩니다.' },
-  members: { title: 'Members', desc: 'METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.' },
-  forum: { title: 'Article', desc: '각 분야의 마에스터를 초청하여 나눈 인사이트를<br class="mobile-br"> 아티클로 정리합니다.' },
-  news: { title: 'News', desc: 'METES 출신 창업가들의 이야기를 전합니다.' },
-};
+// pageHeroData는 data.js에서 로드됨
 
 function renderPageHero(page) {
   const el = document.getElementById('page-hero');

@@ -132,6 +132,7 @@ initNavIndicator();
 
 // 홈 등 데이터 블록 밖 페이지도 커버
 if (currentPage === 'home') {
+  renderHome();
   setTimeout(initScrollReveal, 50);
 }
 

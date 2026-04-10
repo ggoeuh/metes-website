@@ -176,6 +176,32 @@ function renderNextWeek(event) {
     <div class="next-week-img">IMAGE</div>`;
 }
 
+// ── Home 페이지 렌더 ──
+function renderHome() {
+  if (typeof homeData === 'undefined') return;
+
+  const visionEl = document.getElementById('home-vision-grid');
+  if (visionEl) {
+    visionEl.innerHTML = homeData.vision.map(v => `
+      <div class="home-vision-item">
+        <div class="home-vision-icon"${v.img ? ` style="background-image:url('${v.img}');background-size:cover;background-position:center;"` : ''}></div>
+        <p>${v.text}</p>
+      </div>
+    `).join('');
+  }
+
+  const offerEl = document.getElementById('home-offer-grid');
+  if (offerEl) {
+    offerEl.innerHTML = homeData.offer.map(o => `
+      <div class="home-offer-card">
+        <div class="home-offer-img"${o.img ? ` style="background-image:url('${o.img}');background-size:cover;background-position:center;"` : ''}></div>
+        <h3>${o.title}</h3>
+        <p>${o.desc}</p>
+      </div>
+    `).join('');
+  }
+}
+
 // ── 연도 탭 ──
 
 function renderYearTabs(years, activeYear) {

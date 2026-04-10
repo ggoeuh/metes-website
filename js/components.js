@@ -17,7 +17,7 @@ function renderSupportBadge() {
   const el = document.getElementById('support-badge');
   if (!el) return;
   const badge = (typeof siteData !== 'undefined') ? siteOne('ui', 'badge') : { title: '지원 링크', desc: '바로가기' };
-  el.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="support-badge"><span>${badge.title || ''}<br>${badge.desc || ''}<br>→</span></a>`;
+  el.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="support-badge"><span>${badge.title || ''}<br>${badge.desc || ''}</span></a>`;
 }
 
 function renderNav(activePage) {

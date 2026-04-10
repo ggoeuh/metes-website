@@ -178,13 +178,13 @@ function transformCurriculum(rows, lang) {
   const infos = rows.filter(r => r.type === 'info');
   const cc = infos.find(r => r.key === 'current_cohort');
 
-  const tueKeyword = lang === 'eng' ? 'Tuesday' : '화요일';
-  const friKeyword = lang === 'eng' ? 'Friday' : '금요일';
+  const isTue = (v) => v && (v.includes('화요일') || /tue/i.test(v));
+  const isFri = (v) => v && (v.includes('금요일') || /fri/i.test(v));
 
-  const tuesday = sessions.filter(r => r.value.includes(tueKeyword)).map(r => ({
+  const tuesday = sessions.filter(r => isTue(r.value)).map(r => ({
     session: r.key, time: r.value, maester: r.value2, desc: r.value3, tags: r.tags || '', img: r.img || '', hasPhoto: true,
   }));
-  const fridayRow = sessions.find(r => r.value.includes(friKeyword));
+  const fridayRow = sessions.find(r => isFri(r.value));
 
   return {
     learningBlocks: lbs.map(r => ({ num: r.key, title: r.value, desc: r.value2 })),

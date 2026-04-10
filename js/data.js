@@ -1,5 +1,9 @@
 // ── 자동 생성 파일 (node sync.js) ──
+<<<<<<< Updated upstream
 // 마지막 동기화: 2026. 4. 10. PM 1:24:18
+=======
+// 마지막 동기화: 2026. 4. 10. 오후 10:49:54
+>>>>>>> Stashed changes
 
 const dataByLang = {
   kor: {
@@ -198,7 +202,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1HORr-jOJPeX2CFu-b_FsotOjQS4e7P1V/view?usp=share_link"
         }
       ],
       "item2": [
@@ -207,7 +211,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1kVXBv0k2CP5EzgFGz30S_xSvRW3hj1Qv/view?usp=share_link"
         }
       ],
       "item3": [
@@ -216,7 +220,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1FgG7NNVHHR7mmu1q7oXThQl9VJVHV1sQ/view?usp=share_link"
         }
       ]
     },
@@ -227,7 +231,7 @@ const dataByLang = {
           "desc": "업계 전문가와 창업 선배(마이스터)가 프로젝트와 성장을 직접 가이드",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1GJ9S-hc4HgEZJnHnVrNfLFmFKpiXRYCW/view?usp=share_link"
         }
       ],
       "card2": [
@@ -236,7 +240,7 @@ const dataByLang = {
           "desc": "학력, 전공 제한 없는 누구나 참여 가능한 구조",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1Mj8VmtDXf9Dbw8C_E63mtp9QJqh-6FZX/view?usp=share_link"
         }
       ],
       "card3": [
@@ -245,7 +249,7 @@ const dataByLang = {
           "desc": "강의가 아닌 프로젝트와 문제 해결 중심 학습",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1kCkyFyuAXucMscFgCywjB6fGkSNPiJog/view?usp=share_link"
         }
       ],
       "card4": [
@@ -254,7 +258,7 @@ const dataByLang = {
           "desc": "국내외 전문가 및 커뮤니티와의 연결 기회 제공",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1b4qtyXXM6Kc7P_1hiTfP9Go6H4ILzmul/view?usp=share_link"
         }
       ]
     },
@@ -722,12 +726,31 @@ const dataByLang = {
         "desc": "협업과 이해관계자 관리"
       }
     ],
-    "tuesday": [],
+    "tuesday": [
+      {
+        "session": "AI Session",
+        "time": "매주 화요일 오전",
+        "maester": "진석 마에스터",
+        "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
+        "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
+        "img": "",
+        "hasPhoto": true
+      },
+      {
+        "session": "Leadership Session",
+        "time": "매주 화요일 오후",
+        "maester": "희진 마에스터",
+        "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
+        "tags": "리더십|심화 토론|커뮤니티",
+        "img": "",
+        "hasPhoto": true
+      }
+    ],
     "friday": {
-      "session": "",
-      "time": "",
-      "desc": "",
-      "tags": "",
+      "session": "METES FORUM",
+      "time": "매주 금요일",
+      "desc": "업계 전문가 및 마이스터와의 대화, 실제 사례 공유, 네트워킹 중심 세션. 매 기수마다 다양한 분야의 연사가 참여합니다.",
+      "tags": "전문가 초청|사례 공유|네트워킹",
       "img": "",
       "hasPhoto": true
     },
@@ -766,7 +789,7 @@ const dataByLang = {
     "vision": {
       "item1": [
         {
-          "title": "Nurturing next-generation leaders for the digital era",
+          "title": "Nurturing next-generation leaders\nfor the digital era",
           "desc": "",
           "extra1": "",
           "extra2": "",
@@ -775,7 +798,7 @@ const dataByLang = {
       ],
       "item2": [
         {
-          "title": "Building a learning environment that embraces problems",
+          "title": "Building a learning environment\nthat embraces problems",
           "desc": "",
           "extra1": "",
           "extra2": "",
@@ -784,7 +807,7 @@ const dataByLang = {
       ],
       "item3": [
         {
-          "title": "Enabling collaboration and growth through a global network",
+          "title": "Enabling collaboration and growth\nthrough a global network",
           "desc": "",
           "extra1": "",
           "extra2": "",
@@ -796,7 +819,7 @@ const dataByLang = {
       "card1": [
         {
           "title": "Expert Mentorship",
-          "desc": "Industry experts and experienced founders directly guide projects",
+          "desc": "Industry experts and experienced\nfounders directly guide projects",
           "extra1": "",
           "extra2": "",
           "img": "drive.google.com/uc?id=..."

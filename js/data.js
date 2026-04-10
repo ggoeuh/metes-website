@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. AM 7:46:09
+// 마지막 동기화: 2026. 4. 10. AM 8:16:01
 
 const membersData = {
   "moderators": {
@@ -137,20 +137,20 @@ const curriculumData = {
   ],
   "tuesday": [
     {
-      "session": "Leadership Session",
-      "time": "매주 화요일 오후",
-      "maester": "희진 마에스터",
-      "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
-      "tags": "리더십|심화 토론|커뮤니티",
-      "img": "",
-      "hasPhoto": true
-    },
-    {
       "session": "AI Session",
       "time": "매주 화요일 오전",
       "maester": "진석 마에스터",
       "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
       "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
+      "img": "",
+      "hasPhoto": true
+    },
+    {
+      "session": "Leadership Session",
+      "time": "매주 화요일 오후",
+      "maester": "희진 마에스터",
+      "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
+      "tags": "리더십|심화 토론|커뮤니티",
       "img": "",
       "hasPhoto": true
     }
@@ -182,7 +182,7 @@ const homeData = {
       "img": "https://drive.google.com/uc?id=1o3uScivJAzWVgnR06h1BHj_L9m-3S5xd"
     },
     {
-      "text": "문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축",
+      "text": "문제를 사랑하고, 해결 과정 자체를 \n배우는 교육 환경 구축",
       "img": "https://drive.google.com/uc?id=17LEN6zAxWbwRmdPjN3iIS7PJE8uvT23N"
     },
     {

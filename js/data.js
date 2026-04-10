@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. 오후 4:22:12
+// 마지막 동기화: 2026. 4. 10. AM 7:46:09
 
 const membersData = {
   "moderators": {
@@ -16,14 +16,7 @@ const membersData = {
       }
     ]
   },
-  "maesters": [
-    {
-      "name": "다니엘",
-      "bio": "한국 최대 AI 커뮤니티 000",
-      "session": "리더십 세션",
-      "img": ""
-    }
-  ],
+  "maesters": [],
   "lbMakers": [
     {
       "name": "다니엘",
@@ -133,7 +126,7 @@ const curriculumData = {
     },
     {
       "num": "LB3",
-      "title": "Company Building",
+      "title": "Creating Your Own Company",
       "desc": "창업 실행과 구축"
     },
     {
@@ -144,7 +137,7 @@ const curriculumData = {
   ],
   "tuesday": [
     {
-      "session": "Soft Skill Session",
+      "session": "Leadership Session",
       "time": "매주 화요일 오후",
       "maester": "희진 마에스터",
       "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",

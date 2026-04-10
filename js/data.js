@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. 오후 10:57:29
+// 마지막 동기화: 2026. 4. 10. 오후 11:34:38
 
 const dataByLang = {
   kor: {
@@ -1185,6 +1185,30 @@ const dataByLang = {
   }
 }
 };
+
+const controlMap = {
+  "page.curriculum": true,
+  "page.members": true,
+  "page.forum": true,
+  "page.news": false,
+  "section.about": true,
+  "section.vision": true,
+  "section.offer": true,
+  "section.support": true,
+  "section.contact": true,
+  "section.moderator": true,
+  "section.maester": true,
+  "section.maker": true,
+  "section.maker_pool": false,
+  "section.session": true,
+  "section.program": true,
+  "section.cost": true,
+  "ui.support_badge": true,
+  "ui.search": true
+};
+function isEnabled(key) {
+  return controlMap[key] !== false;
+}
 
 const currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'kor';
 const _data = dataByLang[currentLang] || dataByLang.kor;

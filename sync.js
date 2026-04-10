@@ -24,6 +24,7 @@ const SHEETS = {
     articles:   `${SHEET_BASE}?gid=189461007&single=true&output=csv`,
     curriculum: `${SHEET_BASE}?gid=799776214&single=true&output=csv`,
   },
+  control: `${SHEET_BASE}?gid=1977322232&single=true&output=csv`,
 };
 
 function fetch(url) {
@@ -244,10 +245,25 @@ async function buildLang(lang) {
   };
 }
 
+function transformControl(rows) {
+  const map = {};
+  rows.forEach(r => {
+    if (!r.key) return;
+    const v = String(r.enabled || '').trim().toUpperCase();
+    map[r.key] = !(v === 'FALSE' || v === '0' || v === 'NO');
+  });
+  return map;
+}
+
 async function main() {
   console.log('📡 Google Sheets에서 데이터를 가져오는 중 (한/영)...');
 
-  const [kor, eng] = await Promise.all([buildLang('kor'), buildLang('eng')]);
+  const [kor, eng, controlCSV] = await Promise.all([
+    buildLang('kor'),
+    buildLang('eng'),
+    fetch(SHEETS.control),
+  ]);
+  const controlMap = transformControl(parseCSV(controlCSV));
 
   const output = `// ── 자동 생성 파일 (node sync.js) ──
 // 마지막 동기화: ${new Date().toLocaleString('ko-KR')}
@@ -256,6 +272,11 @@ const dataByLang = {
   kor: ${JSON.stringify(kor, null, 2)},
   eng: ${JSON.stringify(eng, null, 2)}
 };
+
+const controlMap = ${JSON.stringify(controlMap, null, 2)};
+function isEnabled(key) {
+  return controlMap[key] !== false;
+}
 
 const currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'kor';
 const _data = dataByLang[currentLang] || dataByLang.kor;

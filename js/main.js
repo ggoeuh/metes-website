@@ -14,6 +14,31 @@ renderFooter();
 // 모든 [data-text] 자동 채우기
 applyDataText();
 
+// 컨트롤 시트로 섹션/페이지 비활성화 처리
+(function applyControl() {
+  if (typeof isEnabled === 'undefined') return;
+
+  // 페이지 비활성화: 해당 페이지면 home으로 리다이렉트
+  const pageMap = { curriculum: 'page.curriculum', members: 'page.members', forum: 'page.forum', news: 'page.news' };
+  if (pageMap[currentPage] && !isEnabled(pageMap[currentPage])) {
+    window.location.href = 'home.html';
+    return;
+  }
+
+  // 섹션 비활성화: data-section 속성으로 매칭
+  const sections = ['about','vision','offer','support','contact','moderator','maester','maker','maker_pool','session','program','cost'];
+  sections.forEach(s => {
+    if (!isEnabled('section.' + s)) {
+      document.querySelectorAll('[data-section="' + s + '"]').forEach(el => { el.style.display = 'none'; });
+    }
+  });
+
+  // 검색 아이콘
+  if (!isEnabled('ui.search')) {
+    document.querySelectorAll('.nav-search, .nav-search-input').forEach(el => { el.style.display = 'none'; });
+  }
+})();
+
 // 햄버거 메뉴
 initHamburger();
 

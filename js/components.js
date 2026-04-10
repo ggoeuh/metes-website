@@ -16,6 +16,10 @@ function renderPageHero(page) {
 function renderSupportBadge() {
   const el = document.getElementById('support-badge');
   if (!el) return;
+  if (typeof isEnabled !== 'undefined' && !isEnabled('ui.support_badge')) {
+    el.style.display = 'none';
+    return;
+  }
   const badge = (typeof siteData !== 'undefined') ? siteOne('ui', 'badge') : { title: '지원 링크', desc: '바로가기' };
   el.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="support-badge"><span>${badge.title || ''}<br>${badge.desc || ''}</span></a>`;
 }
@@ -39,7 +43,7 @@ function renderNav(activePage) {
     { href: 'members.html', label: labels.members, page: 'members' },
     { href: 'index.html', label: labels.forum, page: 'forum' },
     { href: 'news.html', label: labels.news, page: 'news' },
-  ];
+  ].filter(l => typeof isEnabled === 'undefined' || isEnabled('page.' + l.page));
 
   if (activePage === 'search') {
     const query = new URLSearchParams(window.location.search).get('q') || '';

@@ -338,7 +338,7 @@ function renderYearTabs(years, activeYear) {
 function renderModerators(data) {
   const el = document.getElementById('moderators-content');
   if (!el) return;
-  const all = [data.featured, ...data.sub];
+  const all = [data.featured, ...data.sub].filter(m => m && (m.name || m.bio));
   el.innerHTML = `<div class="mem-card-grid">
     ${all.map(m => `
       <div class="mem-card-v">

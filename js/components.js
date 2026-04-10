@@ -185,6 +185,10 @@ function fixDriveUrl(url) {
   return url;
 }
 
+function nl2br(text) {
+  return (text || '').replace(/\n/g, '<br>');
+}
+
 function renderHome() {
   if (typeof homeData === 'undefined') return;
 
@@ -195,7 +199,7 @@ function renderHome() {
       return `
         <div class="home-vision-item">
           <div class="home-vision-icon"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
-          <p>${v.text}</p>
+          <p>${nl2br(v.text)}</p>
         </div>
       `;
     }).join('');
@@ -208,8 +212,8 @@ function renderHome() {
       return `
         <div class="home-offer-card">
           <div class="home-offer-img"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
-          <h3>${o.title}</h3>
-          <p>${o.desc}</p>
+          <h3>${nl2br(o.title)}</h3>
+          <p>${nl2br(o.desc)}</p>
         </div>
       `;
     }).join('');

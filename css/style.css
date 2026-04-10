@@ -941,8 +941,8 @@ a.support-badge {
   text-align: center;
 }
 .home-vision-icon {
-  width: 72px;
-  height: 72px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
   background: var(--gray-light);
   margin: 0 auto 12px;
@@ -1736,8 +1736,8 @@ footer {
     white-space: nowrap;
   }
   .home-vision-icon {
-    width: 48px;
-    height: 48px;
+    width: 72px;
+    height: 72px;
   }
 
   /* PAGE HERO DESC - line-height */

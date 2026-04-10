@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 8. 오후 8:34:45
+// 마지막 동기화: 2026. 4. 10. 오후 4:22:12
 
 const membersData = {
   "moderators": {
@@ -186,15 +186,15 @@ const homeData = {
   "vision": [
     {
       "text": "디지털 시대를 이끌 차세대 리더 양성",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1o3uScivJAzWVgnR06h1BHj_L9m-3S5xd"
     },
     {
       "text": "문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=17LEN6zAxWbwRmdPjN3iIS7PJE8uvT23N"
     },
     {
       "text": "글로벌 네트워크를 통한 협업과 성장",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1tdTsaP7rCqsDF0EA_r1VmP7KNcbV737z"
     }
   ],
   "offer": [

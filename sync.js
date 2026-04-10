@@ -93,7 +93,7 @@ function formatDate(d) {
 function transformMembers(rows) {
   const mf = rows.filter(r => r.type === 'moderator_featured')[0];
   const ms = rows.filter(r => r.type === 'moderator');
-  const ma = rows.filter(r => r.type === 'maester');
+  const ma = rows.filter(r => r.type === 'maester' || r.type === 'miester');
   const mk = rows.filter(r => r.type === 'maker');
   const mp = rows.filter(r => r.type === 'maker_pool');
   return {

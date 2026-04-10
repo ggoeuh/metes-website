@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. 오후 11:34:38
+// 마지막 동기화: 2026. 4. 10. 오후 11:44:51
 
 const dataByLang = {
   kor: {
@@ -18,7 +18,14 @@ const dataByLang = {
         }
       ]
     },
-    "maesters": [],
+    "maesters": [
+      {
+        "name": "다니엘",
+        "bio": "한국 최대 AI 커뮤니티 000",
+        "session": "리더십 세션",
+        "img": ""
+      }
+    ],
     "lbMakers": [
       {
         "name": "다니엘",
@@ -609,7 +616,14 @@ const dataByLang = {
         }
       ]
     },
-    "maesters": [],
+    "maesters": [
+      {
+        "name": "다니엘",
+        "bio": "한국 최대 AI 커뮤니티 000",
+        "session": "리더십 세션",
+        "img": ""
+      }
+    ],
     "lbMakers": [
       {
         "name": "다니엘",

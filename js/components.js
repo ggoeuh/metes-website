@@ -177,28 +177,42 @@ function renderNextWeek(event) {
 }
 
 // ── Home 페이지 렌더 ──
+function fixDriveUrl(url) {
+  if (!url) return '';
+  // https://drive.google.com/uc?id=FILE_ID → https://lh3.googleusercontent.com/d/FILE_ID
+  const match = url.match(/[?&]id=([^&]+)/) || url.match(/\/d\/([^/]+)/);
+  if (match) return `https://lh3.googleusercontent.com/d/${match[1]}=w1000`;
+  return url;
+}
+
 function renderHome() {
   if (typeof homeData === 'undefined') return;
 
   const visionEl = document.getElementById('home-vision-grid');
   if (visionEl) {
-    visionEl.innerHTML = homeData.vision.map(v => `
-      <div class="home-vision-item">
-        <div class="home-vision-icon"${v.img ? ` style="background-image:url('${v.img}');background-size:cover;background-position:center;"` : ''}></div>
-        <p>${v.text}</p>
-      </div>
-    `).join('');
+    visionEl.innerHTML = homeData.vision.map(v => {
+      const img = fixDriveUrl(v.img);
+      return `
+        <div class="home-vision-item">
+          <div class="home-vision-icon"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
+          <p>${v.text}</p>
+        </div>
+      `;
+    }).join('');
   }
 
   const offerEl = document.getElementById('home-offer-grid');
   if (offerEl) {
-    offerEl.innerHTML = homeData.offer.map(o => `
-      <div class="home-offer-card">
-        <div class="home-offer-img"${o.img ? ` style="background-image:url('${o.img}');background-size:cover;background-position:center;"` : ''}></div>
-        <h3>${o.title}</h3>
-        <p>${o.desc}</p>
-      </div>
-    `).join('');
+    offerEl.innerHTML = homeData.offer.map(o => {
+      const img = fixDriveUrl(o.img);
+      return `
+        <div class="home-offer-card">
+          <div class="home-offer-img"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
+          <h3>${o.title}</h3>
+          <p>${o.desc}</p>
+        </div>
+      `;
+    }).join('');
   }
 }
 

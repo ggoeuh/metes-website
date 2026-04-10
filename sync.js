@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Google Sheets → data.js 동기화 스크립트
+// Google Sheets → data.js 동기화 스크립트 (한/영)
 // 사용법: node sync.js
 
 const https = require('https');
@@ -8,12 +8,22 @@ const fs = require('fs');
 const path = require('path');
 
 const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQGLwxxiXmtN5aLVeGVZrRn068Ix7fEMAKDoOBV21GiAGw6fQgBn4yPHfzWbIvwu3nTNOE_uS7vmnAG/pub';
+
 const SHEETS = {
-  members:    `${SHEET_BASE}?gid=0&single=true&output=csv`,
-  news:       `${SHEET_BASE}?gid=466223975&single=true&output=csv`,
-  articles:   `${SHEET_BASE}?gid=636670025&single=true&output=csv`,
-  curriculum: `${SHEET_BASE}?gid=1927098854&single=true&output=csv`,
-  site:       `${SHEET_BASE}?gid=880266556&single=true&output=csv`,
+  kor: {
+    site:       `${SHEET_BASE}?gid=880266556&single=true&output=csv`,
+    members:    `${SHEET_BASE}?gid=0&single=true&output=csv`,
+    news:       `${SHEET_BASE}?gid=466223975&single=true&output=csv`,
+    articles:   `${SHEET_BASE}?gid=636670025&single=true&output=csv`,
+    curriculum: `${SHEET_BASE}?gid=1927098854&single=true&output=csv`,
+  },
+  eng: {
+    site:       `${SHEET_BASE}?gid=555351381&single=true&output=csv`,
+    members:    `${SHEET_BASE}?gid=111990366&single=true&output=csv`,
+    news:       `${SHEET_BASE}?gid=1133512063&single=true&output=csv`,
+    articles:   `${SHEET_BASE}?gid=189461007&single=true&output=csv`,
+    curriculum: `${SHEET_BASE}?gid=799776214&single=true&output=csv`,
+  },
 };
 
 function fetch(url) {
@@ -64,7 +74,7 @@ function parseCSV(text) {
   if (rows.length < 2) return [];
   const headers = rows[0];
   return rows.slice(1)
-    .filter(r => r[0] && !r[0].startsWith('[예시]'))
+    .filter(r => r[0] && !r[0].startsWith('[예시]') && !r[0].startsWith('[Example]'))
     .map(r => {
       const obj = {};
       headers.forEach((h, i) => { obj[h.trim()] = (r[i] || '').trim(); });
@@ -96,7 +106,7 @@ function transformMembers(rows) {
   };
 }
 
-function transformArticles(rows) {
+function transformArticles(rows, lang) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -125,13 +135,14 @@ function transformArticles(rows) {
     return { year, cohorts, moreCards: [] };
   });
 
+  const defaultNextTitle = lang === 'eng' ? 'Next session is being prepared' : '다음 세션을 준비 중입니다';
   const nextWeekEvent = nextWeekRow ? {
     title: nextWeekRow.title,
     desc: nextWeekRow.content ? nextWeekRow.content.split('||')[0].split('::')[0] : '',
     date: formatDate(nextWeekRow.date),
     location: nextWeekRow.location || '',
     link: 'https://walla.my/a/metes_cohort4',
-  } : { title: '다음 세션을 준비 중입니다', desc: '', date: '', location: '', link: 'https://walla.my/a/metes_cohort4' };
+  } : { title: defaultNextTitle, desc: '', date: '', location: '', link: 'https://walla.my/a/metes_cohort4' };
 
   const featuredPost = featuredRow ? {
     num: parseInt(featuredRow.num),
@@ -161,16 +172,19 @@ function transformNews(rows) {
   };
 }
 
-function transformCurriculum(rows) {
+function transformCurriculum(rows, lang) {
   const lbs = rows.filter(r => r.type === 'lb');
   const sessions = rows.filter(r => r.type === 'session');
   const infos = rows.filter(r => r.type === 'info');
   const cc = infos.find(r => r.key === 'current_cohort');
 
-  const tuesday = sessions.filter(r => r.value.includes('화요일')).map(r => ({
+  const tueKeyword = lang === 'eng' ? 'Tuesday' : '화요일';
+  const friKeyword = lang === 'eng' ? 'Friday' : '금요일';
+
+  const tuesday = sessions.filter(r => r.value.includes(tueKeyword)).map(r => ({
     session: r.key, time: r.value, maester: r.value2, desc: r.value3, tags: r.tags || '', img: r.img || '', hasPhoto: true,
   }));
-  const fridayRow = sessions.find(r => r.value.includes('금요일'));
+  const fridayRow = sessions.find(r => r.value.includes(friKeyword));
 
   return {
     learningBlocks: lbs.map(r => ({ num: r.key, title: r.value, desc: r.value2 })),
@@ -181,14 +195,14 @@ function transformCurriculum(rows) {
   };
 }
 
-function transformSite(rows) {
+function transformSite(rows, lang) {
+  const valueCol = lang === 'eng' ? 'value_en' : 'value_ko';
   const homeRows = rows.filter(r => r.page === 'home');
   const heroRows = rows.filter(r => r.page === 'hero');
 
-  // Home data
   const get = (section, key) => {
     const r = homeRows.find(r => r.section === section && r.key === key);
-    return r ? r.value_ko : '';
+    return r ? (r[valueCol] || r.value_ko || r.value_en || '') : '';
   };
   const getImg = (section, key) => {
     const r = homeRows.find(r => r.section === section && r.key === key);
@@ -217,58 +231,67 @@ function transformSite(rows) {
     },
   };
 
-  // Page hero data
   const pageHeroData = {};
   const heroPages = [...new Set(heroRows.map(r => r.section))];
   heroPages.forEach(page => {
     const titleRow = heroRows.find(r => r.section === page && r.key === 'title');
     const descRow = heroRows.find(r => r.section === page && r.key === 'desc');
     pageHeroData[page] = {
-      title: titleRow ? titleRow.value_ko : '',
-      desc: descRow ? descRow.value_ko : '',
+      title: titleRow ? (titleRow[valueCol] || titleRow.value_ko || titleRow.value_en || '') : '',
+      desc: descRow ? (descRow[valueCol] || descRow.value_ko || descRow.value_en || '') : '',
     };
   });
 
   return { homeData, pageHeroData };
 }
 
-async function main() {
-  console.log('📡 Google Sheets에서 데이터를 가져오는 중...');
-
+async function buildLang(lang) {
+  const sheets = SHEETS[lang];
   const [membersCSV, articlesCSV, newsCSV, curriculumCSV, siteCSV] = await Promise.all([
-    fetch(SHEETS.members),
-    fetch(SHEETS.articles),
-    fetch(SHEETS.news),
-    fetch(SHEETS.curriculum),
-    fetch(SHEETS.site),
+    fetch(sheets.members),
+    fetch(sheets.articles),
+    fetch(sheets.news),
+    fetch(sheets.curriculum),
+    fetch(sheets.site),
   ]);
 
   const membersData = transformMembers(parseCSV(membersCSV));
-  const { forumData, nextWeekEvent, featuredPost } = transformArticles(parseCSV(articlesCSV));
+  const { forumData, nextWeekEvent, featuredPost } = transformArticles(parseCSV(articlesCSV), lang);
   const { newsArticle, newsList } = transformNews(parseCSV(newsCSV));
-  const curriculumData = transformCurriculum(parseCSV(curriculumCSV));
-  const { homeData, pageHeroData } = transformSite(parseCSV(siteCSV));
+  const curriculumData = transformCurriculum(parseCSV(curriculumCSV), lang);
+  const { homeData, pageHeroData } = transformSite(parseCSV(siteCSV), lang);
+
+  return {
+    membersData, forumData, nextWeekEvent, featuredPost,
+    newsArticle, newsList, curriculumData, homeData, pageHeroData,
+  };
+}
+
+async function main() {
+  console.log('📡 Google Sheets에서 데이터를 가져오는 중 (한/영)...');
+
+  const [kor, eng] = await Promise.all([buildLang('kor'), buildLang('eng')]);
 
   const output = `// ── 자동 생성 파일 (node sync.js) ──
 // 마지막 동기화: ${new Date().toLocaleString('ko-KR')}
 
-const membersData = ${JSON.stringify(membersData, null, 2)};
+const dataByLang = {
+  kor: ${JSON.stringify(kor, null, 2)},
+  eng: ${JSON.stringify(eng, null, 2)}
+};
 
-const forumData = ${JSON.stringify(forumData, null, 2)};
+const currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'kor';
+const _data = dataByLang[currentLang] || dataByLang.kor;
 
-const nextWeekEvent = ${JSON.stringify(nextWeekEvent, null, 2)};
-
-const featuredPost = ${JSON.stringify(featuredPost, null, 2)};
-
-const newsArticle = ${JSON.stringify(newsArticle, null, 2)};
-
-const newsList = ${JSON.stringify(newsList, null, 2)};
-
-const curriculumData = ${JSON.stringify(curriculumData, null, 2)};
-
-const homeData = ${JSON.stringify(homeData, null, 2)};
-
-const pageHeroData = ${JSON.stringify(pageHeroData, null, 2)};
+const membersData = _data.membersData;
+const forumData = _data.forumData;
+const nextWeekEvent = _data.nextWeekEvent;
+const featuredPost = _data.featuredPost;
+const newsArticle = _data.newsArticle;
+const newsList = _data.newsList;
+const curriculumData = _data.curriculumData;
+const homeData = _data.homeData;
+const pageHeroData = _data.pageHeroData;
 `;
 
   fs.writeFileSync(path.join(__dirname, 'js', 'data.js'), output, 'utf8');

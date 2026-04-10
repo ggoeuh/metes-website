@@ -20,11 +20,15 @@ function renderSupportBadge() {
 }
 
 function renderNav(activePage) {
+  const lang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'kor';
+  const labels = lang === 'eng'
+    ? { curriculum: 'Curriculum', members: 'Members', forum: 'Article', news: 'News', search: 'Type a keyword.', backLabel: 'KOR', langLabel: 'KOR' }
+    : { curriculum: '커리큘럼', members: '멤버', forum: '아티클', news: '소식지', search: '키워드를 입력해보세요.', backLabel: 'ENG', langLabel: 'ENG' };
   const navLinks = [
-    { href: 'curriculum.html', label: '커리큘럼', page: 'curriculum' },
-    { href: 'members.html', label: '멤버', page: 'members' },
-    { href: 'index.html', label: '아티클', page: 'forum' },
-    { href: 'news.html', label: '소식지', page: 'news' },
+    { href: 'curriculum.html', label: labels.curriculum, page: 'curriculum' },
+    { href: 'members.html', label: labels.members, page: 'members' },
+    { href: 'index.html', label: labels.forum, page: 'forum' },
+    { href: 'news.html', label: labels.news, page: 'news' },
   ];
 
   if (activePage === 'search') {
@@ -32,9 +36,9 @@ function renderNav(activePage) {
     document.getElementById('site-nav').innerHTML = `
       <a href="#" class="nav-back" id="search-back">&lt;</a>
       <div style="flex:1;"></div>
-      <input type="text" class="nav-search-input open" placeholder="키워드를 입력해보세요." value="${query}">
+      <input type="text" class="nav-search-input open" placeholder="${labels.search}" value="${query}">
       <span class="nav-search" id="nav-search-btn">🔍</span>
-      <button class="btn-lang">ENG</button>`;
+      <button class="btn-lang" id="btn-lang-toggle">${labels.langLabel}</button>`;
     return;
   }
 
@@ -44,9 +48,9 @@ function renderNav(activePage) {
       ${navLinks.map(l => `<a href="${l.href}" class="nav-link${l.page === activePage ? ' active-nav' : ''}" data-page="${l.page}">${l.label}</a>`).join('')}
       <div class="nav-indicator"></div>
     </div>
-    <input type="text" class="nav-search-input" placeholder="키워드를 입력해보세요.">
+    <input type="text" class="nav-search-input" placeholder="${labels.search}">
     <span class="nav-search" id="nav-search-toggle">🔍</span>
-    <button class="btn-lang">ENG</button>
+    <button class="btn-lang" id="btn-lang-toggle">${labels.langLabel}</button>
     <button class="hamburger" id="hamburger-btn" aria-label="Menu">≡</button>`;
 
   // 모바일 메뉴 배경 (오렌지)
@@ -62,8 +66,8 @@ function renderNav(activePage) {
   overlay.id = 'mobile-menu';
   overlay.innerHTML = `
     <div class="mobile-menu-top">
-      <button class="btn-lang-mobile active">ENG</button>
-      <button class="btn-lang-mobile">KOR</button>
+      <button class="btn-lang-mobile${lang === 'eng' ? ' active' : ''}" data-lang="eng">ENG</button>
+      <button class="btn-lang-mobile${lang === 'kor' ? ' active' : ''}" data-lang="kor">KOR</button>
     </div>
     <div class="mobile-menu-links">
       ${navLinks.map(l => `<a href="${l.href}"${l.page === activePage ? ' class="active"' : ''}>${l.label}</a>`).join('')}

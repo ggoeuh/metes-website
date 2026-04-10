@@ -14,6 +14,9 @@ renderFooter();
 // 햄버거 메뉴
 initHamburger();
 
+// 언어 토글
+initLangToggle();
+
 // 검색 & 네비게이터 (데이터 불필요)
 initSearch();
 initNavIndicator();
@@ -230,6 +233,29 @@ function initMobileBr() {
   toggle();
 }
 initMobileBr();
+
+// ── 언어 토글 ──
+function initLangToggle() {
+  function setLang(newLang) {
+    localStorage.setItem('lang', newLang);
+    location.reload();
+  }
+  // 데스크톱 토글
+  const btn = document.getElementById('btn-lang-toggle');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const cur = localStorage.getItem('lang') || 'kor';
+      setLang(cur === 'kor' ? 'eng' : 'kor');
+    });
+  }
+  // 모바일 ENG/KOR 버튼
+  document.querySelectorAll('.btn-lang-mobile').forEach(b => {
+    b.addEventListener('click', () => {
+      const target = b.dataset.lang;
+      if (target) setLang(target);
+    });
+  });
+}
 
 // ── 햄버거 메뉴 ──
 function initHamburger() {

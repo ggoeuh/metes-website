@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. AM 8:16:01
+// 마지막 동기화: 2026. 4. 10. AM 8:35:14
 
 const membersData = {
   "moderators": {
@@ -179,37 +179,37 @@ const homeData = {
   "vision": [
     {
       "text": "디지털 시대를 이끌 차세대 리더 양성",
-      "img": "https://drive.google.com/uc?id=1o3uScivJAzWVgnR06h1BHj_L9m-3S5xd"
+      "img": "https://drive.google.com/uc?id=1HORr-jOJPeX2CFu-b_FsotOjQS4e7P1V"
     },
     {
       "text": "문제를 사랑하고, 해결 과정 자체를 \n배우는 교육 환경 구축",
-      "img": "https://drive.google.com/uc?id=17LEN6zAxWbwRmdPjN3iIS7PJE8uvT23N"
+      "img": "https://drive.google.com/uc?id=1kVXBv0k2CP5EzgFGz30S_xSvRW3hj1Qv"
     },
     {
       "text": "글로벌 네트워크를 통한 협업과 성장",
-      "img": "https://drive.google.com/uc?id=1tdTsaP7rCqsDF0EA_r1VmP7KNcbV737z"
+      "img": "https://drive.google.com/uc?id=1FgG7NNVHHR7mmu1q7oXThQl9VJVHV1sQ"
     }
   ],
   "offer": [
     {
       "title": "전문가 멘토링",
       "desc": "업계 전문가와 창업 선배(마이스터)가 프로젝트와 성장을 직접 가이드",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1kwyBWJAmeP-_KGNoUJ4w-4HIkhZ9GtzH"
     },
     {
       "title": "열린 교육 환경",
       "desc": "학력, 전공 제한 없는 누구나 참여 가능한 구조",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1eL2Bw2x5T3NfQyie7aQq4kwEAXeop-zL"
     },
     {
       "title": "프로젝트 기반 학습",
       "desc": "강의가 아닌 프로젝트와 문제 해결 중심 학습",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1DDmSFE0fRT5BkwKQTUhRtgBsRAZXZl0c"
     },
     {
       "title": "글로벌 네트워크",
       "desc": "국내외 전문가 및 커뮤니티와의 연결 기회 제공",
-      "img": ""
+      "img": "https://drive.google.com/uc?id=1zkSuwtayxjdCzojuFifqFKCH7-G-Xdpg"
     }
   ],
   "support": {

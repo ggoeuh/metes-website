@@ -13,6 +13,9 @@
   --border: 1px solid #d4d4d4;
 }
 
+html {
+  background: var(--black);
+}
 body {
   font-family: var(--font-kr);
   background: #f5f4f0;

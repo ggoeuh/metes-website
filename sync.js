@@ -196,53 +196,30 @@ function transformCurriculum(rows, lang) {
 }
 
 function transformSite(rows, lang) {
-  const valueCol = lang === 'eng' ? 'value_en' : 'value_ko';
-  const homeRows = rows.filter(r => r.page === 'home');
-  const heroRows = rows.filter(r => r.page === 'hero');
-
-  const get = (section, key) => {
-    const r = homeRows.find(r => r.section === section && r.key === key);
-    return r ? (r[valueCol] || r.value_ko || r.value_en || '') : '';
-  };
-  const getImg = (section, key) => {
-    const r = homeRows.find(r => r.section === section && r.key === key);
-    return r && r.img ? r.img : '';
-  };
-
-  const homeData = {
-    hero: { sub: get('hero', 'sub'), title: get('hero', 'title') },
-    about: { body: get('about', 'body'), quote: get('about', 'quote'), body2: get('about', 'body2') },
-    vision: [
-      { text: get('vision', 'item1'), img: getImg('vision', 'item1') },
-      { text: get('vision', 'item2'), img: getImg('vision', 'item2') },
-      { text: get('vision', 'item3'), img: getImg('vision', 'item3') },
-    ],
-    offer: [
-      { title: get('offer', 'card1_title'), desc: get('offer', 'card1_desc'), img: getImg('offer', 'card1_title') },
-      { title: get('offer', 'card2_title'), desc: get('offer', 'card2_desc'), img: getImg('offer', 'card2_title') },
-      { title: get('offer', 'card3_title'), desc: get('offer', 'card3_desc'), img: getImg('offer', 'card3_title') },
-      { title: get('offer', 'card4_title'), desc: get('offer', 'card4_desc'), img: getImg('offer', 'card4_title') },
-    ],
-    support: { body: get('support', 'body') },
-    contact: {
-      email: get('contact', 'email'),
-      newsletter: get('contact', 'newsletter'),
-      instagram: get('contact', 'instagram'),
-    },
-  };
-
-  const pageHeroData = {};
-  const heroPages = [...new Set(heroRows.map(r => r.section))];
-  heroPages.forEach(page => {
-    const titleRow = heroRows.find(r => r.section === page && r.key === 'title');
-    const descRow = heroRows.find(r => r.section === page && r.key === 'desc');
-    pageHeroData[page] = {
-      title: titleRow ? (titleRow[valueCol] || titleRow.value_ko || titleRow.value_en || '') : '',
-      desc: descRow ? (descRow[valueCol] || descRow.value_ko || descRow.value_en || '') : '',
-    };
+  // Group rows by page > section (multiple rows per section possible)
+  const siteData = {};
+  rows.forEach(r => {
+    if (!r.page || !r.section) return;
+    if (!siteData[r.page]) siteData[r.page] = {};
+    if (!siteData[r.page][r.section]) siteData[r.page][r.section] = [];
+    siteData[r.page][r.section].push({
+      title: r.title || '',
+      desc: r.desc || '',
+      extra1: r.extra1 || '',
+      extra2: r.extra2 || '',
+      img: r.img || '',
+    });
   });
 
-  return { homeData, pageHeroData };
+  // pageHeroData (from page=hero)
+  const pageHeroData = {};
+  const heroSections = (siteData.hero) ? Object.keys(siteData.hero) : [];
+  heroSections.forEach(section => {
+    const r = siteData.hero[section][0] || {};
+    pageHeroData[section] = { title: r.title || '', desc: r.desc || '' };
+  });
+
+  return { siteData, pageHeroData };
 }
 
 async function buildLang(lang) {
@@ -259,11 +236,11 @@ async function buildLang(lang) {
   const { forumData, nextWeekEvent, featuredPost } = transformArticles(parseCSV(articlesCSV), lang);
   const { newsArticle, newsList } = transformNews(parseCSV(newsCSV));
   const curriculumData = transformCurriculum(parseCSV(curriculumCSV), lang);
-  const { homeData, pageHeroData } = transformSite(parseCSV(siteCSV), lang);
+  const { siteData, pageHeroData } = transformSite(parseCSV(siteCSV), lang);
 
   return {
     membersData, forumData, nextWeekEvent, featuredPost,
-    newsArticle, newsList, curriculumData, homeData, pageHeroData,
+    newsArticle, newsList, curriculumData, siteData, pageHeroData,
   };
 }
 
@@ -290,8 +267,16 @@ const featuredPost = _data.featuredPost;
 const newsArticle = _data.newsArticle;
 const newsList = _data.newsList;
 const curriculumData = _data.curriculumData;
-const homeData = _data.homeData;
+const siteData = _data.siteData;
 const pageHeroData = _data.pageHeroData;
+
+// helper for accessing site text
+function siteOne(page, section) {
+  return (siteData && siteData[page] && siteData[page][section] && siteData[page][section][0]) || {};
+}
+function siteAll(page, section) {
+  return (siteData && siteData[page] && siteData[page][section]) || [];
+}
 `;
 
   fs.writeFileSync(path.join(__dirname, 'js', 'data.js'), output, 'utf8');

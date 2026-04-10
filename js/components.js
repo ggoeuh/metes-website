@@ -16,14 +16,24 @@ function renderPageHero(page) {
 function renderSupportBadge() {
   const el = document.getElementById('support-badge');
   if (!el) return;
-  el.innerHTML = '<a href="https://walla.my/a/metes_cohort4" target="_blank" class="support-badge"><span>지원 링크<br>바로가기<br>→</span></a>';
+  const badge = (typeof siteData !== 'undefined') ? siteOne('ui', 'badge') : { title: '지원 링크', desc: '바로가기' };
+  el.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="support-badge"><span>${badge.title || ''}<br>${badge.desc || ''}<br>→</span></a>`;
 }
 
 function renderNav(activePage) {
   const lang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'kor';
-  const labels = lang === 'eng'
-    ? { curriculum: 'Curriculum', members: 'Members', forum: 'Article', news: 'News', search: 'Type a keyword.', backLabel: 'KOR', langLabel: 'KOR' }
-    : { curriculum: '커리큘럼', members: '멤버', forum: '아티클', news: '소식지', search: '키워드를 입력해보세요.', backLabel: 'ENG', langLabel: 'ENG' };
+  const langLabel = lang === 'eng' ? 'KOR' : 'ENG';
+  const search = lang === 'eng' ? 'Type a keyword.' : '키워드를 입력해보세요.';
+  // pageHeroData에서 nav 라벨 가져옴
+  const getLabel = (page, fallback) => (typeof pageHeroData !== 'undefined' && pageHeroData[page] && pageHeroData[page].title) || fallback;
+  const labels = {
+    curriculum: getLabel('curriculum', 'Curriculum'),
+    members: getLabel('members', 'Members'),
+    forum: getLabel('forum', 'Article'),
+    news: getLabel('news', 'News'),
+    search,
+    langLabel,
+  };
   const navLinks = [
     { href: 'curriculum.html', label: labels.curriculum, page: 'curriculum' },
     { href: 'members.html', label: labels.members, page: 'members' },
@@ -54,10 +64,11 @@ function renderNav(activePage) {
     <button class="hamburger" id="hamburger-btn" aria-label="Menu">≡</button>`;
 
   // 모바일 메뉴 배경 (오렌지)
+  const mobileCta = (typeof siteData !== 'undefined') ? siteOne('ui', 'mobile_cta') : { title: '지원', desc: '하기 →' };
   const backdrop = document.createElement('div');
   backdrop.className = 'mobile-menu-backdrop';
   backdrop.id = 'mobile-menu-backdrop';
-  backdrop.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="mobile-menu-backdrop-cta">지원<br>하기 →</a>`;
+  backdrop.innerHTML = `<a href="https://walla.my/a/metes_cohort4" target="_blank" class="mobile-menu-backdrop-cta">${mobileCta.title || ''}<br>${mobileCta.desc || ''}</a>`;
   document.body.appendChild(backdrop);
 
   // 모바일 메뉴 오버레이
@@ -73,8 +84,7 @@ function renderNav(activePage) {
       ${navLinks.map(l => `<a href="${l.href}"${l.page === activePage ? ' class="active"' : ''}>${l.label}</a>`).join('')}
     </div>
     <div class="mobile-menu-footer">
-      <a href="https://metes.stibee.com/" target="_blank">뉴스레터</a>
-      <a href="https://www.instagram.com/metes.institute/" target="_blank">Instagram</a>
+      ${(typeof siteData !== 'undefined' ? siteAll('footer', 'inquiry').slice(1, 3) : []).map(l => `<a href="${l.desc}" target="_blank">${l.title}</a>`).join('') || `<a href="https://metes.stibee.com/" target="_blank">뉴스레터</a><a href="https://www.instagram.com/metes.institute/" target="_blank">Instagram</a>`}
     </div>`;
   document.body.appendChild(overlay);
 }
@@ -124,40 +134,48 @@ function renderSearchResults(query) {
 }
 
 function renderFooter() {
+  const programTitle = siteOne('footer', 'program_title').title || 'Program';
+  const contentTitle = siteOne('footer', 'content_title').title || 'Contents';
+  const inquiryTitle = siteOne('footer', 'inquiry_title').title || 'Inquiries';
+  const programLinks = siteAll('footer', 'program');
+  const contentLinks = siteAll('footer', 'content');
+  const inquiryLinks = siteAll('footer', 'inquiry');
+  const bottom = siteOne('footer', 'bottom');
+  const legalLinks = siteAll('footer', 'legal');
+
+  const linkHtml = (l) => {
+    const url = l.desc || '#';
+    const isExternal = url.startsWith('http');
+    return `<a href="${url}"${isExternal ? ' target="_blank"' : ''}>${l.title}</a>`;
+  };
+
   document.getElementById('site-footer').innerHTML = `
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-logo">Metes</div>
         <div class="footer-links">
           <div class="footer-col">
-            <span class="footer-col-title">프로그램</span>
-            <a href="curriculum.html">커리큘럼</a>
-            <a href="members.html">멤버</a>
-            <a href="curriculum.html">코호트 일정</a>
+            <span class="footer-col-title">${programTitle}</span>
+            ${programLinks.map(linkHtml).join('')}
           </div>
           <div class="footer-col">
-            <span class="footer-col-title">콘텐츠</span>
-            <a href="index.html">아티클</a>
-            <a href="news.html">소식지</a>
-            <a href="index.html">Maester Forum</a>
+            <span class="footer-col-title">${contentTitle}</span>
+            ${contentLinks.map(linkHtml).join('')}
           </div>
           <div class="footer-col">
-            <span class="footer-col-title">문의</span>
-            <a href="https://walla.my/a/metes_cohort4" target="_blank">지원하기</a>
-            <a href="https://metes.stibee.com/" target="_blank">뉴스레터</a>
-            <a href="https://www.instagram.com/metes.institute/" target="_blank">Instagram</a>
+            <span class="footer-col-title">${inquiryTitle}</span>
+            ${inquiryLinks.map(linkHtml).join('')}
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom-left">
-          <span>© 2025 Metes. All rights reserved.</span>
-          <a href="https://naver.me/GRo1DQan" target="_blank" class="footer-address" style="text-decoration:none;">서울 종로구 우정국로2길 22 3층</a>
-          <a href="https://naver.me/5YoeSDvb" target="_blank" class="footer-address" style="text-decoration:none;">서울 강남구 언주로 734</a>
+          <span>${bottom.title || ''}</span>
+          ${bottom.desc ? `<a href="https://naver.me/GRo1DQan" target="_blank" class="footer-address" style="text-decoration:none;">${bottom.desc}</a>` : ''}
+          ${bottom.extra1 ? `<a href="https://naver.me/5YoeSDvb" target="_blank" class="footer-address" style="text-decoration:none;">${bottom.extra1}</a>` : ''}
         </div>
         <div class="footer-legal">
-          <a href="#">개인정보처리방침</a>
-          <a href="#">이용약관</a>
+          ${legalLinks.map(l => `<a href="${l.desc || '#'}">${l.title}</a>`).join('')}
         </div>
       </div>
     </div>`;
@@ -180,6 +198,39 @@ function renderNextWeek(event) {
     <div class="next-week-img">IMAGE</div>`;
 }
 
+// ── data-text 자동 채우기 ──
+function applyDataText() {
+  if (typeof siteData === 'undefined') return;
+  document.querySelectorAll('[data-text]').forEach(el => {
+    const path = el.dataset.text;
+    const parts = path.split('.');
+    if (parts.length < 3) return;
+    const [page, section, key] = parts;
+    const r = siteOne(page, section);
+    const text = r[key] || '';
+    el.innerHTML = nl2br(text);
+  });
+}
+
+// ── 커리큘럼 비용 ──
+function renderCurriculumFees() {
+  const el = document.getElementById('cur-fee-list');
+  if (!el || typeof siteData === 'undefined') return;
+  const fees = ['maker_fee', 'general_fee'].map(k => siteOne('curriculum', k));
+  el.innerHTML = fees.map(f => `
+    <div class="cur-fee-row">
+      <div class="cur-fee-left">
+        <div class="cur-fee-title">${f.title}</div>
+        <div class="cur-fee-sub">${f.desc}</div>
+      </div>
+      <div class="cur-fee-right">
+        <span class="cur-fee-amount">${f.extra1}</span>
+        <span class="cur-fee-unit">${f.extra2}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
 // ── Home 페이지 렌더 ──
 function fixDriveUrl(url) {
   if (!url) return '';
@@ -194,24 +245,52 @@ function nl2br(text) {
 }
 
 function renderHome() {
-  if (typeof homeData === 'undefined') return;
+  if (typeof siteData === 'undefined') return;
 
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = nl2br(text || '');
+  };
+
+  // Hero
+  const hero = siteOne('home', 'hero');
+  setText('home-hero-title', hero.title);
+  setText('home-hero-sub', hero.desc);
+
+  // About
+  const about = siteOne('home', 'about');
+  setText('home-about-body', about.title);
+  setText('home-about-quote', about.extra1);
+  setText('home-about-body2', about.extra2);
+
+  // Vision intro
+  const visionIntro = siteOne('ui', 'vision');
+  setText('home-vision-intro', visionIntro.title);
+
+  // Support
+  const support = siteOne('home', 'support');
+  setText('home-support-body', support.title);
+
+  // Vision grid
   const visionEl = document.getElementById('home-vision-grid');
   if (visionEl) {
-    visionEl.innerHTML = homeData.vision.map(v => {
+    const items = ['item1', 'item2', 'item3'].map(k => siteOne('vision', k));
+    visionEl.innerHTML = items.map(v => {
       const img = fixDriveUrl(v.img);
       return `
         <div class="home-vision-item">
           <div class="home-vision-icon"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
-          <p>${nl2br(v.text)}</p>
+          <p>${nl2br(v.title)}</p>
         </div>
       `;
     }).join('');
   }
 
+  // Offer grid
   const offerEl = document.getElementById('home-offer-grid');
   if (offerEl) {
-    offerEl.innerHTML = homeData.offer.map(o => {
+    const items = ['card1', 'card2', 'card3', 'card4'].map(k => siteOne('offer', k));
+    offerEl.innerHTML = items.map(o => {
       const img = fixDriveUrl(o.img);
       return `
         <div class="home-offer-card">
@@ -219,6 +298,22 @@ function renderHome() {
           <h3>${nl2br(o.title)}</h3>
           <p>${nl2br(o.desc)}</p>
         </div>
+      `;
+    }).join('');
+  }
+
+  // Contact grid
+  const contactEl = document.getElementById('home-contact-grid');
+  if (contactEl) {
+    const items = ['email', 'newsletter', 'instagram'].map(k => siteOne('contact', k));
+    contactEl.innerHTML = items.map(c => {
+      const url = c.extra1 || '#';
+      const isExt = url.startsWith('http');
+      return `
+        <a href="${url}"${isExt ? ' target="_blank"' : ''} class="home-contact-card">
+          <span class="home-contact-label">${c.title}</span>
+          <span class="home-contact-value">${c.desc}</span>
+        </a>
       `;
     }).join('');
   }

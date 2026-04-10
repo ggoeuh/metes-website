@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. 오후 6:09:20
+// 마지막 동기화: 2026. 4. 10. 오후 10:10:07
 
 const dataByLang = {
   kor: {
@@ -161,59 +161,417 @@ const dataByLang = {
     },
     "currentCohort": "Cohort 4, Learning Block 2"
   },
-  "homeData": {
-    "hero": {
-      "sub": "Metaverse Technology Training & Extended Studies",
-      "title": "The destination for leaders who seek to solve global problems."
+  "siteData": {
+    "home": {
+      "hero": [
+        {
+          "title": "The destination for leaders who seek to solve global problems.",
+          "desc": "Metaverse Technology Training & Extended Studies",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "about": [
+        {
+          "title": "METES는 경계 없는 사람들이 모여...",
+          "desc": "",
+          "extra1": "\"TEACH LESS, LEARN MORE\"",
+          "extra2": "강의 중심 교육이 아닌 실습·토론·프로젝트 중심으로 스스로 학습하는 환경을 제공합니다.",
+          "img": ""
+        }
+      ],
+      "support": [
+        {
+          "title": "METES는 성주재단의 후원 프로그램으로 운영됩니다.",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
     },
-    "about": {
-      "body": "METES는 경계 없는 사람들이 모여 함께 배우고 성장하는 스타트업 성장 커뮤니티입니다. 창업가, 예비 창업가, 창작자들이 프로젝트 기반 학습과 커뮤니티 활동을 통해 문제를 발견하고 해결하는 역량을 키워갑니다.",
-      "quote": "TEACH LESS, LEARN MORE",
-      "body2": "강의 중심 교육이 아닌 실습·토론·프로젝트 중심으로 스스로 학습하는 환경을 제공합니다."
+    "vision": {
+      "item1": [
+        {
+          "title": "디지털 시대를 이끌 차세대 리더 양성",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "item2": [
+        {
+          "title": "문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "item3": [
+        {
+          "title": "글로벌 네트워크를 통한 협업과 성장",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ]
     },
-    "vision": [
-      {
-        "text": "디지털 시대를 이끌 차세대 리더 양성",
-        "img": "https://drive.google.com/uc?id=1HORr-jOJPeX2CFu-b_FsotOjQS4e7P1V"
-      },
-      {
-        "text": "문제를 사랑하고, 해결 과정 자체를 \n배우는 교육 환경 구축",
-        "img": "https://drive.google.com/uc?id=1kVXBv0k2CP5EzgFGz30S_xSvRW3hj1Qv"
-      },
-      {
-        "text": "글로벌 네트워크를 통한 협업과 성장",
-        "img": "https://drive.google.com/uc?id=1FgG7NNVHHR7mmu1q7oXThQl9VJVHV1sQ"
-      }
-    ],
-    "offer": [
-      {
-        "title": "전문가 멘토링",
-        "desc": "업계 전문가와 창업 선배(마이스터)가 프로젝트와 성장을 직접 가이드",
-        "img": "https://drive.google.com/uc?id=1kwyBWJAmeP-_KGNoUJ4w-4HIkhZ9GtzH"
-      },
-      {
-        "title": "열린 교육 환경",
-        "desc": "학력, 전공 제한 없는 누구나 참여 가능한 구조",
-        "img": "https://drive.google.com/uc?id=1eL2Bw2x5T3NfQyie7aQq4kwEAXeop-zL"
-      },
-      {
-        "title": "프로젝트 기반 학습",
-        "desc": "강의가 아닌 프로젝트와 문제 해결 중심 학습",
-        "img": "https://drive.google.com/uc?id=1DDmSFE0fRT5BkwKQTUhRtgBsRAZXZl0c"
-      },
-      {
-        "title": "글로벌 네트워크",
-        "desc": "국내외 전문가 및 커뮤니티와의 연결 기회 제공",
-        "img": "https://drive.google.com/uc?id=1zkSuwtayxjdCzojuFifqFKCH7-G-Xdpg"
-      }
-    ],
-    "support": {
-      "body": "METES는 성주재단의 후원 프로그램으로 운영됩니다."
+    "offer": {
+      "card1": [
+        {
+          "title": "전문가 멘토링",
+          "desc": "업계 전문가와 창업 선배(마이스터)가 프로젝트와 성장을 직접 가이드",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card2": [
+        {
+          "title": "열린 교육 환경",
+          "desc": "학력, 전공 제한 없는 누구나 참여 가능한 구조",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card3": [
+        {
+          "title": "프로젝트 기반 학습",
+          "desc": "강의가 아닌 프로젝트와 문제 해결 중심 학습",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card4": [
+        {
+          "title": "글로벌 네트워크",
+          "desc": "국내외 전문가 및 커뮤니티와의 연결 기회 제공",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ]
     },
     "contact": {
-      "email": "sera@metes.io",
-      "newsletter": "https://metes.stibee.com/",
-      "instagram": "https://www.instagram.com/metes.institute/"
+      "email": [
+        {
+          "title": "INQUIRIES",
+          "desc": "sera@metes.io",
+          "extra1": "mailto:sera@metes.io",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "newsletter": [
+        {
+          "title": "NEWSLETTER",
+          "desc": "metes.stibee.com",
+          "extra1": "https://metes.stibee.com/",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "instagram": [
+        {
+          "title": "FOLLOW",
+          "desc": "Instagram ↗",
+          "extra1": "https://www.instagram.com/metes.institute/",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "hero": {
+      "curriculum": [
+        {
+          "title": "Curriculum",
+          "desc": "METES는 매주 2일 세션이 운영됩니다. 1 Cohort = 4 Learning Block = 총 40주 과정",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "members": [
+        {
+          "title": "Members",
+          "desc": "METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "forum": [
+        {
+          "title": "Article",
+          "desc": "각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "news": [
+        {
+          "title": "News",
+          "desc": "METES 출신 창업가들의 이야기를 전합니다.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "members": {
+      "moderator": [
+        {
+          "title": "Moderator",
+          "desc": "METES 커뮤니티의 연결 다리 역할. 프로그램 운영, 세션 진행 및 커뮤니티 관리",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maester": [
+        {
+          "title": "Miester",
+          "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, 투자자, 기업 리더",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker": [
+        {
+          "title": "Maker",
+          "desc": "METES 커뮤니티의 핵심 참여자. 창업가, 예비 창업가, 창작자",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker_pool": [
+        {
+          "title": "Maker Pool",
+          "desc": "다양한 배경의 메이커들이 함께 성장하는 네트워크",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "curriculum": {
+      "session": [
+        {
+          "title": "Session Structure",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "program": [
+        {
+          "title": "Program Structure",
+          "desc": "각 Block은 10주 동안 진행됩니다.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "cost": [
+        {
+          "title": "Cost",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker_fee": [
+        {
+          "title": "메이커",
+          "desc": "출석률 85% 이상 시 전액 환급",
+          "extra1": "200,000원",
+          "extra2": "예치금",
+          "img": ""
+        }
+      ],
+      "general_fee": [
+        {
+          "title": "일반 참여자",
+          "desc": "메이커 지인 첫 참관 1회 무료",
+          "extra1": "20,000원",
+          "extra2": "/ 회",
+          "img": ""
+        }
+      ]
+    },
+    "news": {
+      "cta": [
+        {
+          "title": "다음 이야기의 주인공?",
+          "desc": "바로 당신!",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "footer": {
+      "program_title": [
+        {
+          "title": "프로그램",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "program": [
+        {
+          "title": "커리큘럼",
+          "desc": "curriculum.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "멤버",
+          "desc": "members.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "코호트 일정",
+          "desc": "curriculum.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "content_title": [
+        {
+          "title": "콘텐츠",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "content": [
+        {
+          "title": "아티클",
+          "desc": "index.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "소식지",
+          "desc": "news.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Maester Forum",
+          "desc": "index.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "inquiry_title": [
+        {
+          "title": "문의",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "inquiry": [
+        {
+          "title": "지원하기",
+          "desc": "https://walla.my/a/metes_cohort4",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "뉴스레터",
+          "desc": "https://metes.stibee.com/",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Instagram",
+          "desc": "https://www.instagram.com/metes.institute/",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "bottom": [
+        {
+          "title": "© 2025 Metes. All rights reserved.",
+          "desc": "서울 종로구 우정국로2길 22 3층",
+          "extra1": "서울 강남구 언주로 734",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "legal": [
+        {
+          "title": "개인정보처리방침",
+          "desc": "#",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "이용약관",
+          "desc": "#",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "ui": {
+      "badge": [
+        {
+          "title": "지원 링크",
+          "desc": "바로가기",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "mobile_cta": [
+        {
+          "title": "지원",
+          "desc": "하기 →",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "vision": [
+        {
+          "title": "METES는 단순한 지식 전달이 아닌, 스스로 문제를 정의하고 실행할 수 있는 인재를 만드는 것을 지향합니다.",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
     }
   },
   "pageHeroData": {
@@ -375,59 +733,417 @@ const dataByLang = {
     },
     "currentCohort": "Cohort 4, Learning Block 2"
   },
-  "homeData": {
-    "hero": {
-      "sub": "Metaverse Technology Training & Extended Studies",
-      "title": "The destination for leaders who seek to solve global problems."
+  "siteData": {
+    "home": {
+      "hero": [
+        {
+          "title": "The destination for leaders who seek to solve global problems.",
+          "desc": "Metaverse Technology Training & Extended Studies",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "about": [
+        {
+          "title": "METES is a startup growth community where people without boundaries come together to learn and grow.",
+          "desc": "",
+          "extra1": "\"TEACH LESS, LEARN MORE\"",
+          "extra2": "METES moves beyond lecture-centered education, offering a self-directed learning environment.",
+          "img": ""
+        }
+      ],
+      "support": [
+        {
+          "title": "METES is operated as a sponsored program of the Sungjoo Foundation.",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
     },
-    "about": {
-      "body": "METES is a startup growth community where people without boundaries come together to learn and grow.",
-      "quote": "TEACH LESS, LEARN MORE",
-      "body2": "METES moves beyond lecture-centered education, offering a self-directed learning environment."
+    "vision": {
+      "item1": [
+        {
+          "title": "Nurturing next-generation leaders for the digital era",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "item2": [
+        {
+          "title": "Building a learning environment that embraces problems",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "item3": [
+        {
+          "title": "Enabling collaboration and growth through a global network",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ]
     },
-    "vision": [
-      {
-        "text": "Nurturing next-generation leaders for the digital era",
-        "img": "https://drive.google.com/uc?id=1HORr-jOJPeX2CFu-b_FsotOjQS4e7P1V"
-      },
-      {
-        "text": "Building a learning environment that embraces problems",
-        "img": "https://drive.google.com/uc?id=1kVXBv0k2CP5EzgFGz30S_xSvRW3hj1Qv"
-      },
-      {
-        "text": "Enabling collaboration and growth through a global network",
-        "img": "https://drive.google.com/uc?id=1FgG7NNVHHR7mmu1q7oXThQl9VJVHV1sQ"
-      }
-    ],
-    "offer": [
-      {
-        "title": "Expert Mentorship",
-        "desc": "Industry experts and experienced founders directly guide projects",
-        "img": "https://drive.google.com/uc?id=1kwyBWJAmeP-_KGNoUJ4w-4HIkhZ9GtzH"
-      },
-      {
-        "title": "Open Learning Environment",
-        "desc": "No restrictions on academic background",
-        "img": "https://drive.google.com/uc?id=1eL2Bw2x5T3NfQyie7aQq4kwEAXeop-zL"
-      },
-      {
-        "title": "Project-Based Learning",
-        "desc": "Learning centered on real projects and problem-solving",
-        "img": "https://drive.google.com/uc?id=1DDmSFE0fRT5BkwKQTUhRtgBsRAZXZl0c"
-      },
-      {
-        "title": "Global Network",
-        "desc": "Opportunities to connect with experts and communities",
-        "img": "https://drive.google.com/uc?id=1zkSuwtayxjdCzojuFifqFKCH7-G-Xdpg"
-      }
-    ],
-    "support": {
-      "body": "METES is operated as a sponsored program of the Sungjoo Foundation."
+    "offer": {
+      "card1": [
+        {
+          "title": "Expert Mentorship",
+          "desc": "Industry experts and experienced founders directly guide projects",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card2": [
+        {
+          "title": "Open Learning Environment",
+          "desc": "No restrictions on academic background",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card3": [
+        {
+          "title": "Project-Based Learning",
+          "desc": "Learning centered on real projects and problem-solving",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ],
+      "card4": [
+        {
+          "title": "Global Network",
+          "desc": "Opportunities to connect with experts and communities",
+          "extra1": "",
+          "extra2": "",
+          "img": "drive.google.com/uc?id=..."
+        }
+      ]
     },
     "contact": {
-      "email": "sera@metes.io",
-      "newsletter": "https://metes.stibee.com/",
-      "instagram": "https://www.instagram.com/metes.institute/"
+      "email": [
+        {
+          "title": "INQUIRIES",
+          "desc": "sera@metes.io",
+          "extra1": "mailto:sera@metes.io",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "newsletter": [
+        {
+          "title": "NEWSLETTER",
+          "desc": "metes.stibee.com",
+          "extra1": "https://metes.stibee.com/",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "instagram": [
+        {
+          "title": "FOLLOW",
+          "desc": "Instagram ↗",
+          "extra1": "https://www.instagram.com/metes.institute/",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "hero": {
+      "curriculum": [
+        {
+          "title": "Curriculum",
+          "desc": "METES sessions are held twice a week. 1 Cohort = 4 Learning Blocks = 40 weeks total",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "members": [
+        {
+          "title": "Members",
+          "desc": "Meet the moderators, maesters, and makers who lead METES.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "forum": [
+        {
+          "title": "Article",
+          "desc": "Insights from invited maesters compiled into articles.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "news": [
+        {
+          "title": "News",
+          "desc": "Stories from METES alumni entrepreneurs.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "members": {
+      "moderator": [
+        {
+          "title": "Moderator",
+          "desc": "Connecting bridge of METES community. Program operation, session moderation, community management",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maester": [
+        {
+          "title": "Miester",
+          "desc": "Industry experts leading each session. Founders, investors, business leaders",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker": [
+        {
+          "title": "Maker",
+          "desc": "Core participants of METES. Founders, aspiring founders, creators",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker_pool": [
+        {
+          "title": "Maker Pool",
+          "desc": "A network where makers of diverse backgrounds grow together",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "curriculum": {
+      "session": [
+        {
+          "title": "Session Structure",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "program": [
+        {
+          "title": "Program Structure",
+          "desc": "Each Block runs for 10 weeks.",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "cost": [
+        {
+          "title": "Cost",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "maker_fee": [
+        {
+          "title": "Maker",
+          "desc": "Full refund with 85%+ attendance",
+          "extra1": "KRW 200,000",
+          "extra2": "Deposit",
+          "img": ""
+        }
+      ],
+      "general_fee": [
+        {
+          "title": "General Participant",
+          "desc": "First visit free for maker's guest",
+          "extra1": "KRW 20,000",
+          "extra2": "/ session",
+          "img": ""
+        }
+      ]
+    },
+    "news": {
+      "cta": [
+        {
+          "title": "Next story's protagonist?",
+          "desc": "It's you!",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "footer": {
+      "program_title": [
+        {
+          "title": "Program",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "program": [
+        {
+          "title": "Curriculum",
+          "desc": "curriculum.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Members",
+          "desc": "members.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Cohort Schedule",
+          "desc": "curriculum.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "content_title": [
+        {
+          "title": "Contents",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "content": [
+        {
+          "title": "Article",
+          "desc": "index.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "News",
+          "desc": "news.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Maester Forum",
+          "desc": "index.html",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "inquiry_title": [
+        {
+          "title": "Inquiries",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "inquiry": [
+        {
+          "title": "Apply",
+          "desc": "https://walla.my/a/metes_cohort4",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Newsletter",
+          "desc": "https://metes.stibee.com/",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Instagram",
+          "desc": "https://www.instagram.com/metes.institute/",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "bottom": [
+        {
+          "title": "© 2025 Metes. All rights reserved.",
+          "desc": "22 Ujeongguk-ro 2-gil, Jongno-gu, Seoul, 3F",
+          "extra1": "734 Eonju-ro, Gangnam-gu, Seoul",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "legal": [
+        {
+          "title": "Privacy Policy",
+          "desc": "#",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        },
+        {
+          "title": "Terms of Service",
+          "desc": "#",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
+    },
+    "ui": {
+      "badge": [
+        {
+          "title": "Apply",
+          "desc": "Now →",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "mobile_cta": [
+        {
+          "title": "Apply",
+          "desc": "Now →",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "vision": [
+        {
+          "title": "METES aims to nurture talents who can define and solve problems on their own, not just receive knowledge.",
+          "desc": "",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ]
     }
   },
   "pageHeroData": {
@@ -461,5 +1177,13 @@ const featuredPost = _data.featuredPost;
 const newsArticle = _data.newsArticle;
 const newsList = _data.newsList;
 const curriculumData = _data.curriculumData;
-const homeData = _data.homeData;
+const siteData = _data.siteData;
 const pageHeroData = _data.pageHeroData;
+
+// helper for accessing site text
+function siteOne(page, section) {
+  return (siteData && siteData[page] && siteData[page][section] && siteData[page][section][0]) || {};
+}
+function siteAll(page, section) {
+  return (siteData && siteData[page] && siteData[page][section]) || [];
+}

@@ -6,7 +6,7 @@
 <title>Metes — 커리큘럼</title>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="css/style.css?v=58">
+<link rel="stylesheet" href="css/style.css?v=59">
 </head>
 <body data-page="curriculum">
 
@@ -20,7 +20,7 @@
   <div class="page">
     <div class="cur-section">
       <div class="cur-left">
-        <h2 class="mem-heading">Session<br>Structure</h2>
+        <h2 class="mem-heading" data-text="curriculum.session.title"></h2>
       </div>
       <div class="cur-right" id="session-cards"></div>
     </div>
@@ -32,8 +32,8 @@
   <div class="page">
     <div class="cur-section" style="padding-top:0;">
       <div class="cur-left">
-        <h2 class="mem-heading">Program<br>Structure</h2>
-        <p class="mem-desc">각 Block은 10주 동안 진행됩니다.</p>
+        <h2 class="mem-heading" data-text="curriculum.program.title"></h2>
+        <p class="mem-desc" data-text="curriculum.program.desc"></p>
       </div>
       <div class="cur-right" id="learning-blocks"></div>
     </div>
@@ -45,31 +45,10 @@
   <div class="page">
     <div class="cur-section">
       <div class="cur-left">
-        <h2 class="mem-heading">Cost</h2>
+        <h2 class="mem-heading" data-text="curriculum.cost.title"></h2>
       </div>
       <div class="cur-right">
-        <div class="cur-fee-list">
-          <div class="cur-fee-row">
-            <div class="cur-fee-left">
-              <div class="cur-fee-title">메이커</div>
-              <div class="cur-fee-sub">출석률 85% 이상 시 전액 환급</div>
-            </div>
-            <div class="cur-fee-right">
-              <span class="cur-fee-amount">200,000원</span>
-              <span class="cur-fee-unit">예치금</span>
-            </div>
-          </div>
-          <div class="cur-fee-row">
-            <div class="cur-fee-left">
-              <div class="cur-fee-title">일반 참여자</div>
-              <div class="cur-fee-sub">메이커 지인 첫 참관 1회 무료</div>
-            </div>
-            <div class="cur-fee-right">
-              <span class="cur-fee-amount">20,000원</span>
-              <span class="cur-fee-unit">/ 회</span>
-            </div>
-          </div>
-        </div>
+        <div class="cur-fee-list" id="cur-fee-list"></div>
       </div>
     </div>
   </div>
@@ -77,8 +56,8 @@
 
 <footer id="site-footer"></footer>
 
-<script src="js/data.js?v=58"></script>
-<script src="js/components.js?v=58"></script>
-<script src="js/main.js?v=58"></script>
+<script src="js/data.js?v=59"></script>
+<script src="js/components.js?v=59"></script>
+<script src="js/main.js?v=59"></script>
 </body>
 </html>

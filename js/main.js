@@ -11,6 +11,9 @@ if (!isArticleDetail) {
 }
 renderFooter();
 
+// 모든 [data-text] 자동 채우기
+applyDataText();
+
 // 햄버거 메뉴
 initHamburger();
 
@@ -120,6 +123,7 @@ initNavIndicator();
   if (currentPage === 'curriculum') {
     renderLearningBlocks(curriculumData.learningBlocks);
     renderSessionCards(curriculumData.tuesday, curriculumData.friday);
+    renderCurriculumFees();
   }
 
   // Search 페이지

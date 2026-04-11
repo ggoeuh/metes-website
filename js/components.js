@@ -197,6 +197,7 @@ function renderNextWeek(event) {
     <div class="next-week-content">
       <h2>${event.title}</h2>
       <p>${event.desc}<br><strong>${event.date}, ${event.location}</strong>에서 진행됩니다.</p>
+      <div class="next-week-img-mobile">IMAGE</div>
       <a href="${event.link}" target="_blank" class="btn-apply">지금 바로 참여 신청하기</a>
     </div>
     <div class="next-week-img">IMAGE</div>`;

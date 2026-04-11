@@ -492,7 +492,7 @@ a.support-badge {
 .page-hero-desc {
   font-size: 15px;
   opacity: 0.65;
-  line-height: 120%;
+  line-height: 140%;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -540,12 +540,12 @@ a.support-badge {
 .mem-bio {
   font-size: 13px;
   color: var(--gray-dark);
-  line-height: 120%;
+  line-height: 140%;
 }
 .mem-bio-sm {
   font-size: 13px;
   color: var(--gray-dark);
-  line-height: 120%;
+  line-height: 140%;
   margin-bottom: 6px;
 }
 
@@ -679,7 +679,7 @@ a.support-badge {
 .news-card-desc {
   font-size: 14px;
   color: var(--gray-dark);
-  line-height: 120%;
+  line-height: 140%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -780,7 +780,7 @@ a.support-badge {
 .home-about-body {
   font-size: 16px;
   color: #444;
-  line-height: 120%;
+  line-height: 140%;
   margin-bottom: 12px;
 }
 
@@ -816,7 +816,7 @@ a.support-badge {
 .home-offer-card p {
   font-size: 14px;
   opacity: 0.7;
-  line-height: 120%;
+  line-height: 140%;
 }
 .home-offer-img {
   width: 100%;
@@ -953,7 +953,7 @@ a.support-badge {
 .home-vision-item p {
   font-size: 14px;
   color: #444;
-  line-height: 120%;
+  line-height: 140%;
 }
 
 /* CTA */
@@ -1123,7 +1123,7 @@ a.support-badge {
 .cur-lb-card p {
   font-size: 14px;
   color: var(--gray-dark);
-  line-height: 120%;
+  line-height: 140%;
 }
 .cur-cohort-notice {
   margin-top: 40px;
@@ -1237,7 +1237,7 @@ a.support-badge {
 .cur-session-desc {
   font-size: 14px;
   color: #444;
-  line-height: 120%;
+  line-height: 140%;
   margin-bottom: 16px;
 }
 .cur-session-tags {
@@ -1736,7 +1736,7 @@ footer {
   /* HOME VISION - no wrap */
   .home-vision-item p {
     font-size: 11px;
-    white-space: nowrap;
+    word-break: keep-all;
   }
   .home-vision-icon {
     width: 72px;

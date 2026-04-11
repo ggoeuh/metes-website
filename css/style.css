@@ -344,7 +344,6 @@ a.support-badge {
   max-width: 1200px;
   margin-left: calc((100vw - 1200px) * 0.3 + 50px);
   margin-right: auto;
-  margin-top: 64px;
 }
 .year-tabs {
   display: flex;

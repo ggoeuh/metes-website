@@ -339,11 +339,8 @@ a.support-badge {
 }
 
 /* ── YEAR TABS ── */
-body[data-page="forum"] {
-  background: #f5f4f0;
-}
 .archive-section {
-  padding: 0 32px 72px;
+  padding: 0 32px;
   max-width: 1200px;
   margin-left: calc((100vw - 1200px) * 0.3 + 50px);
   margin-right: auto;

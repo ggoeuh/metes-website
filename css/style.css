@@ -1227,6 +1227,9 @@ a.support-badge {
 .cur-session-name {
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .cur-session-ampm {
   font-size: 14px;

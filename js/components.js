@@ -449,7 +449,7 @@ function renderSessionCards(tuesday, friday) {
       <div class="cur-session-img"></div>
       <div class="cur-session-body">
         <div class="cur-session-top">
-          <div class="cur-session-name">${s.maester || 'METES Forum'}${s.time.includes('오전') ? ' <span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? ' <span class="cur-session-ampm">오후</span>' : ''}</div>
+          <div class="cur-session-name"><span>${s.maester || 'METES Forum'}</span>${s.time.includes('오전') ? '<span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? '<span class="cur-session-ampm">오후</span>' : ''}</div>
           <div class="cur-session-tag">${s.session}</div>
         </div>
         <p class="cur-session-desc">${s.desc}</p>

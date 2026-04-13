@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 10. PM 3:19:25
+// 마지막 동기화: 2026. 4. 13. AM 6:34:13
 
 const dataByLang = {
   kor: {
@@ -210,7 +210,7 @@ const dataByLang = {
       ],
       "item2": [
         {
-          "title": "문제를 사랑하고, 해결 과정 자체를 배우는 교육 환경 구축",
+          "title": "문제를 사랑하고, 해결 과정을 배우는 교육 환경 구축",
           "desc": "",
           "extra1": "",
           "extra2": "",
@@ -803,7 +803,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1HORr-jOJPeX2CFu-b_FsotOjQS4e7P1V/view?usp=share_link"
         }
       ],
       "item2": [
@@ -812,7 +812,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1kVXBv0k2CP5EzgFGz30S_xSvRW3hj1Qv/view?usp=share_link"
         }
       ],
       "item3": [
@@ -821,7 +821,7 @@ const dataByLang = {
           "desc": "",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1FgG7NNVHHR7mmu1q7oXThQl9VJVHV1sQ/view?usp=share_link"
         }
       ]
     },
@@ -832,7 +832,7 @@ const dataByLang = {
           "desc": "Industry experts and experienced\nfounders directly guide projects",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1GJ9S-hc4HgEZJnHnVrNfLFmFKpiXRYCW/view?usp=share_link"
         }
       ],
       "card2": [
@@ -841,7 +841,7 @@ const dataByLang = {
           "desc": "No restrictions on academic background",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1Mj8VmtDXf9Dbw8C_E63mtp9QJqh-6FZX/view?usp=share_link"
         }
       ],
       "card3": [
@@ -850,7 +850,7 @@ const dataByLang = {
           "desc": "Learning centered on real projects and problem-solving",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1kCkyFyuAXucMscFgCywjB6fGkSNPiJog/view?usp=share_link"
         }
       ],
       "card4": [
@@ -859,7 +859,7 @@ const dataByLang = {
           "desc": "Opportunities to connect with experts and communities",
           "extra1": "",
           "extra2": "",
-          "img": "drive.google.com/uc?id=..."
+          "img": "https://drive.google.com/file/d/1b4qtyXXM6Kc7P_1hiTfP9Go6H4ILzmul/view?usp=share_link"
         }
       ]
     },

@@ -62,7 +62,7 @@ nav a {
   white-space: nowrap;
 }
 nav a:hover { opacity: 1; }
-.nav-search { font-size: 18px; cursor: pointer; color: var(--white); opacity: 0.85; }
+.nav-search { font-size: 18px; cursor: pointer; color: var(--white); opacity: 0.85; display: inline-flex; align-items: center; }
 .nav-search-input {
   background: var(--white);
   border: none;

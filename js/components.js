@@ -51,7 +51,7 @@ function renderNav(activePage) {
       <a href="#" class="nav-back" id="search-back">&lt;</a>
       <div style="flex:1;"></div>
       <input type="text" class="nav-search-input open" placeholder="${labels.search}" value="${query}">
-      <span class="nav-search" id="nav-search-btn">🔍</span>
+      <span class="nav-search" id="nav-search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
       <button class="btn-lang" id="btn-lang-toggle">${labels.langLabel}</button>`;
     return;
   }
@@ -63,7 +63,7 @@ function renderNav(activePage) {
       <div class="nav-indicator"></div>
     </div>
     <input type="text" class="nav-search-input" placeholder="${labels.search}">
-    <span class="nav-search" id="nav-search-toggle">🔍</span>
+    <span class="nav-search" id="nav-search-toggle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
     <button class="btn-lang" id="btn-lang-toggle">${labels.langLabel}</button>
     <button class="hamburger" id="hamburger-btn" aria-label="Menu">≡</button>`;
 

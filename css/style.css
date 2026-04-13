@@ -122,7 +122,7 @@ nav a:hover { opacity: 1; }
   padding-top: 4px;
 }
 .btn-lang {
-  border: 1px solid rgba(255,255,255,0.5);
+  border: none;
   color: var(--white);
   font-size: 11px;
   padding: 3px 10px;
@@ -133,7 +133,6 @@ nav a:hover { opacity: 1; }
   transition: transform .3s ease, margin .3s ease;
   display: flex; align-items: center; gap: 5px;
 }
-.btn-lang::after { content: '›'; font-size: 14px; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -172,7 +171,7 @@ a.support-badge {
 .support-badge span {
   color: white;
   font-size: 15px;
-  text-align: right;
+  text-align: left;
   line-height: 1.4;
   font-family: var(--font-kr);
   font-weight: 600;

@@ -299,7 +299,7 @@ function renderHome() {
       const img = fixDriveUrl(o.img);
       return `
         <div class="home-offer-card">
-          <div class="home-offer-img"${img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : ''}></div>
+          <div class="home-offer-img">${img ? `<img src="${img}" alt="" loading="lazy">` : ''}</div>
           <h3>${nl2br(o.title)}</h3>
           <p>${nl2br(o.desc)}</p>
         </div>

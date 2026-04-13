@@ -824,6 +824,13 @@ a.support-badge {
   aspect-ratio: 2/1;
   background: #333;
   margin-bottom: 14px;
+  overflow: hidden;
+}
+.home-offer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Our Curriculum */

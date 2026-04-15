@@ -1700,6 +1700,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: none;
+    width: 100%;
   }
   .cohort-block-label {
     display: inline;

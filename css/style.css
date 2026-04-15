@@ -188,19 +188,21 @@ a.support-badge {
 
 /* ── MAESTER FORUM HERO ── */
 .forum-hero {
-  padding: 56px 32px 48px;
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 5vw, 32px) clamp(32px, 5vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
   background: #f5f4f0;
-  align-items: start;
+  align-items: flex-start;
 }
 .forum-left {
+  flex: 1 1 200px;
+  max-width: 260px;
   padding-top: 0;
 }
 .forum-left h1 {
   font-family: var(--font-en);
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   line-height: 1;
   letter-spacing: -1px;
   margin-bottom: 10px;
@@ -210,6 +212,10 @@ a.support-badge {
   color: var(--gray-dark);
   line-height: 120%;
   max-width: 200px;
+}
+.featured-post {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 
 .featured-post {
@@ -221,35 +227,37 @@ a.support-badge {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .post-num {
   font-family: var(--font-en);
-  font-size: 40px;
+  font-size: clamp(30px, 4vw, 40px);
   letter-spacing: -1px;
 }
-.post-num span { font-size: 28px; margin-right: 2px; }
+.post-num span { font-size: clamp(22px, 3vw, 28px); margin-right: 2px; }
 .post-date {
   font-family: var(--font-kr);
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   color: var(--black);
   letter-spacing: 0.5px;
 }
 
 .post-body {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
+  grid-template-columns: minmax(0, 320px) 1fr;
+  gap: clamp(16px, 2.5vw, 24px);
 }
 .post-img {
-  width: 320px;
-  height: 220px;
+  width: 100%;
+  aspect-ratio: 16/11;
   background: var(--gray-light);
   display: flex; align-items: center; justify-content: center;
   color: var(--gray-mid);
   font-size: 11px;
 }
 .post-content h2 {
-  font-size: 24px;
+  font-size: clamp(20px, 2.8vw, 24px);
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -279,32 +287,37 @@ a.support-badge {
   max-width: 1200px;
   margin-left: max(clamp(20px, 5vw, 50px), calc((100vw - 1200px) * 0.3 + 50px));
   margin-right: auto;
-  display: grid;
-  grid-template-columns: 260px 1fr auto;
-  gap: 48px;
-  align-items: start;
-  padding: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  align-items: flex-start;
+  padding: 0 clamp(20px, 5vw, 32px);
 }
-.next-week h3 {
-  font-family: var(--font-en);
-  font-size: 30px;
-  letter-spacing: -0.5px;
-  line-height: 1;
-  white-space: nowrap;
+.next-week-inner > div:first-child {
+  flex: 1 1 180px;
+  max-width: 260px;
 }
 .next-week-content {
+  flex: 2 1 280px;
   display: flex;
   flex-direction: column;
   min-height: 186px;
+  min-width: 0;
+}
+.next-week h3 {
+  font-family: var(--font-en);
+  font-size: clamp(24px, 3.5vw, 30px);
+  letter-spacing: -0.5px;
+  line-height: 1;
 }
 .next-week-content h2 {
-  font-size: 24px;
+  font-size: clamp(20px, 2.8vw, 24px);
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 10px;
 }
 .next-week-content p {
-  font-size: 16px;
+  font-size: clamp(14px, 1.8vw, 16px);
   color: #444;
   margin-bottom: auto;
   line-height: 1.7;
@@ -327,14 +340,14 @@ a.support-badge {
   display: none;
 }
 .next-week-img {
+  flex: 0 1 270px;
   width: 270px;
-  height: 186px;
-  align-self: end;
+  aspect-ratio: 270/186;
+  align-self: flex-end;
   background: var(--gray-light);
   display: flex; align-items: center; justify-content: center;
   color: var(--gray-mid);
   font-size: 11px;
-  flex-shrink: 0;
 }
 
 /* ── YEAR TABS ── */
@@ -375,12 +388,20 @@ a.support-badge {
 
 /* ── COHORT SECTIONS ── */
 .cohort-section {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
   padding: 20px 0 45px;
   border-bottom: 1px solid #000;
-  align-items: start;
+  align-items: flex-start;
+}
+.cohort-label {
+  flex: 1 1 180px;
+  max-width: 260px;
+}
+.cohort-content {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .cohort-label {
   font-family: var(--font-en);
@@ -405,8 +426,8 @@ a.support-badge {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(16px, 2.5vw, 32px);
 }
 
 .card {
@@ -416,7 +437,7 @@ a.support-badge {
 }
 .card-thumb {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 16/10;
   background: var(--gray-light);
   display: flex; align-items: center; justify-content: center;
   color: var(--gray-mid);
@@ -1566,9 +1587,6 @@ footer {
   }
 
   /* ALL 2-COLUMN → 1-COLUMN */
-  .forum-hero,
-  .next-week-inner,
-  .cohort-section,
   .mem-section,
   .cur-section,
   .news-layout,
@@ -1581,31 +1599,15 @@ footer {
 
   /* POST / CARD GRIDS */
   .post-body { grid-template-columns: 1fr; }
-  .post-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
-  }
-  .card-grid { grid-template-columns: 1fr; gap: 20px; }
-  .card-thumb {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
-  }
   .news-grid { grid-template-columns: 1fr; }
   .home-lb-grid { grid-template-columns: 1fr 1fr; }
+  .next-week-img { width: 100%; flex-basis: 100%; }
   .cur-lb-grid { grid-template-columns: repeat(2, 1fr); }
   .makers-grid { grid-template-columns: 1fr 1fr; }
 
   /* NEXT WEEK */
   .next-week-inner {
     margin-left: auto;
-    grid-template-columns: 1fr;
-  }
-  .next-week-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
   }
 
   /* ARCHIVE */

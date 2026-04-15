@@ -1692,6 +1692,12 @@ footer {
     margin: 16px 0;
   }
 
+  /* Archive card grid: 2 columns on mobile */
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
   /* COHORT - label & block-label same row, center Y */
   .cohort-section {
     grid-template-columns: 1fr;

@@ -813,6 +813,11 @@ a.support-badge {
 .home-section-left .mem-heading {
   margin-top: -12px;
 }
+.vision-divider {
+  border-top: 2px solid var(--black);
+  padding-top: 16px;
+  margin-top: -16px;
+}
 
 /* What We Offer */
 .home-offer-grid {
@@ -1723,6 +1728,40 @@ footer {
   /* SUPPORT BADGE - hide on mobile */
   #support-badge {
     display: none;
+  }
+
+  /* Headings: inline br → space on mobile */
+  .br-desk {
+    display: none;
+  }
+
+  /* Vision: hide desktop divider on mobile */
+  .vision-divider {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  /* Contact card: label left, value right, single row */
+  .home-contact-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Vision grid: horizontal scroll on mobile */
+  .home-vision-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .home-vision-item {
+    flex: 0 0 60%;
+    min-width: 180px;
+    scroll-snap-align: start;
   }
 
   /* NEWS CTA */

@@ -816,6 +816,7 @@ a.support-badge {
 .vision-divider {
   border-top: 2px solid var(--black);
   padding-top: 16px;
+  margin-top: -16px;
 }
 
 /* What We Offer */

@@ -344,8 +344,10 @@ function renderModerators(data) {
     ${all.map(m => `
       <div class="mem-card-v">
         <div class="mem-avatar-v"></div>
-        <div class="mem-name">${m.name}</div>
-        <div class="mem-bio">${m.bio}</div>
+        <div class="mem-info">
+          <div class="mem-name">${m.name}</div>
+          <div class="mem-bio">${m.bio}</div>
+        </div>
       </div>`).join('')}
   </div>`;
 }
@@ -357,9 +359,11 @@ function renderMaesters(list) {
     ${list.map(m => `
       <div class="mem-card-v">
         <div class="mem-avatar-v"></div>
-        <div class="mem-name">${m.name}</div>
-        <div class="mem-bio-sm">${m.bio}</div>
-        <div class="maester-session">${m.session}</div>
+        <div class="mem-info">
+          <div class="mem-name">${m.name}</div>
+          <div class="mem-bio-sm">${m.bio}</div>
+          <div class="maester-session">${m.session}</div>
+        </div>
       </div>`).join('')}
   </div>`;
 }

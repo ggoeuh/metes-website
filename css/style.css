@@ -521,14 +521,23 @@ a.support-badge {
 
 /* ── MEMBERS PAGE ── */
 .mem-section {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 56px 32px 56px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 5vw, 32px);
+  align-items: flex-start;
+}
+.mem-left {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
+.mem-right {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .mem-heading {
   font-family: var(--font-en);
-  font-size: 36px;
+  font-size: clamp(28px, 4.5vw, 36px);
   letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 10px;
@@ -574,7 +583,7 @@ a.support-badge {
 /* Member card vertical */
 .mem-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
   gap: 20px;
 }
 .mem-card-v {
@@ -586,6 +595,27 @@ a.support-badge {
   aspect-ratio: 3/2;
   background: var(--gray-light);
   margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+  .mem-card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .mem-card-v {
+    flex-direction: row;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .mem-card-v .mem-avatar-v {
+    width: 120px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    margin-bottom: 0;
+  }
+  .mem-card-v .mem-info {
+    flex: 1;
+    min-width: 0;
+  }
 }
 .maester-session {
   align-self: flex-start;
@@ -600,7 +630,7 @@ a.support-badge {
 /* LB Makers / Maker Pool */
 .makers-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr));
   gap: 16px 20px;
 }
 .maker-card {
@@ -631,19 +661,37 @@ a.support-badge {
 
 /* ── NEWS PAGE ── */
 .news-layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 56px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 5vw, 32px);
+  align-items: flex-start;
+}
+.news-layout > .news-left {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
+.news-layout > .news-article {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .news-list-layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: 0 clamp(20px, 5vw, 32px);
+  align-items: flex-start;
+}
+.news-list-left {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
+.news-list-right {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .news-article-title {
-  font-size: 24px;
+  font-size: clamp(20px, 2.8vw, 24px);
   font-weight: 700;
   margin-bottom: 18px;
   text-align: right;
@@ -682,8 +730,8 @@ a.support-badge {
 /* News list */
 .news-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: clamp(20px, 2.5vw, 28px) clamp(16px, 2vw, 24px);
   margin-bottom: 36px;
 }
 .news-card-img {
@@ -722,12 +770,12 @@ a.support-badge {
   padding-top: 24px;
 }
 .news-cta {
-  font-size: 22px;
+  font-size: clamp(18px, 2.3vw, 22px);
   color: #444;
   line-height: 1.6;
 }
 .news-cta strong {
-  font-size: 22px;
+  font-size: clamp(18px, 2.3vw, 22px);
   font-weight: 800;
   color: var(--black);
 }
@@ -1078,14 +1126,20 @@ body[data-page="home"] {
   opacity: 1;
 }
 .article-detail {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 56px 32px;
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 5vw, 32px);
+  align-items: flex-start;
 }
 .article-meta-left {
+  flex: 1 1 200px;
+  max-width: 260px;
   padding-top: 0;
+}
+.article-content {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .article-num {
   font-family: var(--font-en);
@@ -1143,10 +1197,19 @@ body[data-page="home"] {
   margin-top: 32px;
 }
 .article-related {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: 0 clamp(20px, 5vw, 32px);
+  align-items: flex-start;
+}
+.article-related-left {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
+.article-related-right {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 
 /* ── CURRICULUM PAGE ── */
@@ -1595,16 +1658,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-  }
-
-  /* ALL 2-COLUMN → 1-COLUMN */
-  .mem-section,
-  .news-layout,
-  .news-list-layout,
-  .article-detail,
-  .article-related {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   /* POST / CARD GRIDS */

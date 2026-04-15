@@ -818,6 +818,9 @@ a.support-badge {
   padding-top: 16px;
   margin-top: -16px;
 }
+body[data-page="home"] {
+  background: #f5f4f0;
+}
 
 /* What We Offer */
 .home-offer-grid {

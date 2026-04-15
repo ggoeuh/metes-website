@@ -967,7 +967,7 @@ body[data-page="home"] {
 .home-vision-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
-  gap: clamp(8px, 1.25vw, 12px);
+  gap: clamp(4px, 0.6vw, 6px);
   margin-top: 24px;
 }
 .home-vision-item {
@@ -1749,7 +1749,7 @@ footer {
   .home-vision-grid {
     display: flex;
     overflow-x: auto;
-    gap: 8px;
+    gap: 4px;
     padding-bottom: 8px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;

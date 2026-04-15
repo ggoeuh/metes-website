@@ -816,7 +816,6 @@ a.support-badge {
 .vision-divider {
   border-top: 2px solid var(--black);
   padding-top: 16px;
-  margin-top: -16px;
 }
 
 /* What We Offer */
@@ -1733,13 +1732,6 @@ footer {
   /* Headings: inline br → space on mobile */
   .br-desk {
     display: none;
-  }
-
-  /* Vision: hide desktop divider on mobile */
-  .vision-divider {
-    border-top: none;
-    padding-top: 0;
-    margin-top: 0;
   }
 
   /* Contact card: label left, value right, single row */

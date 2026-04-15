@@ -1152,7 +1152,7 @@ body[data-page="home"] {
 /* ── CURRICULUM PAGE ── */
 .cur-lb-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
   gap: 5px;
 }
 .cur-lb-card {
@@ -1161,19 +1161,19 @@ body[data-page="home"] {
 }
 .cur-lb-num {
   font-family: var(--font-en);
-  font-size: 28px;
+  font-size: clamp(22px, 3vw, 28px);
   color: var(--black);
   display: block;
   margin-bottom: 20px;
 }
 .cur-lb-card h4 {
-  font-size: 16px;
+  font-size: clamp(14px, 1.8vw, 16px);
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 6px;
 }
 .cur-lb-card p {
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   color: var(--gray-dark);
   line-height: 140%;
 }
@@ -1204,12 +1204,12 @@ body[data-page="home"] {
   border-bottom: none;
 }
 .cur-fee-title {
-  font-size: 21px;
+  font-size: clamp(18px, 2.5vw, 21px);
   font-weight: 700;
   margin-bottom: 4px;
 }
 .cur-fee-sub {
-  font-size: 14px;
+  font-size: clamp(13px, 1.5vw, 14px);
   color: var(--gray-dark);
 }
 .cur-fee-right {
@@ -1217,21 +1217,30 @@ body[data-page="home"] {
   flex-shrink: 0;
 }
 .cur-fee-amount {
-  font-size: 24px;
+  font-size: clamp(20px, 2.8vw, 24px);
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 .cur-fee-unit {
-  font-size: 14px;
+  font-size: clamp(13px, 1.5vw, 14px);
   color: var(--gray-dark);
   margin-left: 4px;
 }
 
 .cur-section {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  padding: 56px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 5vw, 32px);
+  align-items: flex-start;
+}
+.cur-left {
+  flex: 1 1 200px;
+  max-width: 260px;
+}
+.cur-right {
+  flex: 3 1 320px;
+  min-width: 0;
 }
 .cur-session-grid {
   display: flex;
@@ -1247,17 +1256,19 @@ body[data-page="home"] {
 }
 .cur-session-card {
   display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2.5vw, 24px);
   margin-bottom: 26px;
 }
 .cur-session-img {
-  width: 200px;
-  flex-shrink: 0;
+  flex: 1 1 180px;
+  max-width: 200px;
+  aspect-ratio: 4/3;
   background: var(--gray-light);
-  align-self: stretch;
 }
 .cur-session-body {
-  padding: 0 0 0 24px;
-  flex: 1;
+  flex: 3 1 260px;
+  min-width: 0;
 }
 .cur-session-top {
   display: flex;
@@ -1588,7 +1599,6 @@ footer {
 
   /* ALL 2-COLUMN → 1-COLUMN */
   .mem-section,
-  .cur-section,
   .news-layout,
   .news-list-layout,
   .article-detail,
@@ -1602,7 +1612,6 @@ footer {
   .news-grid { grid-template-columns: 1fr; }
   .home-lb-grid { grid-template-columns: 1fr 1fr; }
   .next-week-img { width: 100%; flex-basis: 100%; }
-  .cur-lb-grid { grid-template-columns: repeat(2, 1fr); }
   .makers-grid { grid-template-columns: 1fr 1fr; }
 
   /* NEXT WEEK */
@@ -1617,22 +1626,14 @@ footer {
   }
 
   /* SESSION CARDS */
-  .cur-session-card {
-    flex-direction: column;
-    gap: 16px;
-  }
   .cur-session-img {
-    width: 100%;
-    height: 180px;
-  }
-  .cur-session-body {
-    padding: 0;
+    max-width: 100%;
+    aspect-ratio: 16/9;
   }
 
   /* PADDING */
   .forum-hero,
   .mem-section,
-  .cur-section,
   .news-layout,
   .news-list-layout {
     padding-left: 20px;
@@ -1663,7 +1664,6 @@ footer {
 
   /* SECTION TOP PADDING - reduce to 1/3 */
   .mem-section,
-  .cur-section,
   .news-layout {
     padding-top: 20px;
   }

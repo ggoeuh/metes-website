@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 13. 오후 3:48:16
+// 마지막 동기화: 2026. 4. 16. AM 9:46:48
 
 const dataByLang = {
   kor: {
@@ -15,25 +15,35 @@ const dataByLang = {
           "name": "다니엘",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
           "img": ""
+        },
+        {
+          "name": "세라",
+          "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
+          "img": "Moderator_SERA.jpg"
+        },
+        {
+          "name": "아르베",
+          "bio": "안녕하세요 모더레이터 아르베에요! 조용하고 차분한 커피챗을 원하시면 저를 찾아주세요!",
+          "img": "Moderator_ARBE.jpg"
         }
       ]
     },
     "maesters": [
       {
-        "name": "다니엘",
-        "bio": "한국 최대 AI 커뮤니티 000",
-        "session": "리더십 세션",
+        "name": "최희진",
+        "bio": "",
+        "session": "",
         "img": ""
       }
     ],
     "lbMakers": [
       {
-        "name": "다니엘",
+        "name": "제이콥",
         "tags": [
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": ""
+        "img": "Maker_김준현.jpeg"
       }
     ],
     "makerPool": [
@@ -610,28 +620,38 @@ const dataByLang = {
       },
       "sub": [
         {
-          "name": "다니엘",
+          "name": "Daniel",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
           "img": ""
+        },
+        {
+          "name": "Sera",
+          "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
+          "img": "Moderator_SERA.jpg"
+        },
+        {
+          "name": "Arbe",
+          "bio": "안녕하세요 모더레이터 아르베에요! 조용하고 차분한 커피챗을 원하시면 저를 찾아주세요!",
+          "img": "Moderator_ARBE.jpg"
         }
       ]
     },
     "maesters": [
       {
-        "name": "다니엘",
-        "bio": "한국 최대 AI 커뮤니티 000",
-        "session": "리더십 세션",
+        "name": "Heejin Choi",
+        "bio": "",
+        "session": "",
         "img": ""
       }
     ],
     "lbMakers": [
       {
-        "name": "다니엘",
+        "name": "Jacob",
         "tags": [
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": ""
+        "img": "Maker_김준현.jpeg"
       }
     ],
     "makerPool": [

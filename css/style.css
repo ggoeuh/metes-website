@@ -1772,10 +1772,10 @@ footer {
     font-size: 32px;
   }
 
-  /* SECTION TOP PADDING - reduce to 1/3 */
+  /* SECTION TOP PADDING */
   .mem-section,
   .news-layout {
-    padding-top: 20px;
+    padding-top: 48px;
   }
 
   /* PAGE HERO - smaller */

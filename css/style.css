@@ -630,7 +630,7 @@ a.support-badge {
 /* LB Makers / Maker Pool */
 .makers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
   gap: 16px 20px;
 }
 .maker-card {
@@ -658,6 +658,7 @@ a.support-badge {
   font-size: 10px;
   padding: 2px 7px;
   border-radius: 0;
+  white-space: nowrap;
 }
 
 /* ── NEWS PAGE ── */

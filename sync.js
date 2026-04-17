@@ -75,7 +75,7 @@ function parseCSV(text) {
   if (rows.length < 2) return [];
   const headers = rows[0];
   return rows.slice(1)
-    .filter(r => r.some(v => v && v.trim()) && !(r[0] || '').startsWith('[예시]') && !(r[0] || '').startsWith('[Example]'))
+    .filter(r => r[0] && !r[0].startsWith('[예시]') && !r[0].startsWith('[Example]'))
     .map(r => {
       const obj = {};
       headers.forEach((h, i) => { obj[h.trim()] = (r[i] || '').trim(); });
@@ -91,11 +91,6 @@ function formatDate(d) {
 }
 
 function transformMembers(rows) {
-  let lastType = '';
-  rows = rows.map(r => {
-    if (r.type) lastType = r.type;
-    return { ...r, type: r.type || lastType };
-  });
   const mf = rows.filter(r => r.type === 'moderator_featured')[0];
   const ms = rows.filter(r => r.type === 'moderator');
   const ma = rows.filter(r => r.type === 'maester' || r.type === 'miester');

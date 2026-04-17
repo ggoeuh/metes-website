@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. AM 11:04:07
+// 마지막 동기화: 2026. 4. 17. AM 11:52:03
 
 const dataByLang = {
   kor: {
@@ -9,14 +9,16 @@ const dataByLang = {
         "name": "",
         "bio": "",
         "img": "",
-        "tags": []
+        "tags": [],
+        "profileUrl": ""
       },
       "sub": [
         {
           "name": "다니엘",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
           "img": "",
-          "tags": []
+          "tags": [],
+          "profileUrl": ""
         },
         {
           "name": "세라",
@@ -26,7 +28,8 @@ const dataByLang = {
             "#K컬쳐",
             "#커뮤니티",
             "#KKIRIZ"
-          ]
+          ],
+          "profileUrl": "https://litt.ly/kkiriz"
         },
         {
           "name": "아르베",
@@ -35,17 +38,29 @@ const dataByLang = {
           "tags": [
             "#Fashion",
             "#Culture"
-          ]
+          ],
+          "profileUrl": "https://www.linkedin.com/in/arbe-ryu-260778391?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       ]
     },
-    "maesters": [
+    "miesters": [
       {
         "name": "최희진",
         "bio": "",
         "session": "",
         "img": "",
-        "tags": []
+        "tags": [],
+        "cohorts": [],
+        "profileUrl": ""
+      },
+      {
+        "name": "김진석",
+        "bio": "",
+        "session": "",
+        "img": "",
+        "tags": [],
+        "cohorts": [],
+        "profileUrl": ""
       }
     ],
     "lbMakers": [
@@ -55,7 +70,92 @@ const dataByLang = {
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": "Maker_김준현.jpeg"
+        "img": "Maker_김준현.jpeg",
+        "cohorts": [
+          "3",
+          "4"
+        ],
+        "profileUrl": "instagram.com/yampar"
+      },
+      {
+        "name": "코알티",
+        "tags": [],
+        "img": "Maker_Koarti(고정현).jpg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "리디아",
+        "tags": [
+          "#관계디자인",
+          "#공예"
+        ],
+        "img": "Maker_리디아Lydia.jpeg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": "https://www.instagram.com/arcroom.kr?igsh=Mm9sdDZkeXRrMDNo"
+      },
+      {
+        "name": "케이",
+        "tags": [
+          "#커뮤니티",
+          "#자기계발"
+        ],
+        "img": "Maker_박경민.jpg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": "https://litt.ly/okay.community"
+      },
+      {
+        "name": "박정훈",
+        "tags": [
+          "#수학",
+          "#부동산"
+        ],
+        "img": "Maker_박정훈.jpg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": "https://www.instagram.com/chris.j.h.park?igsh=ZDdpYzM4amtzZ3Uw"
+      },
+      {
+        "name": "백희승",
+        "tags": [
+          "#자립준비청년",
+          "#창업준비생"
+        ],
+        "img": "Maker_백희승.jpeg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": "https://www.instagram.com/heeseungstory?igsh=MWszZDVndG5zajF6Yg%3D%3D&utm_source=qr"
+      },
+      {
+        "name": "알렉스",
+        "tags": [
+          "#K컬쳐",
+          "#글로벌유통"
+        ],
+        "img": "Maker_이부형.jpg",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": "instagram.com/moneylab_alchemist"
+      },
+      {
+        "name": "송인태",
+        "tags": [
+          "#음향(오디오, 사운드, 음악)"
+        ],
+        "img": "",
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
       }
     ],
     "makerPool": [
@@ -65,7 +165,374 @@ const dataByLang = {
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": ""
+        "img": "",
+        "cohorts": [],
+        "profileUrl": ""
+      }
+    ],
+    "miesterPool": [
+      {
+        "name": "이창우",
+        "bio": "닷슬래시대시 대표",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#인류기억저장소",
+          "#닷슬래시대시"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "고승원",
+        "bio": "솔로프리너",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#솔로프리너의시대"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박지혜",
+        "bio": "바이올리니스트, 메타컬쳐센터 센터장",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#가치창조",
+          "#AI퍼포머"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박재형",
+        "bio": "NEXTIS 대표",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#IP비즈니스",
+          "#탈중앙화"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이소영",
+        "bio": "마이크로소프트 글로벌 인플루언서팀 아시아 총괄 리전 매니저",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#마이크로소프트",
+          "#커뮤니티리더십"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김수린",
+        "bio": "앙트레브(Entreve) 대표",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#앙트레브",
+          "#꿈을담는가방"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김성훈",
+        "bio": "범무법인 미션 대표이사",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#법무법인미션",
+          "#커버넌트"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "장성호",
+        "bio": "\"킹 오브 킹스\" 감독",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#킹오브킹스",
+          "#K컬쳐"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박소령",
+        "bio": "퍼블리(PUBLY) Founder",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#실패를통과하는일",
+          "#퍼블리"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김정빈",
+        "bio": "수퍼빈 CEO",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#수퍼빈",
+          "#순환가치"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김정현",
+        "bio": "리빌더AI CEO",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#3D디자인",
+          "#기술혁신"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "황성재",
+        "bio": "XYZ Founder",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#로보틱스",
+          "#F&B"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "권도균",
+        "bio": "현 프라이머 대표이사 / 전 이니시스, 이니텍 Founder",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#창업",
+          "#조직문화"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김승일",
+        "bio": "모두의 연구소 Founder",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#커뮤니티",
+          "#교육혁신"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "조수빈",
+        "bio": "현 조수빈의 큐레이터 유튜브 / 전 KBS 9시 뉴스 메인 앵커",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#KBS9시뉴스",
+          "#콘텐츠브랜딩"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이선민",
+        "bio": "Future Works Lab(퓨처웍스랩) Founder",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#스테이블코인의시대",
+          "#Web3"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김동호",
+        "bio": "한국신용데이터",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#데이터",
+          "#소상공인"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "가종현",
+        "bio": "전 하이브 라틴아메리카 CEO",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#글로벌전략",
+          "#KPOP"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김소희",
+        "bio": "김소희 트렌드랩 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#트렌드",
+          "#엔터프라이즈"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "권민",
+        "bio": "앤털러키브랜드 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#브랜딩",
+          "#휴먼브랜드"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "임선영",
+        "bio": "미쉐린 칼럼니스트",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#푸드",
+          "#테크"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이지윤",
+        "bio": "숨 프로젝트 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#큐레이터",
+          "#현대미술"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "최재웅",
+        "bio": "폴앤마크 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#조직문화",
+          "#컨설팅"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "영주 닐슨",
+        "bio": "한국퇴직연금데이터 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#트레이딩",
+          "#퇴직연금"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "윤수영",
+        "bio": "트레바리 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#커뮤니티",
+          "#독서모임"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Christopher Han",
+        "bio": "Pidea Lab 대표",
+        "session": "Cohort4",
+        "img": "",
+        "tags": [
+          "#디자인씽킹",
+          "#조직문화"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
       }
     ]
   },
@@ -164,7 +631,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "매주 화요일 오전",
-        "maester": "진석 마에스터",
+        "miester": "진석 마에스터",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
         "img": "",
@@ -173,7 +640,7 @@ const dataByLang = {
       {
         "session": "Leadership Session",
         "time": "매주 화요일 오후",
-        "maester": "희진 마에스터",
+        "miester": "희진 마에스터",
         "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
         "tags": "리더십|심화 토론|커뮤니티",
         "img": "",
@@ -364,7 +831,7 @@ const dataByLang = {
           "img": ""
         }
       ],
-      "maester": [
+      "miester로": [
         {
           "title": "Miester",
           "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, 투자자, 기업 리더",
@@ -517,7 +984,7 @@ const dataByLang = {
           "img": ""
         },
         {
-          "title": "Maester Forum",
+          "title": "miester로 Forum",
           "desc": "index.html",
           "extra1": "",
           "extra2": "",
@@ -638,14 +1105,16 @@ const dataByLang = {
         "name": "",
         "bio": "",
         "img": "",
-        "tags": []
+        "tags": [],
+        "profileUrl": ""
       },
       "sub": [
         {
           "name": "Daniel",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
           "img": "",
-          "tags": []
+          "tags": [],
+          "profileUrl": ""
         },
         {
           "name": "Sera",
@@ -655,7 +1124,8 @@ const dataByLang = {
             "#K컬쳐",
             "#커뮤니티",
             "#KKIRIZ"
-          ]
+          ],
+          "profileUrl": "https://litt.ly/kkiriz"
         },
         {
           "name": "Arbe",
@@ -664,17 +1134,20 @@ const dataByLang = {
           "tags": [
             "#Fashion",
             "#Culture"
-          ]
+          ],
+          "profileUrl": "https://www.linkedin.com/in/arbe-ryu-260778391?utm_source=share_via&utm_content=profile&utm_medium=member_android"
         }
       ]
     },
-    "maesters": [
+    "miesters": [
       {
         "name": "Heejin Choi",
         "bio": "",
         "session": "",
         "img": "",
-        "tags": []
+        "tags": [],
+        "cohorts": [],
+        "profileUrl": ""
       }
     ],
     "lbMakers": [
@@ -684,7 +1157,12 @@ const dataByLang = {
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": "Maker_김준현.jpeg"
+        "img": "Maker_김준현.jpeg",
+        "cohorts": [
+          "3",
+          "4"
+        ],
+        "profileUrl": "instagram.com/yampar"
       }
     ],
     "makerPool": [
@@ -694,7 +1172,25 @@ const dataByLang = {
           "# AI 디자이너",
           "# AI 강의"
         ],
-        "img": ""
+        "img": "",
+        "cohorts": [],
+        "profileUrl": ""
+      }
+    ],
+    "miesterPool": [
+      {
+        "name": "이창우",
+        "bio": "닷슬래시대시 대표",
+        "session": "Cohort3",
+        "img": "",
+        "tags": [
+          "#인류기억저장소",
+          "#닷슬래시대시"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
       }
     ]
   },
@@ -793,7 +1289,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "매주 화요일 오전",
-        "maester": "진석 마에스터",
+        "miester": "진석 마에스터",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
         "img": "",
@@ -802,7 +1298,7 @@ const dataByLang = {
       {
         "session": "Leadership Session",
         "time": "매주 화요일 오후",
-        "maester": "희진 마에스터",
+        "miester": "희진 마에스터",
         "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
         "tags": "리더십|심화 토론|커뮤니티",
         "img": "",
@@ -958,7 +1454,7 @@ const dataByLang = {
       "members": [
         {
           "title": "Members",
-          "desc": "Meet the moderators, maesters, and makers who lead METES.",
+          "desc": "Meet the moderators, miester로s, and makers who lead METES.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -967,7 +1463,7 @@ const dataByLang = {
       "forum": [
         {
           "title": "Article",
-          "desc": "Insights from invited maesters compiled into articles.",
+          "desc": "Insights from invited miester로s compiled into articles.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -993,7 +1489,7 @@ const dataByLang = {
           "img": ""
         }
       ],
-      "maester": [
+      "miester로": [
         {
           "title": "Miester",
           "desc": "Industry experts leading each session. Founders, investors, business leaders",
@@ -1015,6 +1511,15 @@ const dataByLang = {
         {
           "title": "Maker Pool",
           "desc": "A network where makers of diverse backgrounds grow together",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
+      ],
+      "miester_pool": [
+        {
+          "title": "Miester Pool",
+          "desc": "설명",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -1137,7 +1642,7 @@ const dataByLang = {
           "img": ""
         },
         {
-          "title": "Maester Forum",
+          "title": "miester로 Forum",
           "desc": "index.html",
           "extra1": "",
           "extra2": "",
@@ -1239,11 +1744,11 @@ const dataByLang = {
     },
     "members": {
       "title": "Members",
-      "desc": "Meet the moderators, maesters, and makers who lead METES."
+      "desc": "Meet the moderators, miester로s, and makers who lead METES."
     },
     "forum": {
       "title": "Article",
-      "desc": "Insights from invited maesters compiled into articles."
+      "desc": "Insights from invited miester로s compiled into articles."
     },
     "news": {
       "title": "News",
@@ -1264,7 +1769,7 @@ const controlMap = {
   "section.support": true,
   "section.contact": true,
   "section.moderator": true,
-  "section.maester": true,
+  "section.miester": true,
   "section.maker": true,
   "section.maker_pool": false,
   "section.miester_pool": true,

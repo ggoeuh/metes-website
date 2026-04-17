@@ -113,7 +113,7 @@ nav a:hover { opacity: 1; }
   align-items: start;
 }
 .search-section > :nth-child(2) {
-  border-top: 1px solid #000;
+  border-top: 2px solid var(--black);
   padding-top: 28px;
 }
 .search-section .makers-grid,

@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. AM 7:47:43
+// 마지막 동기화: 2026. 4. 17. AM 7:57:20
 
 const dataByLang = {
   kor: {
@@ -24,7 +24,7 @@ const dataByLang = {
         {
           "name": "아르베",
           "bio": "안녕하세요 모더레이터 아르베에요! 조용하고 차분한 커피챗을 원하시면 저를 찾아주세요!",
-          "img": "https://drive.google.com/file/d/1Jvq_vBZz5OWIHtdSuA4kwBDr9HRGydjL/view?usp=sharing"
+          "img": "https://drive.google.com/file/d/1ifhRyErigKmepX2eCfn065YO7LZDezlz/view?usp=sharing"
         }
       ]
     },

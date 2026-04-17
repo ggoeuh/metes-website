@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. PM 1:23:36
+// 마지막 동기화: 2026. 4. 17. PM 1:35:49
 
 const dataByLang = {
   kor: {
@@ -825,7 +825,7 @@ const dataByLang = {
       "moderator": [
         {
           "title": "Moderator",
-          "desc": "METES 커뮤니티의 연결 다리 역할. 프로그램 운영, 세션 진행 및 커뮤니티 관리",
+          "desc": "METES 커뮤니티의 연결 다리 역할. 프로그램 운영, \n세션 진행 및 커뮤니티 관리",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -834,7 +834,7 @@ const dataByLang = {
       "miester": [
         {
           "title": "Miester",
-          "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, 투자자, 기업 리더",
+          "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, \n투자자, 기업 리더",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -843,7 +843,7 @@ const dataByLang = {
       "maker": [
         {
           "title": "Maker",
-          "desc": "METES 커뮤니티의 핵심 참여자. 창업가, 예비 창업가, 창작자",
+          "desc": "METES 커뮤니티의 핵심 참여자. 창업가, \n예비 창업가, 창작자",
           "extra1": "",
           "extra2": "",
           "img": ""

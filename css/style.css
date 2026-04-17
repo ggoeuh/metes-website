@@ -646,9 +646,9 @@ a.support-badge {
 }
 .maker-tags {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 3px;
+  gap: 4px;
 }
 .mtag {
   display: inline-block;

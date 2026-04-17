@@ -1722,7 +1722,7 @@ footer {
   .news-grid { grid-template-columns: 1fr; }
   .home-lb-grid { grid-template-columns: 1fr 1fr; }
   .next-week-img { width: 100%; flex-basis: 100%; }
-  .makers-grid { grid-template-columns: 1fr 1fr; }
+  .makers-grid { grid-template-columns: 1fr; }
 
   /* NEXT WEEK */
   .next-week-inner {

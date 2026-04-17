@@ -653,8 +653,8 @@ a.support-badge {
 }
 .mtag {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.12);
-  color: var(--black);
+  background: var(--black);
+  color: #fff;
   font-size: 10px;
   padding: 2px 7px;
   border-radius: 0;
@@ -677,11 +677,9 @@ a.support-badge {
   font-size: 10px;
   font-weight: 600;
   line-height: 1;
+  background: var(--black);
+  color: #fff;
 }
-.cohort-chip.c1 { background: #D4F0D4; color: #2d6e2d; }
-.cohort-chip.c2 { background: #FFF0C8; color: #8a6d2e; }
-.cohort-chip.c3 { background: #FFD4D4; color: #8a3e3e; }
-.cohort-chip.c4 { background: #D4E5FF; color: #2e5c8a; }
 
 /* ── NEWS PAGE ── */
 .news-layout {

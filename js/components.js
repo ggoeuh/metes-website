@@ -99,12 +99,15 @@ function renderSearchResults(query) {
   const miesP = Array.isArray(membersData.miesterPool) ? membersData.miesterPool : [];
   const lbM = Array.isArray(membersData.lbMakers) ? membersData.lbMakers : [];
   const mkrP = Array.isArray(membersData.makerPool) ? membersData.makerPool : [];
-  const allMembers = [...mods, ...mies, ...miesP, ...lbM, ...mkrP];
-  const matchedMembers = allMembers.filter(m => {
+  const matchFn = m => {
     const tags = Array.isArray(m.tags) ? m.tags : [];
     const name = m.name || '';
     return tags.some(t => (t || '').includes(query)) || name.includes(query);
-  });
+  };
+  const matchedMods = mods.filter(matchFn);
+  const matchedMies = [...mies, ...miesP].filter(matchFn);
+  const matchedMkrs = [...lbM, ...mkrP].filter(matchFn);
+  const totalMembers = matchedMods.length + matchedMies.length + matchedMkrs.length;
 
   const allCards = (Array.isArray(forumData) ? forumData : []).flatMap(y =>
     (y.cohorts || []).flatMap(c => (c.blocks || []).flatMap(b => b.cards || []))
@@ -115,7 +118,7 @@ function renderSearchResults(query) {
     return title.includes(query) || tags.some(t => (t || '').includes(query));
   });
 
-  const totalResults = matchedMembers.length + matchedCards.length;
+  const totalResults = totalMembers + matchedCards.length;
 
   // 헤더
   const header = document.getElementById('search-header');
@@ -125,11 +128,16 @@ function renderSearchResults(query) {
       <div class="search-count">검색 결과 ${totalResults}건</div>`;
   }
 
-  // Member 결과
+  // Member 결과 (타입별 행 분리)
   const memberEl = document.getElementById('search-members');
   if (memberEl) {
-    if (matchedMembers.length > 0) {
-      memberEl.innerHTML = `<div class="makers-grid">${matchedMembers.map(renderMakerCard).join('')}</div>`;
+    if (totalMembers > 0) {
+      const group = (label, list) => list.length === 0 ? '' :
+        `<div class="search-member-group">
+          <div class="search-member-group-label">${label}</div>
+          <div class="makers-grid">${list.map(renderMakerCard).join('')}</div>
+        </div>`;
+      memberEl.innerHTML = group('Moderator', matchedMods) + group('Miester', matchedMies) + group('Maker', matchedMkrs);
     } else {
       memberEl.innerHTML = '<p style="color:#999;">검색 결과가 없습니다.</p>';
     }

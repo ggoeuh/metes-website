@@ -119,6 +119,17 @@ nav a:hover { opacity: 1; }
 .search-section .makers-grid {
   grid-template-columns: 1fr 1fr;
 }
+.search-member-group + .search-member-group {
+  margin-top: 24px;
+}
+.search-member-group-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-dark);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 .search-section-label {
   font-family: var(--font-en);
   font-size: 28px;

@@ -116,8 +116,12 @@ nav a:hover { opacity: 1; }
   border-top: 1px solid #000;
   padding-top: 28px;
 }
-.search-section .makers-grid {
-  grid-template-columns: 1fr 1fr;
+.search-section .makers-grid,
+.search-section .mem-card-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.search-section .mem-bio-sm {
+  min-height: 36px;
 }
 .search-section .mem-card-grid + .mem-card-grid,
 .search-section .mem-card-grid + .makers-grid,

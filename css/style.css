@@ -660,14 +660,23 @@ a.support-badge {
   align-items: flex-start;
 }
 .maker-card .mem-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   height: 80px;
   flex: 1;
 }
 .maker-card .mem-name {
   margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.maker-card .maker-tags {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
 }
 .maker-tags {
   display: flex;

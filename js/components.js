@@ -341,6 +341,11 @@ function avatarStyle(imgUrl) {
   return img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : '';
 }
 
+function renderTags(tags) {
+  if (!tags || !tags.length) return '';
+  return `<div class="maker-tags">${tags.map(t => `<span class="mtag">${t}</span>`).join('')}</div>`;
+}
+
 function renderModerators(data) {
   const el = document.getElementById('moderators-content');
   if (!el) return;
@@ -352,6 +357,7 @@ function renderModerators(data) {
         <div class="mem-info">
           <div class="mem-name">${m.name}</div>
           <div class="mem-bio">${m.bio}</div>
+          ${renderTags(m.tags)}
         </div>
       </div>`).join('')}
   </div>`;
@@ -368,6 +374,7 @@ function renderMaesters(list) {
           <div class="mem-name">${m.name}</div>
           <div class="mem-bio-sm">${m.bio}</div>
           <div class="maester-session">${m.session}</div>
+          ${renderTags(m.tags)}
         </div>
       </div>`).join('')}
   </div>`;
@@ -378,7 +385,7 @@ function renderMakerCard(m) {
     <div class="mem-avatar small"${avatarStyle(m.img)}></div>
     <div class="mem-info">
       <div class="mem-name">${m.name}</div>
-      <div class="maker-tags">${m.tags.map(t => `<span class="mtag">${t}</span>`).join('')}</div>
+      ${renderTags(m.tags)}
     </div>
   </div>`;
 }

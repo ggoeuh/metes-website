@@ -96,14 +96,15 @@ function transformMembers(rows) {
   const ma = rows.filter(r => r.type === 'maester' || r.type === 'miester');
   const mk = rows.filter(r => r.type === 'maker');
   const mp = rows.filter(r => r.type === 'maker_pool');
+  const tagsOf = (r) => [r.tag1, r.tag2, r.tag3].filter(Boolean);
   return {
     moderators: {
-      featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '' },
-      sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '' })),
+      featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '', tags: mf ? tagsOf(mf) : [] },
+      sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '', tags: tagsOf(r) })),
     },
-    maesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '' })),
-    lbMakers: mk.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean), img: r.img || '' })),
-    makerPool: mp.map(r => ({ name: r.name, tags: [r.tag1, r.tag2, r.tag3].filter(Boolean), img: r.img || '' })),
+    maesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r) })),
+    lbMakers: mk.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '' })),
+    makerPool: mp.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '' })),
   };
 }
 

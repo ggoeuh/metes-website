@@ -364,8 +364,8 @@ function profileLink(url) {
 }
 
 function renderTags(tags) {
-  if (!tags || !tags.length) return '';
-  return `<div class="maker-tags">${tags.map(t => `<span class="mtag">${t}</span>`).join('')}</div>`;
+  const list = Array.isArray(tags) ? tags : [];
+  return `<div class="maker-tags">${list.map(t => `<span class="mtag">${t}</span>`).join('')}</div>`;
 }
 
 function renderCohorts(cohorts) {

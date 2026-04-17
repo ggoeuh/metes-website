@@ -601,8 +601,16 @@ a.support-badge {
   gap: 20px;
 }
 .mem-card-v {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
+}
+.mem-card-v .mem-info {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0;
 }
 .mem-avatar-v {
   width: 100%;
@@ -636,6 +644,9 @@ a.support-badge {
     gap: 16px;
   }
   .mem-card-v {
+    display: flex;
+    grid-template-rows: none;
+    grid-row: auto;
     flex-direction: row;
     gap: 14px;
     align-items: flex-start;
@@ -647,8 +658,12 @@ a.support-badge {
     margin-bottom: 0;
   }
   .mem-card-v .mem-info {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-width: 0;
+    grid-template-rows: none;
+    grid-row: auto;
   }
 }
 .miester-session {

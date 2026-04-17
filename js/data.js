@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. AM 7:35:28
+// 마지막 동기화: 2026. 4. 17. AM 7:47:43
 
 const dataByLang = {
   kor: {
@@ -19,7 +19,7 @@ const dataByLang = {
         {
           "name": "세라",
           "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
-          "img": "Moderator_SERA.jpg"
+          "img": "https://drive.google.com/file/d/17oKdPHN0IjoVNqtaF5i7ORfj2jSY_LtA/view?usp=sharing"
         },
         {
           "name": "아르베",

@@ -104,10 +104,13 @@ function renderSearchResults(query) {
     const name = m.name || '';
     return tags.some(t => (t || '').includes(query)) || name.includes(query);
   };
-  const matchedMods = mods.filter(matchFn);
-  const matchedMies = [...mies, ...miesP].filter(matchFn);
-  const matchedMkrs = [...lbM, ...mkrP].filter(matchFn);
-  const totalMembers = matchedMods.length + matchedMies.length + matchedMkrs.length;
+  const tagRole = (list, role) => list.filter(matchFn).map(m => ({ ...m, _role: role }));
+  const matched = [
+    ...tagRole(mods, 'Moderator'),
+    ...tagRole([...mies, ...miesP], 'Miester'),
+    ...tagRole([...lbM, ...mkrP], 'Maker'),
+  ];
+  const totalMembers = matched.length;
 
   const allCards = (Array.isArray(forumData) ? forumData : []).flatMap(y =>
     (y.cohorts || []).flatMap(c => (c.blocks || []).flatMap(b => b.cards || []))
@@ -128,16 +131,11 @@ function renderSearchResults(query) {
       <div class="search-count">검색 결과 ${totalResults}건</div>`;
   }
 
-  // Member 결과 (타입별 행 분리)
+  // Member 결과 (역할 칩으로 구분)
   const memberEl = document.getElementById('search-members');
   if (memberEl) {
     if (totalMembers > 0) {
-      const group = (label, list) => list.length === 0 ? '' :
-        `<div class="search-member-group">
-          <div class="search-member-group-label">${label}</div>
-          <div class="makers-grid">${list.map(renderMakerCard).join('')}</div>
-        </div>`;
-      memberEl.innerHTML = group('Moderator', matchedMods) + group('Miester', matchedMies) + group('Maker', matchedMkrs);
+      memberEl.innerHTML = `<div class="makers-grid">${matched.map(renderSearchMemberCard).join('')}</div>`;
     } else {
       memberEl.innerHTML = '<p style="color:#999;">검색 결과가 없습니다.</p>';
     }
@@ -412,6 +410,17 @@ function renderMakerCard(m) {
     <div class="mem-avatar small"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
     <div class="mem-info">
       <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
+      ${renderTags(m.tags)}
+    </div>
+  </div>`;
+}
+
+function renderSearchMemberCard(m) {
+  const roleChip = m._role ? `<span class="role-chip role-${m._role.toLowerCase()}">${m._role}</span>` : '';
+  return `<div class="maker-card">
+    <div class="mem-avatar small"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+    <div class="mem-info">
+      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}${roleChip}</div>
       ${renderTags(m.tags)}
     </div>
   </div>`;

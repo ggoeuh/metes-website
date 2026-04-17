@@ -119,17 +119,23 @@ nav a:hover { opacity: 1; }
 .search-section .makers-grid {
   grid-template-columns: 1fr 1fr;
 }
-.search-member-group + .search-member-group {
-  margin-top: 24px;
-}
-.search-member-group-label {
-  font-size: 13px;
+.role-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+  font-family: var(--font-kr);
+  font-size: 10px;
   font-weight: 700;
-  color: var(--gray-dark);
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: var(--white);
+  background: var(--black);
+  vertical-align: middle;
 }
+.role-chip.role-maker { background: #7d6ad9; }
+.role-chip.role-miester { background: #2e2a3d; }
+.role-chip.role-moderator { background: #555; }
 .search-section-label {
   font-family: var(--font-en);
   font-size: 28px;

@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. AM 11:52:03
+// 마지막 동기화: 2026. 4. 17. PM 12:06:47
 
 const dataByLang = {
   kor: {
@@ -831,7 +831,7 @@ const dataByLang = {
           "img": ""
         }
       ],
-      "miester로": [
+      "miester": [
         {
           "title": "Miester",
           "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, 투자자, 기업 리더",
@@ -1489,7 +1489,7 @@ const dataByLang = {
           "img": ""
         }
       ],
-      "miester로": [
+      "miester": [
         {
           "title": "Miester",
           "desc": "Industry experts leading each session. Founders, investors, business leaders",

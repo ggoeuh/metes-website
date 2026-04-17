@@ -336,6 +336,11 @@ function renderYearTabs(years, activeYear) {
 
 // ── 멤버 컴포넌트 ──
 
+function avatarStyle(imgUrl) {
+  const img = fixDriveUrl(imgUrl);
+  return img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : '';
+}
+
 function renderModerators(data) {
   const el = document.getElementById('moderators-content');
   if (!el) return;
@@ -343,7 +348,7 @@ function renderModerators(data) {
   el.innerHTML = `<div class="mem-card-grid">
     ${all.map(m => `
       <div class="mem-card-v">
-        <div class="mem-avatar-v"></div>
+        <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
         <div class="mem-info">
           <div class="mem-name">${m.name}</div>
           <div class="mem-bio">${m.bio}</div>
@@ -358,7 +363,7 @@ function renderMaesters(list) {
   el.innerHTML = `<div class="mem-card-grid">
     ${list.map(m => `
       <div class="mem-card-v">
-        <div class="mem-avatar-v"></div>
+        <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
         <div class="mem-info">
           <div class="mem-name">${m.name}</div>
           <div class="mem-bio-sm">${m.bio}</div>
@@ -370,7 +375,7 @@ function renderMaesters(list) {
 
 function renderMakerCard(m) {
   return `<div class="maker-card">
-    <div class="mem-avatar small"></div>
+    <div class="mem-avatar small"${avatarStyle(m.img)}></div>
     <div class="mem-info">
       <div class="mem-name">${m.name}</div>
       <div class="maker-tags">${m.tags.map(t => `<span class="mtag">${t}</span>`).join('')}</div>

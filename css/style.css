@@ -666,12 +666,15 @@ a.support-badge {
   height: 80px;
   flex: 1;
 }
+.maker-card .mem-name {
+  margin-bottom: 0;
+}
 .maker-tags {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 4px;
-  margin-top: 6px;
+  margin-top: 0;
 }
 .mtag {
   display: inline-block;
@@ -681,6 +684,7 @@ a.support-badge {
   padding: 2px 7px;
   border-radius: 0;
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 .cohort-chips {

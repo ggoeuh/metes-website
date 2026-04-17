@@ -368,8 +368,8 @@ function renderModerators(data) {
   </div>`;
 }
 
-function renderMaesters(list, containerId) {
-  const el = document.getElementById(containerId || 'maesters-content');
+function renderMiesters(list, containerId) {
+  const el = document.getElementById(containerId || 'miesters-content');
   if (!el) return;
   el.innerHTML = `<div class="mem-card-grid">
     ${list.map(m => `
@@ -469,7 +469,7 @@ function renderSessionCards(tuesday, friday) {
       <div class="cur-session-img"></div>
       <div class="cur-session-body">
         <div class="cur-session-top">
-          <div class="cur-session-name"><span>${s.maester || 'METES Forum'}</span>${s.time.includes('오전') ? '<span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? '<span class="cur-session-ampm">오후</span>' : ''}</div>
+          <div class="cur-session-name"><span>${s.miester || 'METES Forum'}</span>${s.time.includes('오전') ? '<span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? '<span class="cur-session-ampm">오후</span>' : ''}</div>
           <div class="cur-session-tag">${s.session}</div>
         </div>
         <p class="cur-session-desc">${s.desc}</p>

@@ -94,17 +94,26 @@ function renderNav(activePage) {
 }
 
 function renderSearchResults(query) {
-  const allMembers = [...membersData.lbMakers, ...membersData.makerPool];
-  const matchedMembers = allMembers.filter(m =>
-    m.tags.some(t => t.includes(query)) || m.name.includes(query)
-  );
+  const mods = Array.isArray(membersData.moderators) ? membersData.moderators : [];
+  const mies = Array.isArray(membersData.miesters) ? membersData.miesters : [];
+  const miesP = Array.isArray(membersData.miesterPool) ? membersData.miesterPool : [];
+  const lbM = Array.isArray(membersData.lbMakers) ? membersData.lbMakers : [];
+  const mkrP = Array.isArray(membersData.makerPool) ? membersData.makerPool : [];
+  const allMembers = [...mods, ...mies, ...miesP, ...lbM, ...mkrP];
+  const matchedMembers = allMembers.filter(m => {
+    const tags = Array.isArray(m.tags) ? m.tags : [];
+    const name = m.name || '';
+    return tags.some(t => (t || '').includes(query)) || name.includes(query);
+  });
 
-  const allCards = forumData.flatMap(y =>
-    y.cohorts.flatMap(c => c.blocks.flatMap(b => b.cards))
-  ).concat(forumData.flatMap(y => y.moreCards || []));
-  const matchedCards = allCards.filter(c =>
-    c.title.includes(query) || (c.tags && c.tags.some(t => t.includes(query)))
-  );
+  const allCards = (Array.isArray(forumData) ? forumData : []).flatMap(y =>
+    (y.cohorts || []).flatMap(c => (c.blocks || []).flatMap(b => b.cards || []))
+  ).concat((Array.isArray(forumData) ? forumData : []).flatMap(y => y.moreCards || []));
+  const matchedCards = allCards.filter(c => {
+    const title = c.title || '';
+    const tags = Array.isArray(c.tags) ? c.tags : [];
+    return title.includes(query) || tags.some(t => (t || '').includes(query));
+  });
 
   const totalResults = matchedMembers.length + matchedCards.length;
 

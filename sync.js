@@ -99,15 +99,16 @@ function transformMembers(rows) {
   const mep = rows.filter(r => r.type === 'miester_pool');
   const tagsOf = (r) => [r.tag1, r.tag2, r.tag3].filter(Boolean);
   const cohortsOf = (r) => ((r.session || '').match(/Cohort\s*(\d+)/gi) || []).map(m => m.match(/\d+/)[0]);
+  const urlOf = (r) => r.profile_url || '';
   return {
     moderators: {
-      featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '', tags: mf ? tagsOf(mf) : [] },
-      sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '', tags: tagsOf(r) })),
+      featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '', tags: mf ? tagsOf(mf) : [], profileUrl: mf ? urlOf(mf) : '' },
+      sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '', tags: tagsOf(r), profileUrl: urlOf(r) })),
     },
-    miesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r) })),
-    lbMakers: mk.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r) })),
-    makerPool: mp.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r) })),
-    miesterPool: mep.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r) })),
+    miesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
+    lbMakers: mk.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
+    makerPool: mp.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
+    miesterPool: mep.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
   };
 }
 

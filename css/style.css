@@ -555,6 +555,7 @@ a.support-badge {
   justify-content: center;
   color: var(--gray-mid);
   font-size: 10px;
+  position: relative;
 }
 .mem-avatar.large { width: 80px; height: 80px; }
 .mem-avatar.small { width: 80px; height: 80px; }
@@ -595,6 +596,26 @@ a.support-badge {
   aspect-ratio: 3/2;
   background: var(--gray-light);
   margin-bottom: 12px;
+  position: relative;
+}
+
+.profile-link {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1;
+}
+.profile-link svg {
+  width: 8px;
+  height: 8px;
 }
 @media (max-width: 600px) {
   .mem-card-grid {

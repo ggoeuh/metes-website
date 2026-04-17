@@ -104,13 +104,10 @@ function renderSearchResults(query) {
     const name = m.name || '';
     return tags.some(t => (t || '').includes(query)) || name.includes(query);
   };
-  const tagRole = (list, role) => list.filter(matchFn).map(m => ({ ...m, _role: role }));
-  const matched = [
-    ...tagRole(mods, 'Moderator'),
-    ...tagRole([...mies, ...miesP], 'Miester'),
-    ...tagRole([...lbM, ...mkrP], 'Maker'),
-  ];
-  const totalMembers = matched.length;
+  const matchedMods = mods.filter(matchFn);
+  const matchedMies = [...mies, ...miesP].filter(matchFn);
+  const matchedMkrs = [...lbM, ...mkrP].filter(matchFn);
+  const totalMembers = matchedMods.length + matchedMies.length + matchedMkrs.length;
 
   const allCards = (Array.isArray(forumData) ? forumData : []).flatMap(y =>
     (y.cohorts || []).flatMap(c => (c.blocks || []).flatMap(b => b.cards || []))
@@ -131,11 +128,15 @@ function renderSearchResults(query) {
       <div class="search-count">검색 결과 ${totalResults}건</div>`;
   }
 
-  // Member 결과 (역할 칩으로 구분)
+  // Member 결과 (타입별 행 — 카드 스타일 자체로 구분)
   const memberEl = document.getElementById('search-members');
   if (memberEl) {
     if (totalMembers > 0) {
-      memberEl.innerHTML = `<div class="makers-grid">${matched.map(renderSearchMemberCard).join('')}</div>`;
+      const rows = [];
+      if (matchedMods.length) rows.push(`<div class="mem-card-grid">${matchedMods.map(renderModeratorCard).join('')}</div>`);
+      if (matchedMies.length) rows.push(`<div class="mem-card-grid">${matchedMies.map(renderMiesterCard).join('')}</div>`);
+      if (matchedMkrs.length) rows.push(`<div class="makers-grid">${matchedMkrs.map(renderMakerCard).join('')}</div>`);
+      memberEl.innerHTML = rows.join('');
     } else {
       memberEl.innerHTML = '<p style="color:#999;">검색 결과가 없습니다.</p>';
     }
@@ -415,12 +416,23 @@ function renderMakerCard(m) {
   </div>`;
 }
 
-function renderSearchMemberCard(m) {
-  const roleChip = m._role ? `<span class="role-chip role-${m._role.toLowerCase()}">${m._role}</span>` : '';
-  return `<div class="maker-card">
-    <div class="mem-avatar small"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+function renderMiesterCard(m) {
+  return `<div class="mem-card-v">
+    <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
     <div class="mem-info">
-      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}${roleChip}</div>
+      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
+      <div class="mem-bio-sm">${m.bio || ''}</div>
+      ${renderTags(m.tags)}
+    </div>
+  </div>`;
+}
+
+function renderModeratorCard(m) {
+  return `<div class="mem-card-v">
+    <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+    <div class="mem-info">
+      <div class="mem-name">${m.name}</div>
+      <div class="mem-bio">${m.bio || ''}</div>
       ${renderTags(m.tags)}
     </div>
   </div>`;

@@ -119,19 +119,11 @@ nav a:hover { opacity: 1; }
 .search-section .makers-grid {
   grid-template-columns: 1fr 1fr;
 }
-.role-chip {
-  display: inline-flex;
-  align-items: center;
-  height: 20px;
-  padding: 0 9px;
-  border-radius: 10px;
-  margin-left: 6px;
-  font-family: var(--font-kr);
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--white);
-  background: var(--black);
-  vertical-align: middle;
+.search-section .mem-card-grid + .mem-card-grid,
+.search-section .mem-card-grid + .makers-grid,
+.search-section .makers-grid + .mem-card-grid,
+.search-section .makers-grid + .makers-grid {
+  margin-top: 32px;
 }
 .search-section-label {
   font-family: var(--font-en);

@@ -649,6 +649,7 @@ a.support-badge {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 4px;
+  margin-top: 6px;
 }
 .mtag {
   display: inline-block;

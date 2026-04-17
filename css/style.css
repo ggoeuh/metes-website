@@ -110,11 +110,14 @@ nav a:hover { opacity: 1; }
   grid-template-columns: 260px 1fr;
   gap: 48px;
   padding: 28px 32px;
-  align-items: baseline;
+  align-items: start;
 }
 .search-section > :nth-child(2) {
   border-top: 1px solid #000;
   padding-top: 28px;
+}
+.search-section .makers-grid {
+  grid-template-columns: 1fr 1fr;
 }
 .search-section-label {
   font-family: var(--font-en);

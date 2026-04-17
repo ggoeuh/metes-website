@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. AM 7:57:20
+// 마지막 동기화: 2026. 4. 17. AM 11:04:07
 
 const dataByLang = {
   kor: {
@@ -8,23 +8,34 @@ const dataByLang = {
       "featured": {
         "name": "",
         "bio": "",
-        "img": ""
+        "img": "",
+        "tags": []
       },
       "sub": [
         {
           "name": "다니엘",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
-          "img": ""
+          "img": "",
+          "tags": []
         },
         {
           "name": "세라",
           "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
-          "img": "https://drive.google.com/file/d/17oKdPHN0IjoVNqtaF5i7ORfj2jSY_LtA/view?usp=sharing"
+          "img": "https://drive.google.com/file/d/17oKdPHN0IjoVNqtaF5i7ORfj2jSY_LtA/view?usp=sharing",
+          "tags": [
+            "#K컬쳐",
+            "#커뮤니티",
+            "#KKIRIZ"
+          ]
         },
         {
           "name": "아르베",
           "bio": "안녕하세요 모더레이터 아르베에요! 조용하고 차분한 커피챗을 원하시면 저를 찾아주세요!",
-          "img": "https://drive.google.com/file/d/1ifhRyErigKmepX2eCfn065YO7LZDezlz/view?usp=sharing"
+          "img": "https://drive.google.com/file/d/1ifhRyErigKmepX2eCfn065YO7LZDezlz/view?usp=sharing",
+          "tags": [
+            "#Fashion",
+            "#Culture"
+          ]
         }
       ]
     },
@@ -33,7 +44,8 @@ const dataByLang = {
         "name": "최희진",
         "bio": "",
         "session": "",
-        "img": ""
+        "img": "",
+        "tags": []
       }
     ],
     "lbMakers": [
@@ -378,6 +390,15 @@ const dataByLang = {
           "extra2": "",
           "img": ""
         }
+      ],
+      "miester_pool": [
+        {
+          "title": "Miester Pool",
+          "desc": "설명",
+          "extra1": "",
+          "extra2": "",
+          "img": ""
+        }
       ]
     },
     "curriculum": {
@@ -616,23 +637,34 @@ const dataByLang = {
       "featured": {
         "name": "",
         "bio": "",
-        "img": ""
+        "img": "",
+        "tags": []
       },
       "sub": [
         {
           "name": "Daniel",
           "bio": "자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개자기소개",
-          "img": ""
+          "img": "",
+          "tags": []
         },
         {
           "name": "Sera",
           "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
-          "img": "Moderator_SERA.jpg"
+          "img": "Moderator_SERA.jpg",
+          "tags": [
+            "#K컬쳐",
+            "#커뮤니티",
+            "#KKIRIZ"
+          ]
         },
         {
           "name": "Arbe",
           "bio": "안녕하세요 모더레이터 아르베에요! 조용하고 차분한 커피챗을 원하시면 저를 찾아주세요!",
-          "img": "Moderator_ARBE.jpg"
+          "img": "Moderator_ARBE.jpg",
+          "tags": [
+            "#Fashion",
+            "#Culture"
+          ]
         }
       ]
     },
@@ -641,7 +673,8 @@ const dataByLang = {
         "name": "Heejin Choi",
         "bio": "",
         "session": "",
-        "img": ""
+        "img": "",
+        "tags": []
       }
     ],
     "lbMakers": [
@@ -1234,6 +1267,7 @@ const controlMap = {
   "section.maester": true,
   "section.maker": true,
   "section.maker_pool": false,
+  "section.miester_pool": true,
   "section.session": true,
   "section.program": true,
   "section.cost": true,

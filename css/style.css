@@ -657,13 +657,19 @@ a.support-badge {
 .maker-card {
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: stretch;
+}
+.maker-card .mem-avatar.small {
+  height: auto;
+  min-height: 80px;
+  align-self: stretch;
 }
 .maker-card .mem-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80px;
+  min-height: 80px;
+  flex: 1;
 }
 .maker-tags {
   display: flex;

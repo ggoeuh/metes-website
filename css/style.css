@@ -661,6 +661,28 @@ a.support-badge {
   white-space: nowrap;
 }
 
+.cohort-chips {
+  display: inline-flex;
+  gap: 4px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.cohort-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+}
+.cohort-chip.c1 { background: #D4F0D4; color: #2d6e2d; }
+.cohort-chip.c2 { background: #FFF0C8; color: #8a6d2e; }
+.cohort-chip.c3 { background: #FFD4D4; color: #8a3e3e; }
+.cohort-chip.c4 { background: #D4E5FF; color: #2e5c8a; }
+
 /* ── NEWS PAGE ── */
 .news-layout {
   display: flex;

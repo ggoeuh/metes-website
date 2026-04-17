@@ -346,6 +346,11 @@ function renderTags(tags) {
   return `<div class="maker-tags">${tags.map(t => `<span class="mtag">${t}</span>`).join('')}</div>`;
 }
 
+function renderCohorts(cohorts) {
+  if (!cohorts || !cohorts.length) return '';
+  return `<span class="cohort-chips">${cohorts.map(n => `<span class="cohort-chip c${n}">C${n}</span>`).join('')}</span>`;
+}
+
 function renderModerators(data) {
   const el = document.getElementById('moderators-content');
   if (!el) return;
@@ -371,9 +376,8 @@ function renderMaesters(list) {
       <div class="mem-card-v">
         <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
         <div class="mem-info">
-          <div class="mem-name">${m.name}</div>
+          <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
           <div class="mem-bio-sm">${m.bio}</div>
-          <div class="maester-session">${m.session}</div>
           ${renderTags(m.tags)}
         </div>
       </div>`).join('')}
@@ -384,7 +388,7 @@ function renderMakerCard(m) {
   return `<div class="maker-card">
     <div class="mem-avatar small"${avatarStyle(m.img)}></div>
     <div class="mem-info">
-      <div class="mem-name">${m.name}</div>
+      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
       ${renderTags(m.tags)}
     </div>
   </div>`;

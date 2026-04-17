@@ -96,6 +96,7 @@ function transformMembers(rows) {
   const ma = rows.filter(r => r.type === 'maester' || r.type === 'miester');
   const mk = rows.filter(r => r.type === 'maker');
   const mp = rows.filter(r => r.type === 'maker_pool');
+  const mep = rows.filter(r => r.type === 'miester_pool' || r.type === 'maester_pool');
   const tagsOf = (r) => [r.tag1, r.tag2, r.tag3].filter(Boolean);
   const cohortsOf = (r) => ((r.session || '').match(/Cohort\s*(\d+)/gi) || []).map(m => m.match(/\d+/)[0]);
   return {
@@ -106,6 +107,7 @@ function transformMembers(rows) {
     maesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r) })),
     lbMakers: mk.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r) })),
     makerPool: mp.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r) })),
+    miesterPool: mep.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r) })),
   };
 }
 

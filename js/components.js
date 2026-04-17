@@ -368,8 +368,8 @@ function renderModerators(data) {
   </div>`;
 }
 
-function renderMaesters(list) {
-  const el = document.getElementById('maesters-content');
+function renderMaesters(list, containerId) {
+  const el = document.getElementById(containerId || 'maesters-content');
   if (!el) return;
   el.innerHTML = `<div class="mem-card-grid">
     ${list.map(m => `

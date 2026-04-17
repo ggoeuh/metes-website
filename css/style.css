@@ -659,15 +659,11 @@ a.support-badge {
   gap: 12px;
   align-items: flex-start;
 }
-.maker-card .mem-avatar.small {
-  width: 110px;
-  height: 110px;
-}
 .maker-card .mem-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 110px;
+  height: 80px;
   flex: 1;
 }
 .maker-tags {

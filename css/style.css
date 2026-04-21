@@ -596,7 +596,7 @@ a.support-badge {
 /* Member card vertical */
 .mem-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .mem-card-v {
@@ -678,7 +678,7 @@ a.support-badge {
 /* LB Makers / Maker Pool */
 .makers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px 20px;
 }
 .maker-card {

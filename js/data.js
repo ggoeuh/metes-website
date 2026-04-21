@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 21. AM 7:55:30
+// 마지막 동기화: 2026. 4. 21. AM 8:34:41
 
 const dataByLang = {
   kor: {
@@ -22,7 +22,7 @@ const dataByLang = {
         },
         {
           "name": "세라",
-          "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
+          "bio": "우리의 덕질, 누구의 방해도 없이! \n끼리즈 대표 이세윤 입니다.",
           "img": "https://drive.google.com/file/d/17oKdPHN0IjoVNqtaF5i7ORfj2jSY_LtA/view?usp=sharing",
           "tags": [
             "#K컬쳐",
@@ -116,7 +116,7 @@ const dataByLang = {
           "#수학",
           "#부동산"
         ],
-        "img": "https://drive.google.com/file/d/1iBD7VBJM2jhm7Vb4PrNNiSYWsYBtUlB3/view?usp=sharing",
+        "img": "https://drive.google.com/file/d/1IFdvgQwr71-s_0_--DOcXStK-DGKgdTO/view?usp=drive_link",
         "cohorts": [
           "4"
         ],
@@ -1199,7 +1199,7 @@ const dataByLang = {
         "name": "KAY",
         "tags": [
           "#Community",
-          "#SelfDevelopment"
+          "#Self-improvement"
         ],
         "img": "https://drive.google.com/file/d/1gwUNiMF7TO_bJIQGH1U3n7SN8j_YhRV7/view?usp=sharing",
         "cohorts": [
@@ -1208,7 +1208,7 @@ const dataByLang = {
         "profileUrl": "https://litt.ly/okay.community"
       },
       {
-        "name": "Park Jung-hoon",
+        "name": "Chris",
         "tags": [
           "#math",
           "#real estate"
@@ -1220,12 +1220,12 @@ const dataByLang = {
         "profileUrl": "https://www.instagram.com/chris.j.h.park?igsh=ZDdpYzM4amtzZ3Uw"
       },
       {
-        "name": "Baek Hee-seung",
+        "name": "Back",
         "tags": [
           "#YouthPreparingForIndependence",
           "#AspiringEntrepreneur"
         ],
-        "img": "https://drive.google.com/file/d/1jl9-FIDlyxo9V0kOiSaVs5DTx3PkM0B8/view?usp=sharing",
+        "img": "https://drive.google.com/file/d/1IFdvgQwr71-s_0_--DOcXStK-DGKgdTO/view?usp=drive_link",
         "cohorts": [
           "4"
         ],
@@ -2201,7 +2201,7 @@ const dataByLang = {
 const controlMap = {
   "page.curriculum": true,
   "page.members": true,
-  "page.forum": true,
+  "page.forum": false,
   "page.news": false,
   "section.about": true,
   "section.vision": true,

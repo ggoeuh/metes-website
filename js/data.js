@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 21. AM 5:19:24
+// 마지막 동기화: 2026. 4. 21. AM 7:48:42
 
 const dataByLang = {
   kor: {
@@ -191,7 +191,8 @@ const dataByLang = {
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#솔로프리너의시대"
+          "#솔로프리너의시대",
+          "#1인 기업가"
         ],
         "cohorts": [
           "3"
@@ -521,7 +522,7 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "Christopher Han",
+        "name": "크리스토퍼 한",
         "bio": "Pidea Lab 대표",
         "session": "Cohort4",
         "img": "",
@@ -1121,8 +1122,8 @@ const dataByLang = {
           "bio": "우리의 덕질, 누구의 방해도 없이! 끼리즈 대표 이세윤 입니다.",
           "img": "https://drive.google.com/file/d/17oKdPHN0IjoVNqtaF5i7ORfj2jSY_LtA/view?usp=sharing",
           "tags": [
-            "#K컬쳐",
-            "#커뮤니티",
+            "#K-Culture",
+            "#Community",
             "#KKIRIZ"
           ],
           "profileUrl": "https://litt.ly/kkiriz"
@@ -1163,8 +1164,8 @@ const dataByLang = {
       {
         "name": "Jacob",
         "tags": [
-          "# AI 디자이너",
-          "# AI 강의"
+          "# AI Designer",
+          "# AI Lecture"
         ],
         "img": "https://drive.google.com/file/d/1s3eHCbgjLDBFRpJ1RVXutbYUUsWDwRri/view?usp=sharing",
         "cohorts": [
@@ -1174,7 +1175,7 @@ const dataByLang = {
         "profileUrl": "instagram.com/yampar"
       },
       {
-        "name": "KOARTI",
+        "name": "Koalti",
         "tags": [],
         "img": "https://drive.google.com/file/d/1imE9EBvgqQ1mUh1MUBWBWil48C_dG28G/view?usp=sharing",
         "cohorts": [
@@ -1185,8 +1186,8 @@ const dataByLang = {
       {
         "name": "Lydia",
         "tags": [
-          "#관계디자인",
-          "#공예"
+          "#RelationshipDesign",
+          "#crafts"
         ],
         "img": "https://drive.google.com/file/d/1clzMp1LAOgUZE5ZFJzyGemF-khmd7XgX/view?usp=sharing",
         "cohorts": [
@@ -1195,10 +1196,10 @@ const dataByLang = {
         "profileUrl": "https://www.instagram.com/arcroom.kr?igsh=Mm9sdDZkeXRrMDNo"
       },
       {
-        "name": "Kay",
+        "name": "KAY",
         "tags": [
-          "#커뮤니티",
-          "#자기계발"
+          "#Community",
+          "#SelfDevelopment"
         ],
         "img": "https://drive.google.com/file/d/1gwUNiMF7TO_bJIQGH1U3n7SN8j_YhRV7/view?usp=sharing",
         "cohorts": [
@@ -1207,10 +1208,10 @@ const dataByLang = {
         "profileUrl": "https://litt.ly/okay.community"
       },
       {
-        "name": "박정훈",
+        "name": "Park Jung-hoon",
         "tags": [
-          "#수학",
-          "#부동산"
+          "#math",
+          "#real estate"
         ],
         "img": "https://drive.google.com/file/d/1iBD7VBJM2jhm7Vb4PrNNiSYWsYBtUlB3/view?usp=sharing",
         "cohorts": [
@@ -1219,10 +1220,10 @@ const dataByLang = {
         "profileUrl": "https://www.instagram.com/chris.j.h.park?igsh=ZDdpYzM4amtzZ3Uw"
       },
       {
-        "name": "백희승",
+        "name": "Baek Hee-seung",
         "tags": [
-          "#자립준비청년",
-          "#창업준비생"
+          "#YouthPreparingForIndependence",
+          "#AspiringEntrepreneur"
         ],
         "img": "https://drive.google.com/file/d/1jl9-FIDlyxo9V0kOiSaVs5DTx3PkM0B8/view?usp=sharing",
         "cohorts": [
@@ -1233,8 +1234,8 @@ const dataByLang = {
       {
         "name": "Alex",
         "tags": [
-          "#K컬쳐",
-          "#글로벌유통"
+          "#K-Culture",
+          "#GlobalDistribution"
         ],
         "img": "https://drive.google.com/file/d/1pGwChfDY0P17eaeDAfNnHIl0s3O2TgCY/view?usp=sharing",
         "cohorts": [
@@ -1243,9 +1244,9 @@ const dataByLang = {
         "profileUrl": "instagram.com/moneylab_alchemist"
       },
       {
-        "name": "송인태",
+        "name": "Song In-tae",
         "tags": [
-          "#음향(오디오, 사운드, 음악)"
+          "#Audio (Audio, Sound, Music)"
         ],
         "img": "",
         "cohorts": [
@@ -1258,8 +1259,8 @@ const dataByLang = {
       {
         "name": "다니엘",
         "tags": [
-          "# AI 디자이너",
-          "# AI 강의"
+          "# AI Designer",
+          "# AI Lecture"
         ],
         "img": "",
         "cohorts": [],
@@ -1268,13 +1269,13 @@ const dataByLang = {
     ],
     "miesterPool": [
       {
-        "name": "이창우",
-        "bio": "닷슬래시대시 대표",
+        "name": "Lee Chang-woo",
+        "bio": "Dot Slash Dash CEO",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#인류기억저장소",
-          "#닷슬래시대시"
+          "#HumanMemoryStorage",
+          "#DotSlashDash"
         ],
         "cohorts": [
           "3"
@@ -1282,12 +1283,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "고승원",
-        "bio": "솔로프리너",
+        "name": "Ko Seung-won",
+        "bio": "Solo Preneur",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#솔로프리너의시대"
+          "#The Solo Preneur",
+          "#One-person entrepreneur"
         ],
         "cohorts": [
           "3"
@@ -1295,13 +1297,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "박지혜",
-        "bio": "바이올리니스트, 메타컬쳐센터 센터장",
+        "name": "Park Ji-hye",
+        "bio": "Violinist",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#가치창조",
-          "#AI퍼포머"
+          "#ValueCreation",
+          "#AIPerformer"
         ],
         "cohorts": [
           "3"
@@ -1309,13 +1311,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "박재형",
-        "bio": "NEXTIS 대표",
+        "name": "Park Jae-hyung",
+        "bio": "NEXTIS CEO",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#IP비즈니스",
-          "#탈중앙화"
+          "#IP Business",
+          "#Decentralization"
         ],
         "cohorts": [
           "3"
@@ -1323,13 +1325,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "이소영",
-        "bio": "마이크로소프트 글로벌 인플루언서팀 아시아 총괄 리전 매니저",
+        "name": "Lee So-young",
+        "bio": "Microsoft Global Influencer Team Asia Regional Manager",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#마이크로소프트",
-          "#커뮤니티리더십"
+          "#Microsoft",
+          "#CommunityLeadership"
         ],
         "cohorts": [
           "3"
@@ -1337,13 +1339,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김수린",
-        "bio": "앙트레브(Entreve) 대표",
+        "name": "Kim Su-rin",
+        "bio": "Entre Rêves CEO",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#앙트레브",
-          "#꿈을담는가방"
+          "#Entre Rêves",
+          "#BagThatCarriesDreams"
         ],
         "cohorts": [
           "3"
@@ -1351,13 +1353,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김성훈",
-        "bio": "범무법인 미션 대표이사",
+        "name": "Kim Seong-hoon",
+        "bio": "Managing Partner of MISSION Law Firm",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#법무법인미션",
-          "#커버넌트"
+          "#LawFirmMission",
+          "#Covenant"
         ],
         "cohorts": [
           "3"
@@ -1365,13 +1367,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "장성호",
-        "bio": "\"킹 오브 킹스\" 감독",
+        "name": "Jang Seong-ho",
+        "bio": "\"King or Kings\" Director",
         "session": "Cohort3",
         "img": "",
         "tags": [
-          "#킹오브킹스",
-          "#K컬쳐"
+          "#KingOfKings",
+          "#KCulture"
         ],
         "cohorts": [
           "3"
@@ -1379,13 +1381,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "박소령",
-        "bio": "퍼블리(PUBLY) Founder",
+        "name": "Park So-ryeong",
+        "bio": "PUBLY Founder",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#실패를통과하는일",
-          "#퍼블리"
+          "#PassingThroughFailure",
+          "#Publy"
         ],
         "cohorts": [
           "4"
@@ -1393,13 +1395,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김정빈",
-        "bio": "수퍼빈 CEO",
+        "name": "Kim Jeong-bin",
+        "bio": "SUPERBIN CEO",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#수퍼빈",
-          "#순환가치"
+          "#Superbin",
+          "#CircularValue"
         ],
         "cohorts": [
           "4"
@@ -1407,13 +1409,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김정현",
-        "bio": "리빌더AI CEO",
+        "name": "Kim Jung-hyun",
+        "bio": "Rebuilder AI CEO",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#3D디자인",
-          "#기술혁신"
+          "#3Ddesign",
+          "#Technological Innovation"
         ],
         "cohorts": [
           "4"
@@ -1421,12 +1423,12 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "황성재",
+        "name": "Hwang Seong-jae",
         "bio": "XYZ Founder",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#로보틱스",
+          "#Robotics",
           "#F&B"
         ],
         "cohorts": [
@@ -1435,13 +1437,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "권도균",
-        "bio": "현 프라이머 대표이사 / 전 이니시스, 이니텍 Founder",
+        "name": "Douglas Guen",
+        "bio": "Primer Founder & CEO",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#창업",
-          "#조직문화"
+          "#Startup",
+          "#OrganizationalCulture"
         ],
         "cohorts": [
           "4"
@@ -1449,13 +1451,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김승일",
-        "bio": "모두의 연구소 Founder",
+        "name": "Kim Seung-il",
+        "bio": "Modu Labs Founder",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#커뮤니티",
-          "#교육혁신"
+          "#Community",
+          "#EducationInnovation"
         ],
         "cohorts": [
           "4"
@@ -1463,13 +1465,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "조수빈",
-        "bio": "현 조수빈의 큐레이터 유튜브 / 전 KBS 9시 뉴스 메인 앵커",
+        "name": "Jo Soo-bin",
+        "bio": "Main anchor of KBS 9 News",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#KBS9시뉴스",
-          "#콘텐츠브랜딩"
+          "#KBS9pmNews",
+          "#ContentBranding"
         ],
         "cohorts": [
           "4"
@@ -1477,12 +1479,12 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "이선민",
+        "name": "Lee Seon-min",
         "bio": "Future Works Lab(퓨처웍스랩) Founder",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#스테이블코인의시대",
+          "#TheEraOfStableCoins",
           "#Web3"
         ],
         "cohorts": [
@@ -1491,13 +1493,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김동호",
+        "name": "Kim Dong-ho",
         "bio": "한국신용데이터",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#데이터",
-          "#소상공인"
+          "#data",
+          "#Small business owners"
         ],
         "cohorts": [
           "4"
@@ -1505,12 +1507,12 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "가종현",
+        "name": "Ga Jong-hyun",
         "bio": "전 하이브 라틴아메리카 CEO",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#글로벌전략",
+          "#GlobalStrategy",
           "#KPOP"
         ],
         "cohorts": [
@@ -1519,13 +1521,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "김소희",
+        "name": "Kim So-hee",
         "bio": "김소희 트렌드랩 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#트렌드",
-          "#엔터프라이즈"
+          "#Trend",
+          "#Enterprise"
         ],
         "cohorts": [
           "4"
@@ -1533,13 +1535,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "권민",
+        "name": "Kwon Min",
         "bio": "앤털러키브랜드 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#브랜딩",
-          "#휴먼브랜드"
+          "#Branding",
+          "#HumanBrand"
         ],
         "cohorts": [
           "4"
@@ -1547,13 +1549,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "임선영",
+        "name": "Im Seon-young",
         "bio": "미쉐린 칼럼니스트",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#푸드",
-          "#테크"
+          "#pood",
+          "#Tech"
         ],
         "cohorts": [
           "4"
@@ -1561,13 +1563,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "이지윤",
+        "name": "Lee Ji-yoon",
         "bio": "숨 프로젝트 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#큐레이터",
-          "#현대미술"
+          "#Curator",
+          "#ContemporaryArt"
         ],
         "cohorts": [
           "4"
@@ -1575,13 +1577,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "최재웅",
+        "name": "Choi Jae-woong",
         "bio": "폴앤마크 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#조직문화",
-          "#컨설팅"
+          "#OrganizationalCulture",
+          "#Consulting"
         ],
         "cohorts": [
           "4"
@@ -1589,13 +1591,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "영주 닐슨",
+        "name": "Youngju Nielsen",
         "bio": "한국퇴직연금데이터 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#트레이딩",
-          "#퇴직연금"
+          "#Trading",
+          "#RetirementPension"
         ],
         "cohorts": [
           "4"
@@ -1603,13 +1605,13 @@ const dataByLang = {
         "profileUrl": ""
       },
       {
-        "name": "윤수영",
+        "name": "Yoon Soo-young",
         "bio": "트레바리 대표",
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#커뮤니티",
-          "#독서모임"
+          "#Community",
+          "#BookClub"
         ],
         "cohorts": [
           "4"
@@ -1622,8 +1624,8 @@ const dataByLang = {
         "session": "Cohort4",
         "img": "",
         "tags": [
-          "#디자인씽킹",
-          "#조직문화"
+          "#DesignThinking",
+          "#OrganizationalCulture"
         ],
         "cohorts": [
           "4"

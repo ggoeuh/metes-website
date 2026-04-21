@@ -357,12 +357,6 @@ function avatarStyle(imgUrl) {
   return img ? ` style="background-image:url('${img}');background-size:cover;background-position:center;"` : '';
 }
 
-function profileLink(url) {
-  if (!url) return '';
-  const href = /^https?:\/\//i.test(url) ? url : 'https://' + url;
-  return `<a class="profile-link" href="${href}" target="_blank" rel="noopener" aria-label="profile"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3.5 3 H7 V6.5 M7 3 L3 7"/></svg></a>`;
-}
-
 function nameWithLink(name, url) {
   if (!url) return name;
   const href = /^https?:\/\//i.test(url) ? url : 'https://' + url;
@@ -386,9 +380,9 @@ function renderModerators(data) {
   el.innerHTML = `<div class="mem-card-grid">
     ${all.map(m => `
       <div class="mem-card-v">
-        <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+        <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
         <div class="mem-info">
-          <div class="mem-name">${m.name}</div>
+          <div class="mem-name">${nameWithLink(m.name, m.profileUrl)}</div>
           <div class="mem-bio">${m.bio}</div>
           ${renderTags(m.tags)}
         </div>
@@ -402,9 +396,9 @@ function renderMiesters(list, containerId) {
   el.innerHTML = `<div class="mem-card-grid">
     ${list.map(m => `
       <div class="mem-card-v">
-        <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+        <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
         <div class="mem-info">
-          <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
+          <div class="mem-name">${nameWithLink(m.name, m.profileUrl)}${renderCohorts(m.cohorts)}</div>
           <div class="mem-bio-sm">${m.bio}</div>
           ${renderTags(m.tags)}
         </div>
@@ -424,9 +418,9 @@ function renderMakerCard(m) {
 
 function renderMiesterCard(m) {
   return `<div class="mem-card-v">
-    <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+    <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
     <div class="mem-info">
-      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
+      <div class="mem-name">${nameWithLink(m.name, m.profileUrl)}${renderCohorts(m.cohorts)}</div>
       <div class="mem-bio-sm">${m.bio || ''}</div>
       ${renderTags(m.tags)}
     </div>
@@ -435,9 +429,9 @@ function renderMiesterCard(m) {
 
 function renderModeratorCard(m) {
   return `<div class="mem-card-v">
-    <div class="mem-avatar-v"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+    <div class="mem-avatar-v"${avatarStyle(m.img)}></div>
     <div class="mem-info">
-      <div class="mem-name">${m.name}</div>
+      <div class="mem-name">${nameWithLink(m.name, m.profileUrl)}</div>
       <div class="mem-bio">${m.bio || ''}</div>
       ${renderTags(m.tags)}
     </div>

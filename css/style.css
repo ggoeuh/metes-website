@@ -680,22 +680,21 @@ a.support-badge {
   left: 0;
   right: 0;
 }
-.mem-name-link {
+.mem-avatar-link {
+  display: block;
+  text-decoration: none;
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
 }
-.mem-name-arrow {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  transition: color 0.15s ease;
-}
-.mem-name-link:hover .mem-name-arrow {
-  color: #ff6600;
+.mem-avatar-tri {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28%;
+  max-width: 40px;
+  aspect-ratio: 1 / 1;
+  background: #ff6600;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  pointer-events: none;
 }
 .maker-card .maker-tags {
   position: absolute;

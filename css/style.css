@@ -698,6 +698,23 @@ a.support-badge {
   left: 0;
   right: 0;
 }
+.mem-name-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.mem-name-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+.mem-name-link:hover .mem-name-arrow {
+  color: #ff6600;
+}
 .maker-card .maker-tags {
   position: absolute;
   bottom: 0;

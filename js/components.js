@@ -363,6 +363,12 @@ function profileLink(url) {
   return `<a class="profile-link" href="${href}" target="_blank" rel="noopener" aria-label="profile"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3.5 3 H7 V6.5 M7 3 L3 7"/></svg></a>`;
 }
 
+function nameWithLink(name, url) {
+  if (!url) return name;
+  const href = /^https?:\/\//i.test(url) ? url : 'https://' + url;
+  return `<a class="mem-name-link" href="${href}" target="_blank" rel="noopener">${name}<svg class="mem-name-arrow" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 3 H7 V6.5 M7 3 L3 7"/></svg></a>`;
+}
+
 function renderTags(tags) {
   const list = Array.isArray(tags) ? tags : [];
   return `<div class="maker-tags">${list.map(t => `<span class="mtag">${t}</span>`).join('')}</div>`;
@@ -408,9 +414,9 @@ function renderMiesters(list, containerId) {
 
 function renderMakerCard(m) {
   return `<div class="maker-card">
-    <div class="mem-avatar small"${avatarStyle(m.img)}>${profileLink(m.profileUrl)}</div>
+    <div class="mem-avatar small"${avatarStyle(m.img)}></div>
     <div class="mem-info">
-      <div class="mem-name">${m.name}${renderCohorts(m.cohorts)}</div>
+      <div class="mem-name">${nameWithLink(m.name, m.profileUrl)}${renderCohorts(m.cohorts)}</div>
       ${renderTags(m.tags)}
     </div>
   </div>`;

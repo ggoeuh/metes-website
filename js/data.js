@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 17. PM 1:35:49
+// 마지막 동기화: 2026. 4. 21. AM 5:19:24
 
 const dataByLang = {
   kor: {
@@ -631,7 +631,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "매주 화요일 오전",
-        "miester": "진석 마에스터",
+        "miester": "진석 마이스터",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
         "img": "",
@@ -640,7 +640,7 @@ const dataByLang = {
       {
         "session": "Leadership Session",
         "time": "매주 화요일 오후",
-        "miester": "희진 마에스터",
+        "miester": "희진 마이스터",
         "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
         "tags": "리더십|심화 토론|커뮤니티",
         "img": "",
@@ -796,7 +796,7 @@ const dataByLang = {
       "members": [
         {
           "title": "Members",
-          "desc": "METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다.",
+          "desc": "METES를 이끌어가는 모더레이터, 마이스터, 그리고 메이커들을 소개합니다.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -805,7 +805,7 @@ const dataByLang = {
       "forum": [
         {
           "title": "Article",
-          "desc": "각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.",
+          "desc": "각 분야의 마이스터를 초청하여 나눈 인사이트를 아티클로 정리합니다.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -825,7 +825,7 @@ const dataByLang = {
       "moderator": [
         {
           "title": "Moderator",
-          "desc": "METES 커뮤니티의 연결 다리 역할. 프로그램 운영, \n세션 진행 및 커뮤니티 관리",
+          "desc": "METES 커뮤니티의 연결 다리 역할. \n프로그램 운영, 세션 진행 및 커뮤니티 관리",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -834,7 +834,7 @@ const dataByLang = {
       "miester": [
         {
           "title": "Miester",
-          "desc": "각 세션을 이끄는 업계 전문가. 스타트업 창업가, \n투자자, 기업 리더",
+          "desc": "각 세션을 이끄는 업계 전문가.\n스타트업 창업가, 투자자, 기업 리더",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -843,7 +843,7 @@ const dataByLang = {
       "maker": [
         {
           "title": "Maker",
-          "desc": "METES 커뮤니티의 핵심 참여자. 창업가, \n예비 창업가, 창작자",
+          "desc": "METES 커뮤니티의 핵심 참여자. \n창업가, 예비 창업가, 창작자",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -861,7 +861,7 @@ const dataByLang = {
       "miester_pool": [
         {
           "title": "Miester Pool",
-          "desc": "설명",
+          "desc": "메테스 포럼에 함께 해주신 업계 전문가. \n스타트업 창업가, 투자자, 기업 리더",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -1086,11 +1086,11 @@ const dataByLang = {
     },
     "members": {
       "title": "Members",
-      "desc": "METES를 이끌어가는 모더레이터, 마에스터, 그리고 메이커들을 소개합니다."
+      "desc": "METES를 이끌어가는 모더레이터, 마이스터, 그리고 메이커들을 소개합니다."
     },
     "forum": {
       "title": "Article",
-      "desc": "각 분야의 마에스터를 초청하여 나눈 인사이트를 아티클로 정리합니다."
+      "desc": "각 분야의 마이스터를 초청하여 나눈 인사이트를 아티클로 정리합니다."
     },
     "news": {
       "title": "News",
@@ -1727,7 +1727,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "매주 화요일 오전",
-        "miester": "진석 마에스터",
+        "miester": "Jinseok Miester",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
         "img": "",
@@ -1892,7 +1892,7 @@ const dataByLang = {
       "members": [
         {
           "title": "Members",
-          "desc": "Meet the moderators, miester로s, and makers who lead METES.",
+          "desc": "Meet the moderators, miesters, and makers who lead METES.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -1901,7 +1901,7 @@ const dataByLang = {
       "forum": [
         {
           "title": "Article",
-          "desc": "Insights from invited miester로s compiled into articles.",
+          "desc": "Insights from invited miesters compiled into articles.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -1957,7 +1957,7 @@ const dataByLang = {
       "miester_pool": [
         {
           "title": "Miester Pool",
-          "desc": "설명",
+          "desc": "Industry experts who joined METES FORUM.\nFounders, investors, business leaders.",
           "extra1": "",
           "extra2": "",
           "img": ""
@@ -2182,11 +2182,11 @@ const dataByLang = {
     },
     "members": {
       "title": "Members",
-      "desc": "Meet the moderators, miester로s, and makers who lead METES."
+      "desc": "Meet the moderators, miesters, and makers who lead METES."
     },
     "forum": {
       "title": "Article",
-      "desc": "Insights from invited miester로s compiled into articles."
+      "desc": "Insights from invited miesters compiled into articles."
     },
     "news": {
       "title": "News",

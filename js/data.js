@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. AM 8:19:10
+// 마지막 동기화: 2026. 4. 22. AM 9:50:56
 
 const dataByLang = {
   kor: {
@@ -1199,7 +1199,7 @@ const dataByLang = {
         "name": "KAY",
         "tags": [
           "#Community",
-          "#SelfDevelopment"
+          "#Self-improvement"
         ],
         "img": "https://drive.google.com/file/d/1gwUNiMF7TO_bJIQGH1U3n7SN8j_YhRV7/view?usp=sharing",
         "cohorts": [
@@ -1286,7 +1286,7 @@ const dataByLang = {
         "name": "Ko Seung-won",
         "bio": "Solo Preneur",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1M9THuqdIf8iTyvupym0F4PcyARKKlw2V/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1NYHAl6TexByuXWy34a7jyA27IYJ8FcF7/view?usp=drive_link",
         "tags": [
           "#The Solo Preneur",
           "#One-person entrepreneur"
@@ -1300,7 +1300,7 @@ const dataByLang = {
         "name": "Park Ji-hye",
         "bio": "Violinist",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1xXxan3CpQ5ssY2_OnwZQEwoB7BlGTbHi/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1EUx0gxlnrEfQGHUjQ3Pk4XEaQ4cVwcqX/view?usp=drive_link",
         "tags": [
           "#ValueCreation",
           "#AIPerformer"
@@ -1314,7 +1314,7 @@ const dataByLang = {
         "name": "Park Jae-hyung",
         "bio": "NEXTIS CEO",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1bC8eiE3Ylndu_arJXeSJW5NtsEsXR5PX/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1BilHWBM7vMareHGkfXwf99xZz3b58diy/view?usp=drive_link",
         "tags": [
           "#IP Business",
           "#Decentralization"
@@ -1328,7 +1328,7 @@ const dataByLang = {
         "name": "Lee So-young",
         "bio": "Microsoft Global Influencer Team Asia Regional Manager",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1VW4FpQQ3BsZd2exrcUVb3KqW-XAPkF2W/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1OTkDeSaC4wsqmn3oaOy6QZgEh1v3vWZ9/view?usp=drive_link",
         "tags": [
           "#Microsoft",
           "#CommunityLeadership"
@@ -1342,7 +1342,7 @@ const dataByLang = {
         "name": "Kim Su-rin",
         "bio": "Entre Rêves CEO",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1cmvXgUNZ5ysUcl1RMauQmTwiNEUgeUEQ/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1ixTWLRlM9qY7WhXZhq9IIiZd7HEo0XkI/view?usp=drive_link",
         "tags": [
           "#Entre Rêves",
           "#BagThatCarriesDreams"
@@ -1356,7 +1356,7 @@ const dataByLang = {
         "name": "Kim Seong-hoon",
         "bio": "Managing Partner of MISSION Law Firm",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1WnzKJRe1IhsJ274xS9asFXyPJc4OIq5t/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/15ZZbZ8FNel7zwCnaoygb4S0h6T2mFZvA/view?usp=drive_link",
         "tags": [
           "#LawFirmMission",
           "#Covenant"
@@ -1370,7 +1370,7 @@ const dataByLang = {
         "name": "Jang Seong-ho",
         "bio": "\"King or Kings\" Director",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1diblLjG3xAdK7L-tnAYapJmEl4FSjJP8/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1N-YdXp5-EVrtTdUbVWDF2aHhCpfIxh3y/view?usp=drive_link",
         "tags": [
           "#KingOfKings",
           "#KCulture"
@@ -1384,7 +1384,7 @@ const dataByLang = {
         "name": "Park So-ryeong",
         "bio": "PUBLY Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/14_WPhRVMBc5lBbmgo-T_oNiOlMH2DX91/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1zxCjgSEAW7I1DCIpJg5boLuAkcG6_M9U/view?usp=drive_link",
         "tags": [
           "#PassingThroughFailure",
           "#Publy"
@@ -1398,7 +1398,7 @@ const dataByLang = {
         "name": "Kim Jeong-bin",
         "bio": "SUPERBIN CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1kXK8lbnJXcbpJmQqUZwkrw_GMxskRTH3/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/15gw-96uojBDvD8vgnQvhFIaFwj1iPOxw/view?usp=drive_link",
         "tags": [
           "#Superbin",
           "#CircularValue"
@@ -1426,7 +1426,7 @@ const dataByLang = {
         "name": "Hwang Seong-jae",
         "bio": "XYZ Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1mChCA4wTRuU5pXN6hrYKWCRR0y9G8QPc/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1EazskEK4NmCYIiZcnAT1t_obFVJS5Go4/view?usp=drive_link",
         "tags": [
           "#Robotics",
           "#F&B"
@@ -1440,7 +1440,7 @@ const dataByLang = {
         "name": "Douglas Guen",
         "bio": "Primer Founder & CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/13xaSM-PwZurX1qDpjzByp2rmBZX8ZOUE/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1uhrO5nxZC7nXl9p0aPEh_2rlxU8quUwN/view?usp=drive_link",
         "tags": [
           "#Startup",
           "#OrganizationalCulture"
@@ -1454,7 +1454,7 @@ const dataByLang = {
         "name": "Kim Seung-il",
         "bio": "Modu Labs Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1K2yMOI47Zwvnjrckv5snEQEM-jQPmPW_/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1d9PD7ietzm-0WbneXfKY8RWRv7vteThI/view?usp=drive_link",
         "tags": [
           "#Community",
           "#EducationInnovation"
@@ -1468,7 +1468,7 @@ const dataByLang = {
         "name": "Jo Soo-bin",
         "bio": "Main anchor of KBS 9 News",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/182IumBamrWALHFoIbSmgwK4UWfThAI4b/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1k2vNuxNe8pob4A2-PZAA86sOOqWeHDpr/view?usp=drive_link",
         "tags": [
           "#KBS9pmNews",
           "#ContentBranding"
@@ -1482,7 +1482,7 @@ const dataByLang = {
         "name": "Lee Seon-min",
         "bio": "Future Works Lab(퓨처웍스랩) Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1by52bGB7fFej7AVyeR1zhh7YBTr3CYVC/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1WlvIg1FpCsIdgcoJeE3vVKCa1XXRvC8o/view?usp=drive_link",
         "tags": [
           "#TheEraOfStableCoins",
           "#Web3"
@@ -1496,7 +1496,7 @@ const dataByLang = {
         "name": "Kim Dong-ho",
         "bio": "KCD(Korea Credit Data) CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1BOtTb-H5rQ1EUNLrFLYiT-7vmuuXn7Vy/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1_AxgPitXfyND1w2YB7Y1gWeNnbGfvYNK/view?usp=drive_link",
         "tags": [
           "#data",
           "#Small business owners"
@@ -1510,7 +1510,7 @@ const dataByLang = {
         "name": "Ga Jong-hyun",
         "bio": "Ex-CEO of HYVE Latin America",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1jIJ_-9iKNuLyDy_q5-O4pursg_iz6Dx0/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/16fSlwEmuORaZ0BNMLL8I_3GrXTWiknBK/view?usp=drive_link",
         "tags": [
           "#GlobalStrategy",
           "#KPOP"
@@ -1524,7 +1524,7 @@ const dataByLang = {
         "name": "Kim So-hee",
         "bio": "Kimsohee Trend Lab CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1ApuX5XBU1T8hOTDqjIQ6Kmm6SkY5fCPp/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1WsCspODa944UM13wni7pTCBzhkyLCPCx/view?usp=drive_link",
         "tags": [
           "#Trend",
           "#Enterprise"
@@ -1538,7 +1538,7 @@ const dataByLang = {
         "name": "Kwon Min",
         "bio": "Antlerkey Brand CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1RsuljHTOuSA8ZHFclnfw390B6xym2R15/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1jD1Lh1sUXBk4RKBxXQ2-p8HraZxEY4iw/view?usp=drive_link",
         "tags": [
           "#Branding",
           "#HumanBrand"
@@ -1552,7 +1552,7 @@ const dataByLang = {
         "name": "Im Seon-young",
         "bio": "Food&Tech Columnist",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1XJly9wLC6j--0b8ryHJw-nX_ghOHi3ou/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1yb51ITN-W4GfRhoQFsKmKBpCveoJmfGv/view?usp=drive_link",
         "tags": [
           "#Food",
           "#Tech"
@@ -1566,7 +1566,7 @@ const dataByLang = {
         "name": "Lee Ji-yoon",
         "bio": "SUUM project CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1GMs24zwBFWY7EwgQ1pORqlvRS1F00avw/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1RF2sJ7Jbh5XB4EFFXyc2VIKXmf2AuRIr/view?usp=drive_link",
         "tags": [
           "#Curator",
           "#ContemporaryArt"
@@ -1580,7 +1580,7 @@ const dataByLang = {
         "name": "Choi Jae-woong",
         "bio": "Paul&Mark CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1PUcRVml93RpVtSME8D2_8KgU4Wlwzc-6/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1IpXyexcfPLBEo4EdnLod6a4RNNH3oa8l/view?usp=drive_link",
         "tags": [
           "#OrganizationalCulture",
           "#Consulting"
@@ -1594,7 +1594,7 @@ const dataByLang = {
         "name": "Youngju Nielsen",
         "bio": "KPD(Korea Pension Data) CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1heil2mnUnuhXsOK3BbbWbfu1X5Wpx03R/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1ArEwxvYSAL8Q9LlsMo53hntD29kqc8hE/view?usp=drive_link",
         "tags": [
           "#Trading",
           "#RetirementPension"
@@ -1608,7 +1608,7 @@ const dataByLang = {
         "name": "Yoon Soo-young",
         "bio": "TREVARI CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1BCBqdwl0wpp2wPLFpvMTqr6UpBdR7Jhc/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/13egrY9jSL4ncLBqmpjApZ4w1QFqVkdEt/view?usp=drive_link",
         "tags": [
           "#Community",
           "#BookClub"
@@ -1622,7 +1622,7 @@ const dataByLang = {
         "name": "Christopher Han",
         "bio": "Pidea Lab CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1rVmLSUVYr0Z6c9U6t1Kw4O-4ioG9d0UJ/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1bKthHkoB13SBBepFlW7HvmEATQ31ADGR/view?usp=drive_link",
         "tags": [
           "#DesignThinking",
           "#OrganizationalCulture"

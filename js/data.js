@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. AM 10:27:51
+// 마지막 동기화: 2026. 4. 22. 오후 11:22:45
 
 const dataByLang = {
   kor: {
@@ -43,7 +43,29 @@ const dataByLang = {
         }
       ]
     },
-    "miesters": [],
+    "miesters": [
+      {
+        "name": "최희진",
+        "bio": "",
+        "session": "",
+        "img": "",
+        "tags": [],
+        "cohorts": [],
+        "profileUrl": ""
+      },
+      {
+        "name": "김진석",
+        "bio": "영감으로 엔진을, AI로 프레임을 설계하는 스토리 마이스터 김진석입니다.",
+        "session": "",
+        "img": "https://drive.google.com/file/d/1w3ifrDPMcvfqh4Y8Js_YsC_eCh3zNJkn/view?usp=sharing",
+        "tags": [
+          "#AI마이스터",
+          "#스토리마이스터"
+        ],
+        "cohorts": [],
+        "profileUrl": "http://www.storyandrecord.com/project.html"
+      }
+    ],
     "lbMakers": [
       {
         "name": "제이콥",
@@ -151,7 +173,372 @@ const dataByLang = {
         "profileUrl": ""
       }
     ],
-    "miesterPool": []
+    "miesterPool": [
+      {
+        "name": "이창우",
+        "bio": "닷슬래시대시 대표",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1NGBrFCT0UoRe8MocgcCuufwQc4V2aghA/view?usp=drive_link",
+        "tags": [
+          "#인류기억저장소",
+          "#닷슬래시대시"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "고승원",
+        "bio": "솔로프리너",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1NYHAl6TexByuXWy34a7jyA27IYJ8FcF7/view?usp=drive_link",
+        "tags": [
+          "#솔로프리너의시대",
+          "#1인 기업가"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박지혜",
+        "bio": "바이올리니스트, 메타컬쳐센터 센터장",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1EUx0gxlnrEfQGHUjQ3Pk4XEaQ4cVwcqX/view?usp=drive_link",
+        "tags": [
+          "#가치창조",
+          "#AI퍼포머"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박재형",
+        "bio": "NEXTIS 대표",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1BilHWBM7vMareHGkfXwf99xZz3b58diy/view?usp=drive_link",
+        "tags": [
+          "#IP비즈니스",
+          "#탈중앙화"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이소영",
+        "bio": "마이크로소프트 글로벌 인플루언서팀 아시아 총괄 리전 매니저",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1OTkDeSaC4wsqmn3oaOy6QZgEh1v3vWZ9/view?usp=drive_link",
+        "tags": [
+          "#마이크로소프트",
+          "#커뮤니티리더십"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김수린",
+        "bio": "앙트레브(Entreve) 대표",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1ixTWLRlM9qY7WhXZhq9IIiZd7HEo0XkI/view?usp=drive_link",
+        "tags": [
+          "#앙트레브",
+          "#꿈을담는가방"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김성훈",
+        "bio": "범무법인 미션 대표이사",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/15ZZbZ8FNel7zwCnaoygb4S0h6T2mFZvA/view?usp=drive_link",
+        "tags": [
+          "#법무법인미션",
+          "#커버넌트"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "장성호",
+        "bio": "\"킹 오브 킹스\" 감독",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1N-YdXp5-EVrtTdUbVWDF2aHhCpfIxh3y/view?usp=drive_link",
+        "tags": [
+          "#킹오브킹스",
+          "#K컬쳐"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "박소령",
+        "bio": "퍼블리(PUBLY) Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1zxCjgSEAW7I1DCIpJg5boLuAkcG6_M9U/view?usp=drive_link",
+        "tags": [
+          "#실패를통과하는일",
+          "#퍼블리"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김정빈",
+        "bio": "수퍼빈 CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/15gw-96uojBDvD8vgnQvhFIaFwj1iPOxw/view?usp=drive_link",
+        "tags": [
+          "#수퍼빈",
+          "#순환가치"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김정현",
+        "bio": "리빌더AI CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1VlM4vaPYOnOfsmleFpgjuEUjCPwNbygd/view?usp=sharing",
+        "tags": [
+          "#3D디자인",
+          "#기술혁신"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "황성재",
+        "bio": "XYZ Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1EazskEK4NmCYIiZcnAT1t_obFVJS5Go4/view?usp=drive_link",
+        "tags": [
+          "#로보틱스",
+          "#F&B"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "권도균",
+        "bio": "현 프라이머 대표이사 / 전 이니시스, 이니텍 Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1uhrO5nxZC7nXl9p0aPEh_2rlxU8quUwN/view?usp=drive_link",
+        "tags": [
+          "#창업",
+          "#조직문화"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김승일",
+        "bio": "모두의 연구소 Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1d9PD7ietzm-0WbneXfKY8RWRv7vteThI/view?usp=drive_link",
+        "tags": [
+          "#커뮤니티",
+          "#교육혁신"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "조수빈",
+        "bio": "현 조수빈의 큐레이터 유튜브 / 전 KBS 9시 뉴스 메인 앵커",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1k2vNuxNe8pob4A2-PZAA86sOOqWeHDpr/view?usp=drive_link",
+        "tags": [
+          "#KBS9시뉴스",
+          "#콘텐츠브랜딩"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이선민",
+        "bio": "Future Works Lab(퓨처웍스랩) Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1WlvIg1FpCsIdgcoJeE3vVKCa1XXRvC8o/view?usp=drive_link",
+        "tags": [
+          "#스테이블코인의시대",
+          "#Web3"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김동호",
+        "bio": "한국신용데이터",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1_AxgPitXfyND1w2YB7Y1gWeNnbGfvYNK/view?usp=drive_link",
+        "tags": [
+          "#데이터",
+          "#소상공인"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "가종현",
+        "bio": "전 하이브 라틴아메리카 CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/16fSlwEmuORaZ0BNMLL8I_3GrXTWiknBK/view?usp=drive_link",
+        "tags": [
+          "#글로벌전략",
+          "#KPOP"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "김소희",
+        "bio": "김소희 트렌드랩 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1WsCspODa944UM13wni7pTCBzhkyLCPCx/view?usp=drive_link",
+        "tags": [
+          "#트렌드",
+          "#엔터프라이즈"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "권민",
+        "bio": "앤털러키브랜드 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1jD1Lh1sUXBk4RKBxXQ2-p8HraZxEY4iw/view?usp=drive_link",
+        "tags": [
+          "#브랜딩",
+          "#휴먼브랜드"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "임선영",
+        "bio": "미쉐린 칼럼니스트",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1yb51ITN-W4GfRhoQFsKmKBpCveoJmfGv/view?usp=drive_link",
+        "tags": [
+          "#푸드",
+          "#테크"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "이지윤",
+        "bio": "숨 프로젝트 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1RF2sJ7Jbh5XB4EFFXyc2VIKXmf2AuRIr/view?usp=drive_link",
+        "tags": [
+          "#큐레이터",
+          "#현대미술"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "최재웅",
+        "bio": "폴앤마크 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1IpXyexcfPLBEo4EdnLod6a4RNNH3oa8l/view?usp=drive_link",
+        "tags": [
+          "#조직문화",
+          "#컨설팅"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "영주 닐슨",
+        "bio": "한국퇴직연금데이터 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1ArEwxvYSAL8Q9LlsMo53hntD29kqc8hE/view?usp=drive_link",
+        "tags": [
+          "#트레이딩",
+          "#퇴직연금"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "윤수영",
+        "bio": "트레바리 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/13egrY9jSL4ncLBqmpjApZ4w1QFqVkdEt/view?usp=drive_link",
+        "tags": [
+          "#커뮤니티",
+          "#독서모임"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "크리스토퍼 한",
+        "bio": "Pidea Lab 대표",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1bKthHkoB13SBBepFlW7HvmEATQ31ADGR/view?usp=drive_link",
+        "tags": [
+          "#디자인씽킹",
+          "#조직문화"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      }
+    ]
   },
   "forumData": [
     {
@@ -756,7 +1143,29 @@ const dataByLang = {
         }
       ]
     },
-    "miesters": [],
+    "miesters": [
+      {
+        "name": "Heejin Choi",
+        "bio": "",
+        "session": "",
+        "img": "",
+        "tags": [],
+        "cohorts": [],
+        "profileUrl": ""
+      },
+      {
+        "name": "Jay",
+        "bio": "영감으로 엔진을, AI로 프레임을 설계하는 스토리 마이스터 김진석입니다.",
+        "session": "",
+        "img": "https://drive.google.com/file/d/1w3ifrDPMcvfqh4Y8Js_YsC_eCh3zNJkn/view?usp=sharing",
+        "tags": [
+          "#AIMeister",
+          "#StoryMeister"
+        ],
+        "cohorts": [],
+        "profileUrl": "http://www.storyandrecord.com/project.html"
+      }
+    ],
     "lbMakers": [
       {
         "name": "Jacob",
@@ -796,7 +1205,7 @@ const dataByLang = {
         "name": "KAY",
         "tags": [
           "#Community",
-          "#Self-improvement"
+          "#SelfDevelopment"
         ],
         "img": "https://drive.google.com/file/d/1gwUNiMF7TO_bJIQGH1U3n7SN8j_YhRV7/view?usp=sharing",
         "cohorts": [
@@ -864,7 +1273,372 @@ const dataByLang = {
         "profileUrl": ""
       }
     ],
-    "miesterPool": []
+    "miesterPool": [
+      {
+        "name": "Lee Chang-woo",
+        "bio": "Dot Slash Dash CEO",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1NGBrFCT0UoRe8MocgcCuufwQc4V2aghA/view?usp=drive_link",
+        "tags": [
+          "#HumanMemoryStorage",
+          "#DotSlashDash"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Ko Seung-won",
+        "bio": "Solo Preneur",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1NYHAl6TexByuXWy34a7jyA27IYJ8FcF7/view?usp=drive_link",
+        "tags": [
+          "#The Solo Preneur",
+          "#One-person entrepreneur"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Park Ji-hye",
+        "bio": "Violinist",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1EUx0gxlnrEfQGHUjQ3Pk4XEaQ4cVwcqX/view?usp=drive_link",
+        "tags": [
+          "#ValueCreation",
+          "#AIPerformer"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Park Jae-hyung",
+        "bio": "NEXTIS CEO",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1BilHWBM7vMareHGkfXwf99xZz3b58diy/view?usp=drive_link",
+        "tags": [
+          "#IP Business",
+          "#Decentralization"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Lee So-young",
+        "bio": "Microsoft Global Influencer Team Asia Regional Manager",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1OTkDeSaC4wsqmn3oaOy6QZgEh1v3vWZ9/view?usp=drive_link",
+        "tags": [
+          "#Microsoft",
+          "#CommunityLeadership"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Su-rin",
+        "bio": "Entre Rêves CEO",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1ixTWLRlM9qY7WhXZhq9IIiZd7HEo0XkI/view?usp=drive_link",
+        "tags": [
+          "#Entre Rêves",
+          "#BagThatCarriesDreams"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Seong-hoon",
+        "bio": "Managing Partner of MISSION Law Firm",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/15ZZbZ8FNel7zwCnaoygb4S0h6T2mFZvA/view?usp=drive_link",
+        "tags": [
+          "#LawFirmMission",
+          "#Covenant"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Jang Seong-ho",
+        "bio": "\"King or Kings\" Director",
+        "session": "Cohort3",
+        "img": "https://drive.google.com/file/d/1N-YdXp5-EVrtTdUbVWDF2aHhCpfIxh3y/view?usp=drive_link",
+        "tags": [
+          "#KingOfKings",
+          "#KCulture"
+        ],
+        "cohorts": [
+          "3"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Park So-ryeong",
+        "bio": "PUBLY Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1zxCjgSEAW7I1DCIpJg5boLuAkcG6_M9U/view?usp=drive_link",
+        "tags": [
+          "#PassingThroughFailure",
+          "#Publy"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Jeong-bin",
+        "bio": "SUPERBIN CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/15gw-96uojBDvD8vgnQvhFIaFwj1iPOxw/view?usp=drive_link",
+        "tags": [
+          "#Superbin",
+          "#CircularValue"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Jung-hyun",
+        "bio": "Rebuilder AI CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1VlM4vaPYOnOfsmleFpgjuEUjCPwNbygd/view?usp=sharing",
+        "tags": [
+          "#3Ddesign",
+          "#Technological Innovation"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Hwang Seong-jae",
+        "bio": "XYZ Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1EazskEK4NmCYIiZcnAT1t_obFVJS5Go4/view?usp=drive_link",
+        "tags": [
+          "#Robotics",
+          "#F&B"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Douglas Guen",
+        "bio": "Primer Founder & CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1uhrO5nxZC7nXl9p0aPEh_2rlxU8quUwN/view?usp=drive_link",
+        "tags": [
+          "#Startup",
+          "#OrganizationalCulture"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Seung-il",
+        "bio": "Modu Labs Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1d9PD7ietzm-0WbneXfKY8RWRv7vteThI/view?usp=drive_link",
+        "tags": [
+          "#Community",
+          "#EducationInnovation"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Jo Soo-bin",
+        "bio": "Main anchor of KBS 9 News",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1k2vNuxNe8pob4A2-PZAA86sOOqWeHDpr/view?usp=drive_link",
+        "tags": [
+          "#KBS9pmNews",
+          "#ContentBranding"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Lee Seon-min",
+        "bio": "Future Works Lab(퓨처웍스랩) Founder",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1WlvIg1FpCsIdgcoJeE3vVKCa1XXRvC8o/view?usp=drive_link",
+        "tags": [
+          "#TheEraOfStableCoins",
+          "#Web3"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim Dong-ho",
+        "bio": "KCD(Korea Credit Data) CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1_AxgPitXfyND1w2YB7Y1gWeNnbGfvYNK/view?usp=drive_link",
+        "tags": [
+          "#data",
+          "#Small business owners"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Ga Jong-hyun",
+        "bio": "Ex-CEO of HYVE Latin America",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/16fSlwEmuORaZ0BNMLL8I_3GrXTWiknBK/view?usp=drive_link",
+        "tags": [
+          "#GlobalStrategy",
+          "#KPOP"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kim So-hee",
+        "bio": "Kimsohee Trend Lab CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1WsCspODa944UM13wni7pTCBzhkyLCPCx/view?usp=drive_link",
+        "tags": [
+          "#Trend",
+          "#Enterprise"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Kwon Min",
+        "bio": "Antlerkey Brand CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1jD1Lh1sUXBk4RKBxXQ2-p8HraZxEY4iw/view?usp=drive_link",
+        "tags": [
+          "#Branding",
+          "#HumanBrand"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Im Seon-young",
+        "bio": "Food&Tech Columnist",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1yb51ITN-W4GfRhoQFsKmKBpCveoJmfGv/view?usp=drive_link",
+        "tags": [
+          "#Food",
+          "#Tech"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Lee Ji-yoon",
+        "bio": "SUUM project CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1RF2sJ7Jbh5XB4EFFXyc2VIKXmf2AuRIr/view?usp=drive_link",
+        "tags": [
+          "#Curator",
+          "#ContemporaryArt"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Choi Jae-woong",
+        "bio": "Paul&Mark CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1IpXyexcfPLBEo4EdnLod6a4RNNH3oa8l/view?usp=drive_link",
+        "tags": [
+          "#OrganizationalCulture",
+          "#Consulting"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Youngju Nielsen",
+        "bio": "KPD(Korea Pension Data) CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1ArEwxvYSAL8Q9LlsMo53hntD29kqc8hE/view?usp=drive_link",
+        "tags": [
+          "#Trading",
+          "#RetirementPension"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Yoon Soo-young",
+        "bio": "TREVARI CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/13egrY9jSL4ncLBqmpjApZ4w1QFqVkdEt/view?usp=drive_link",
+        "tags": [
+          "#Community",
+          "#BookClub"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      },
+      {
+        "name": "Christopher Han",
+        "bio": "Pidea Lab CEO",
+        "session": "Cohort4",
+        "img": "https://drive.google.com/file/d/1bKthHkoB13SBBepFlW7HvmEATQ31ADGR/view?usp=drive_link",
+        "tags": [
+          "#DesignThinking",
+          "#OrganizationalCulture"
+        ],
+        "cohorts": [
+          "4"
+        ],
+        "profileUrl": ""
+      }
+    ]
   },
   "forumData": [
     {

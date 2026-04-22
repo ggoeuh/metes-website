@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. 오후 11:22:45
+// 마지막 동기화: 2026. 4. 22. 오후 11:38:10
 
 const dataByLang = {
   kor: {
@@ -43,7 +43,7 @@ const dataByLang = {
         }
       ]
     },
-    "miesters": [
+    "meisters": [
       {
         "name": "최희진",
         "bio": "",
@@ -173,7 +173,7 @@ const dataByLang = {
         "profileUrl": ""
       }
     ],
-    "miesterPool": [
+    "meisterPool": [
       {
         "name": "이창우",
         "bio": "닷슬래시대시 대표",
@@ -635,7 +635,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "매주 화요일 오전",
-        "miester": "진석 마이스터",
+        "meister": "진석 마이스터",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
         "img": "",
@@ -644,7 +644,7 @@ const dataByLang = {
       {
         "session": "Leadership Session",
         "time": "매주 화요일 오후",
-        "miester": "희진 마이스터",
+        "meister": "희진 마이스터",
         "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
         "tags": "리더십|심화 토론|커뮤니티",
         "img": "",
@@ -1143,7 +1143,7 @@ const dataByLang = {
         }
       ]
     },
-    "miesters": [
+    "meisters": [
       {
         "name": "Heejin Choi",
         "bio": "",
@@ -1273,7 +1273,7 @@ const dataByLang = {
         "profileUrl": ""
       }
     ],
-    "miesterPool": [
+    "meisterPool": [
       {
         "name": "Lee Chang-woo",
         "bio": "Dot Slash Dash CEO",
@@ -1735,7 +1735,7 @@ const dataByLang = {
       {
         "session": "AI Session",
         "time": "Every Tuesday morning",
-        "miester": "Jay Meister",
+        "meister": "Jay Meister",
         "desc": "A practice-oriented session focusing on directly applying the latest AI tools, such as Claude and GPT, to real-world scenarios. It covers everything from prompt design to business automation and the utilization of no-code tools.",
         "tags": "AI Application Practice | Prompt Engineering | Automation",
         "img": "",
@@ -1744,7 +1744,7 @@ const dataByLang = {
       {
         "session": "Leadership Session",
         "time": "Every Tuesday afternoon",
-        "miester": "Heejin Meister",
+        "meister": "Heejin Meister",
         "desc": "Internalize a leadership mindset and team communication through simulations and in-depth discussions. Each session combines role-playing based on real-life scenarios with community activities.",
         "tags": "Leadership | In-depth Discussion | Community",
         "img": "",

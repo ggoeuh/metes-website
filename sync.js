@@ -93,10 +93,10 @@ function formatDate(d) {
 function transformMembers(rows) {
   const mf = rows.filter(r => r.type === 'moderator_featured')[0];
   const ms = rows.filter(r => r.type === 'moderator');
-  const ma = rows.filter(r => r.type === 'meister' || r.type === 'miester');
+  const ma = rows.filter(r => r.type === 'meister' || r.type === 'meister');
   const mk = rows.filter(r => r.type === 'maker');
   const mp = rows.filter(r => r.type === 'maker_pool');
-  const mep = rows.filter(r => r.type === 'meister_pool' || r.type === 'miester_pool');
+  const mep = rows.filter(r => r.type === 'meister_pool' || r.type === 'meister_pool');
   const tagsOf = (r) => [r.tag1, r.tag2, r.tag3].filter(Boolean);
   const cohortsOf = (r) => ((r.session || '').match(/Cohort\s*(\d+)/gi) || []).map(m => m.match(/\d+/)[0]);
   const urlOf = (r) => r.profile_url || '';
@@ -105,10 +105,10 @@ function transformMembers(rows) {
       featured: { name: mf?.name || '', bio: mf?.bio || '', img: mf?.img || '', tags: mf ? tagsOf(mf) : [], profileUrl: mf ? urlOf(mf) : '' },
       sub: ms.map(r => ({ name: r.name, bio: r.bio, img: r.img || '', tags: tagsOf(r), profileUrl: urlOf(r) })),
     },
-    miesters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
+    meisters: ma.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
     lbMakers: mk.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
     makerPool: mp.map(r => ({ name: r.name, tags: tagsOf(r), img: r.img || '', cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
-    miesterPool: mep.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
+    meisterPool: mep.map(r => ({ name: r.name, bio: r.bio, session: r.session, img: r.img || '', tags: tagsOf(r), cohorts: cohortsOf(r), profileUrl: urlOf(r) })),
   };
 }
 
@@ -188,7 +188,7 @@ function transformCurriculum(rows, lang) {
   const isFri = (v) => v && (v.includes('금요일') || /fri/i.test(v));
 
   const tuesday = sessions.filter(r => isTue(r.value)).map(r => ({
-    session: r.key, time: r.value, miester: r.value2, desc: r.value3, tags: r.tags || '', img: r.img || '', hasPhoto: true,
+    session: r.key, time: r.value, meister: r.value2, desc: r.value3, tags: r.tags || '', img: r.img || '', hasPhoto: true,
   }));
   const fridayRow = sessions.find(r => isFri(r.value));
 

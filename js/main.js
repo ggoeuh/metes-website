@@ -102,8 +102,8 @@ initNavIndicator();
   // Members 페이지
   if (currentPage === 'members') {
     renderModerators(membersData.moderators);
-    renderMiesters(membersData.miesters, 'meisters-content');
-    renderMiesters(membersData.miesterPool || [], 'meister-pool-content');
+    renderMeisters(membersData.meisters, 'meisters-content');
+    renderMeisters(membersData.meisterPool || [], 'meister-pool-content');
     renderMakersGrid(membersData.lbMakers, 'lb-makers-content');
     renderMakersGrid(membersData.makerPool, 'maker-pool-content');
   }

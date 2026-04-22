@@ -95,8 +95,8 @@ function renderNav(activePage) {
 
 function renderSearchResults(query) {
   const mods = Array.isArray(membersData.moderators) ? membersData.moderators : [];
-  const mies = Array.isArray(membersData.miesters) ? membersData.miesters : [];
-  const miesP = Array.isArray(membersData.miesterPool) ? membersData.miesterPool : [];
+  const mies = Array.isArray(membersData.meisters) ? membersData.meisters : [];
+  const miesP = Array.isArray(membersData.meisterPool) ? membersData.meisterPool : [];
   const lbM = Array.isArray(membersData.lbMakers) ? membersData.lbMakers : [];
   const mkrP = Array.isArray(membersData.makerPool) ? membersData.makerPool : [];
   const matchFn = m => {
@@ -134,7 +134,7 @@ function renderSearchResults(query) {
     if (totalMembers > 0) {
       const rows = [];
       if (matchedMods.length) rows.push(`<div class="mem-card-grid">${matchedMods.map(renderModeratorCard).join('')}</div>`);
-      if (matchedMies.length) rows.push(`<div class="mem-card-grid">${matchedMies.map(renderMiesterCard).join('')}</div>`);
+      if (matchedMies.length) rows.push(`<div class="mem-card-grid">${matchedMies.map(renderMeisterCard).join('')}</div>`);
       if (matchedMkrs.length) rows.push(`<div class="makers-grid">${matchedMkrs.map(renderMakerCard).join('')}</div>`);
       memberEl.innerHTML = rows.join('');
     } else {
@@ -391,7 +391,7 @@ function renderModerators(data) {
   </div>`;
 }
 
-function renderMiesters(list, containerId) {
+function renderMeisters(list, containerId) {
   const el = document.getElementById(containerId || 'meisters-content');
   if (!el) return;
   el.innerHTML = `<div class="mem-card-grid">
@@ -417,7 +417,7 @@ function renderMakerCard(m) {
   </div>`;
 }
 
-function renderMiesterCard(m) {
+function renderMeisterCard(m) {
   return `<div class="mem-card-v">
     ${renderAvatar(m, 'mem-avatar-v')}
     <div class="mem-info">
@@ -514,7 +514,7 @@ function renderSessionCards(tuesday, friday) {
       <div class="cur-session-img"></div>
       <div class="cur-session-body">
         <div class="cur-session-top">
-          <div class="cur-session-name"><span>${s.miester || 'METES Forum'}</span>${s.time.includes('오전') ? '<span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? '<span class="cur-session-ampm">오후</span>' : ''}</div>
+          <div class="cur-session-name"><span>${s.meister || 'METES Forum'}</span>${s.time.includes('오전') ? '<span class="cur-session-ampm">오전</span>' : s.time.includes('오후') ? '<span class="cur-session-ampm">오후</span>' : ''}</div>
           <div class="cur-session-tag">${s.session}</div>
         </div>
         <p class="cur-session-desc">${s.desc}</p>

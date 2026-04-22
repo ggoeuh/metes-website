@@ -647,7 +647,7 @@ a.support-badge {
     grid-row: auto;
   }
 }
-.miester-session {
+.meister-session {
   align-self: flex-start;
   display: inline-block;
   background: var(--black);

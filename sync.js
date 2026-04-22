@@ -93,10 +93,10 @@ function formatDate(d) {
 function transformMembers(rows) {
   const mf = rows.filter(r => r.type === 'moderator_featured')[0];
   const ms = rows.filter(r => r.type === 'moderator');
-  const ma = rows.filter(r => r.type === 'miester');
+  const ma = rows.filter(r => r.type === 'meister' || r.type === 'miester');
   const mk = rows.filter(r => r.type === 'maker');
   const mp = rows.filter(r => r.type === 'maker_pool');
-  const mep = rows.filter(r => r.type === 'miester_pool');
+  const mep = rows.filter(r => r.type === 'meister_pool' || r.type === 'miester_pool');
   const tagsOf = (r) => [r.tag1, r.tag2, r.tag3].filter(Boolean);
   const cohortsOf = (r) => ((r.session || '').match(/Cohort\s*(\d+)/gi) || []).map(m => m.match(/\d+/)[0]);
   const urlOf = (r) => r.profile_url || '';

@@ -26,7 +26,7 @@ applyDataText();
   }
 
   // 섹션 비활성화: data-section 속성으로 매칭
-  const sections = ['about','vision','offer','support','contact','moderator','miester','miester_pool','maker','maker_pool','session','program','cost'];
+  const sections = ['about','vision','offer','support','contact','moderator','meister','meister_pool','maker','maker_pool','session','program','cost'];
   sections.forEach(s => {
     if (!isEnabled('section.' + s)) {
       document.querySelectorAll('[data-section="' + s + '"]').forEach(el => { el.style.display = 'none'; });
@@ -102,8 +102,8 @@ initNavIndicator();
   // Members 페이지
   if (currentPage === 'members') {
     renderModerators(membersData.moderators);
-    renderMiesters(membersData.miesters, 'miesters-content');
-    renderMiesters(membersData.miesterPool || [], 'miester-pool-content');
+    renderMiesters(membersData.miesters, 'meisters-content');
+    renderMiesters(membersData.miesterPool || [], 'meister-pool-content');
     renderMakersGrid(membersData.lbMakers, 'lb-makers-content');
     renderMakersGrid(membersData.makerPool, 'maker-pool-content');
   }

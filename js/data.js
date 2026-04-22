@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. AM 6:19:21
+// 마지막 동기화: 2026. 4. 22. AM 8:19:10
 
 const dataByLang = {
   kor: {
@@ -189,7 +189,7 @@ const dataByLang = {
         "name": "고승원",
         "bio": "솔로프리너",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/159nO7mkkm2STjK9IsGH6_NMNr6ys7jFI/view?usp=sharing",
+        "img": "https://drive.google.com/file/d/1NYHAl6TexByuXWy34a7jyA27IYJ8FcF7/view?usp=drive_link",
         "tags": [
           "#솔로프리너의시대",
           "#1인 기업가"
@@ -203,7 +203,7 @@ const dataByLang = {
         "name": "박지혜",
         "bio": "바이올리니스트, 메타컬쳐센터 센터장",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1xXxan3CpQ5ssY2_OnwZQEwoB7BlGTbHi/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1EUx0gxlnrEfQGHUjQ3Pk4XEaQ4cVwcqX/view?usp=drive_link",
         "tags": [
           "#가치창조",
           "#AI퍼포머"
@@ -217,7 +217,7 @@ const dataByLang = {
         "name": "박재형",
         "bio": "NEXTIS 대표",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1bC8eiE3Ylndu_arJXeSJW5NtsEsXR5PX/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1BilHWBM7vMareHGkfXwf99xZz3b58diy/view?usp=drive_link",
         "tags": [
           "#IP비즈니스",
           "#탈중앙화"
@@ -231,7 +231,7 @@ const dataByLang = {
         "name": "이소영",
         "bio": "마이크로소프트 글로벌 인플루언서팀 아시아 총괄 리전 매니저",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1VW4FpQQ3BsZd2exrcUVb3KqW-XAPkF2W/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1OTkDeSaC4wsqmn3oaOy6QZgEh1v3vWZ9/view?usp=drive_link",
         "tags": [
           "#마이크로소프트",
           "#커뮤니티리더십"
@@ -245,7 +245,7 @@ const dataByLang = {
         "name": "김수린",
         "bio": "앙트레브(Entreve) 대표",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1cmvXgUNZ5ysUcl1RMauQmTwiNEUgeUEQ/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1ixTWLRlM9qY7WhXZhq9IIiZd7HEo0XkI/view?usp=drive_link",
         "tags": [
           "#앙트레브",
           "#꿈을담는가방"
@@ -259,7 +259,7 @@ const dataByLang = {
         "name": "김성훈",
         "bio": "범무법인 미션 대표이사",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1WnzKJRe1IhsJ274xS9asFXyPJc4OIq5t/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/15ZZbZ8FNel7zwCnaoygb4S0h6T2mFZvA/view?usp=drive_link",
         "tags": [
           "#법무법인미션",
           "#커버넌트"
@@ -273,7 +273,7 @@ const dataByLang = {
         "name": "장성호",
         "bio": "\"킹 오브 킹스\" 감독",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1diblLjG3xAdK7L-tnAYapJmEl4FSjJP8/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1N-YdXp5-EVrtTdUbVWDF2aHhCpfIxh3y/view?usp=drive_link",
         "tags": [
           "#킹오브킹스",
           "#K컬쳐"
@@ -287,7 +287,7 @@ const dataByLang = {
         "name": "박소령",
         "bio": "퍼블리(PUBLY) Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/14_WPhRVMBc5lBbmgo-T_oNiOlMH2DX91/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1zxCjgSEAW7I1DCIpJg5boLuAkcG6_M9U/view?usp=drive_link",
         "tags": [
           "#실패를통과하는일",
           "#퍼블리"
@@ -301,7 +301,7 @@ const dataByLang = {
         "name": "김정빈",
         "bio": "수퍼빈 CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1kXK8lbnJXcbpJmQqUZwkrw_GMxskRTH3/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/15gw-96uojBDvD8vgnQvhFIaFwj1iPOxw/view?usp=drive_link",
         "tags": [
           "#수퍼빈",
           "#순환가치"
@@ -329,7 +329,7 @@ const dataByLang = {
         "name": "황성재",
         "bio": "XYZ Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1mChCA4wTRuU5pXN6hrYKWCRR0y9G8QPc/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1EazskEK4NmCYIiZcnAT1t_obFVJS5Go4/view?usp=drive_link",
         "tags": [
           "#로보틱스",
           "#F&B"
@@ -343,7 +343,7 @@ const dataByLang = {
         "name": "권도균",
         "bio": "현 프라이머 대표이사 / 전 이니시스, 이니텍 Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/13xaSM-PwZurX1qDpjzByp2rmBZX8ZOUE/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1uhrO5nxZC7nXl9p0aPEh_2rlxU8quUwN/view?usp=drive_link",
         "tags": [
           "#창업",
           "#조직문화"
@@ -357,7 +357,7 @@ const dataByLang = {
         "name": "김승일",
         "bio": "모두의 연구소 Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1K2yMOI47Zwvnjrckv5snEQEM-jQPmPW_/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1d9PD7ietzm-0WbneXfKY8RWRv7vteThI/view?usp=drive_link",
         "tags": [
           "#커뮤니티",
           "#교육혁신"
@@ -371,7 +371,7 @@ const dataByLang = {
         "name": "조수빈",
         "bio": "현 조수빈의 큐레이터 유튜브 / 전 KBS 9시 뉴스 메인 앵커",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/182IumBamrWALHFoIbSmgwK4UWfThAI4b/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1k2vNuxNe8pob4A2-PZAA86sOOqWeHDpr/view?usp=drive_link",
         "tags": [
           "#KBS9시뉴스",
           "#콘텐츠브랜딩"
@@ -385,7 +385,7 @@ const dataByLang = {
         "name": "이선민",
         "bio": "Future Works Lab(퓨처웍스랩) Founder",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1by52bGB7fFej7AVyeR1zhh7YBTr3CYVC/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1WlvIg1FpCsIdgcoJeE3vVKCa1XXRvC8o/view?usp=drive_link",
         "tags": [
           "#스테이블코인의시대",
           "#Web3"
@@ -399,7 +399,7 @@ const dataByLang = {
         "name": "김동호",
         "bio": "한국신용데이터",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1BOtTb-H5rQ1EUNLrFLYiT-7vmuuXn7Vy/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1_AxgPitXfyND1w2YB7Y1gWeNnbGfvYNK/view?usp=drive_link",
         "tags": [
           "#데이터",
           "#소상공인"
@@ -413,7 +413,7 @@ const dataByLang = {
         "name": "가종현",
         "bio": "전 하이브 라틴아메리카 CEO",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1jIJ_-9iKNuLyDy_q5-O4pursg_iz6Dx0/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/16fSlwEmuORaZ0BNMLL8I_3GrXTWiknBK/view?usp=drive_link",
         "tags": [
           "#글로벌전략",
           "#KPOP"
@@ -427,7 +427,7 @@ const dataByLang = {
         "name": "김소희",
         "bio": "김소희 트렌드랩 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1ApuX5XBU1T8hOTDqjIQ6Kmm6SkY5fCPp/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1WsCspODa944UM13wni7pTCBzhkyLCPCx/view?usp=drive_link",
         "tags": [
           "#트렌드",
           "#엔터프라이즈"
@@ -441,7 +441,7 @@ const dataByLang = {
         "name": "권민",
         "bio": "앤털러키브랜드 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1RsuljHTOuSA8ZHFclnfw390B6xym2R15/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1jD1Lh1sUXBk4RKBxXQ2-p8HraZxEY4iw/view?usp=drive_link",
         "tags": [
           "#브랜딩",
           "#휴먼브랜드"
@@ -455,7 +455,7 @@ const dataByLang = {
         "name": "임선영",
         "bio": "미쉐린 칼럼니스트",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1XJly9wLC6j--0b8ryHJw-nX_ghOHi3ou/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1yb51ITN-W4GfRhoQFsKmKBpCveoJmfGv/view?usp=drive_link",
         "tags": [
           "#푸드",
           "#테크"
@@ -469,7 +469,7 @@ const dataByLang = {
         "name": "이지윤",
         "bio": "숨 프로젝트 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1GMs24zwBFWY7EwgQ1pORqlvRS1F00avw/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1RF2sJ7Jbh5XB4EFFXyc2VIKXmf2AuRIr/view?usp=drive_link",
         "tags": [
           "#큐레이터",
           "#현대미술"
@@ -483,7 +483,7 @@ const dataByLang = {
         "name": "최재웅",
         "bio": "폴앤마크 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1PUcRVml93RpVtSME8D2_8KgU4Wlwzc-6/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1IpXyexcfPLBEo4EdnLod6a4RNNH3oa8l/view?usp=drive_link",
         "tags": [
           "#조직문화",
           "#컨설팅"
@@ -497,7 +497,7 @@ const dataByLang = {
         "name": "영주 닐슨",
         "bio": "한국퇴직연금데이터 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1heil2mnUnuhXsOK3BbbWbfu1X5Wpx03R/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1ArEwxvYSAL8Q9LlsMo53hntD29kqc8hE/view?usp=drive_link",
         "tags": [
           "#트레이딩",
           "#퇴직연금"
@@ -511,7 +511,7 @@ const dataByLang = {
         "name": "윤수영",
         "bio": "트레바리 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1BCBqdwl0wpp2wPLFpvMTqr6UpBdR7Jhc/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/13egrY9jSL4ncLBqmpjApZ4w1QFqVkdEt/view?usp=drive_link",
         "tags": [
           "#커뮤니티",
           "#독서모임"
@@ -525,7 +525,7 @@ const dataByLang = {
         "name": "크리스토퍼 한",
         "bio": "Pidea Lab 대표",
         "session": "Cohort4",
-        "img": "https://drive.google.com/file/d/1rVmLSUVYr0Z6c9U6t1Kw4O-4ioG9d0UJ/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1bKthHkoB13SBBepFlW7HvmEATQ31ADGR/view?usp=drive_link",
         "tags": [
           "#디자인씽킹",
           "#조직문화"
@@ -1199,7 +1199,7 @@ const dataByLang = {
         "name": "KAY",
         "tags": [
           "#Community",
-          "#Self-improvement"
+          "#SelfDevelopment"
         ],
         "img": "https://drive.google.com/file/d/1gwUNiMF7TO_bJIQGH1U3n7SN8j_YhRV7/view?usp=sharing",
         "cohorts": [

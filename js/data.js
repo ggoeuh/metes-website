@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. AM 5:20:25
+// 마지막 동기화: 2026. 4. 22. AM 6:19:21
 
 const dataByLang = {
   kor: {
@@ -189,7 +189,7 @@ const dataByLang = {
         "name": "고승원",
         "bio": "솔로프리너",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1M9THuqdIf8iTyvupym0F4PcyARKKlw2V/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/159nO7mkkm2STjK9IsGH6_NMNr6ys7jFI/view?usp=sharing",
         "tags": [
           "#솔로프리너의시대",
           "#1인 기업가"

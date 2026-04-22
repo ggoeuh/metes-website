@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 21. AM 10:51:22
+// 마지막 동기화: 2026. 4. 22. AM 5:20:25
 
 const dataByLang = {
   kor: {
@@ -175,7 +175,7 @@ const dataByLang = {
         "name": "이창우",
         "bio": "닷슬래시대시 대표",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1RJTgTHvjLjJ449-HDUQLvp5s5mJOde2m/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1NGBrFCT0UoRe8MocgcCuufwQc4V2aghA/view?usp=drive_link",
         "tags": [
           "#인류기억저장소",
           "#닷슬래시대시"
@@ -1272,7 +1272,7 @@ const dataByLang = {
         "name": "Lee Chang-woo",
         "bio": "Dot Slash Dash CEO",
         "session": "Cohort3",
-        "img": "https://drive.google.com/file/d/1RJTgTHvjLjJ449-HDUQLvp5s5mJOde2m/view?usp=drive_link",
+        "img": "https://drive.google.com/file/d/1NGBrFCT0UoRe8MocgcCuufwQc4V2aghA/view?usp=drive_link",
         "tags": [
           "#HumanMemoryStorage",
           "#DotSlashDash"

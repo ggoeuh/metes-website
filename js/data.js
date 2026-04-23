@@ -1,5 +1,5 @@
 // ── 자동 생성 파일 (node sync.js) ──
-// 마지막 동기화: 2026. 4. 22. 오후 11:38:10
+// 마지막 동기화: 2026. 4. 23. AM 6:59:32
 
 const dataByLang = {
   kor: {
@@ -638,7 +638,7 @@ const dataByLang = {
         "meister": "진석 마이스터",
         "desc": "Claude, GPT 등 최신 AI 도구를 실무에 직접 적용하는 실습 중심 세션. 프롬프트 설계부터 비즈니스 자동화, 노코드 툴 활용까지 다룹니다.",
         "tags": "AI 활용 실습|프롬프트 엔지니어링|자동화",
-        "img": "",
+        "img": "https://drive.google.com/file/d/1d76PfqV6WkrJAgEGt59Kr76QjjRQf5VT/view?usp=drive_link",
         "hasPhoto": true
       },
       {
@@ -647,7 +647,7 @@ const dataByLang = {
         "meister": "희진 마이스터",
         "desc": "리더로서의 사고방식과 팀 커뮤니케이션을 시뮬레이션과 심화 토론으로 체화합니다. 매 세션마다 실제 상황을 전제로 한 롤플레이와 커뮤니티 활동이 병행됩니다.",
         "tags": "리더십|심화 토론|커뮤니티",
-        "img": "",
+        "img": "https://drive.google.com/file/d/1gz3RLeCuIkvhdsFhyGSCSEkizqv6tjc2/view?usp=drive_link",
         "hasPhoto": true
       }
     ],
